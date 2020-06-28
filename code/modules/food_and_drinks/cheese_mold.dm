@@ -3,7 +3,7 @@
 	desc = "A mold for cheese making"
 	icon_state = "cheese_mold"
 	volume = 60
-	var/cheese_inside = FALSE
+	var/cheese_inside
 
 /obj/item/reagent_containers/glass/cheese_mold/update_icon_state()
 	. = ..()
@@ -38,5 +38,5 @@
 /obj/item/reagent_containers/glass/cheese_mold/proc/drop_cheese()
 	new cheese_inside(drop_location())
 	volume = initial(volume)
-	cheese_inside = FALSE
+	cheese_inside = null
 	update_icon_state()
