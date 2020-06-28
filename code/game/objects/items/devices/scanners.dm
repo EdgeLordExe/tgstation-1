@@ -127,6 +127,10 @@ GENE SCANNER
 					 \n<span class='info'>Body temperature: ???</span>")
 		return
 
+	if(ispodperson(M)&& !advanced)
+		to_chat(user, "<span class='info'>[M]'s biologal structure is too complex for the health analyzer.")
+		return
+
 	user.visible_message("<span class='notice'>[user] analyzes [M]'s vitals.</span>", \
 						"<span class='notice'>You analyze [M]'s vitals.</span>")
 
@@ -437,8 +441,12 @@ GENE SCANNER
 		render_list += "</span>"
 
 	if(render_list == "")
-		playsound(scanner, 'sound/machines/ping.ogg', 50, FALSE)
-		to_chat(user, "<span class='notice'>\The [scanner] makes a happy ping and briefly displays a smiley face with several exclamation points! It's really excited to report that [patient] has no wounds!</span>")
+		if(istype(scanner))
+			// Only emit the cheerful scanner message if this scan came from a scanner
+			playsound(scanner, 'sound/machines/ping.ogg', 50, FALSE)
+			to_chat(user, "<span class='notice'>\The [scanner] makes a happy ping and briefly displays a smiley face with several exclamation points! It's really excited to report that [patient] has no wounds!</span>")
+		else
+			to_chat(user, "<span class='notice ml-1'>No wounds detected in subject.</span>")
 	else
 		to_chat(user, jointext(render_list, ""))
 
