@@ -246,6 +246,7 @@ Class Procs:
 		use_power(idle_power_usage,power_channel)
 	else if(use_power >= 2)
 		use_power(active_power_usage,power_channel)
+		add_flux()
 	return 1
 
 /obj/machinery/proc/is_operational()

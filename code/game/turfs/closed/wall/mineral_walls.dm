@@ -52,7 +52,11 @@
 	icon_state = "sandstone"
 	sheet_type = /obj/item/stack/sheet/mineral/sandstone
 	explosion_block = 0
-	canSmoothWith = list(/turf/closed/wall/mineral/sandstone, /obj/structure/falsewall/sandstone)
+	canSmoothWith = list(/turf/closed/wall/mineral/sandstone, /obj/structure/falsewall/sandstone , /turf/closed/wall/mineral/sandstone/flux)
+
+/turf/closed/wall/mineral/sandstone/flux
+	name = "flux wall"
+	desc = "A wall with flux plating. Rough."
 
 /turf/closed/wall/mineral/uranium
 	article = "a"

@@ -498,3 +498,23 @@ GLOBAL_LIST_INIT(metalhydrogen_recipes, list(
 /obj/item/stack/sheet/mineral/metal_hydrogen/get_main_recipes()
 	. = ..()
 	. += GLOB.metalhydrogen_recipes
+
+/*
+ * Flux
+ */
+/obj/item/stack/sheet/mineral/flux
+	name = "flux"
+	icon_state = "sheet-titanium"
+	inhand_icon_state = "sheet-titanium"
+	singular_name = "flux sheet"
+	force = 5
+	throwforce = 5
+	w_class = WEIGHT_CLASS_NORMAL
+	throw_speed = 1
+	throw_range = 3
+	sheettype = "flux"
+	custom_materials = list(/datum/material/flux=MINERAL_MATERIAL_AMOUNT)
+	point_value = 20
+	merge_type = /obj/item/stack/sheet/mineral/flux
+	material_type = /datum/material/flux
+	walltype = /turf/closed/wall/mineral/sandstone/flux

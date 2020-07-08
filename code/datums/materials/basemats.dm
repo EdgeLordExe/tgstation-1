@@ -395,3 +395,15 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.2
 	turf_sound_override = FOOTSTEP_WOOD
 	texture_layer_icon_state = "bamboo"
+
+///Flux used mainly for flux items
+/datum/material/flux
+	name = "flux"
+	desc = "Flux"
+	color = "#e6ff74"
+	strength_modifier = 1.1
+	categories = list( MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
+	sheet_type = /obj/item/stack/sheet/mineral/flux
+	value_per_unit = 0.0625
+	beauty_modifier = -0.05
+	armor_modifiers = list("melee" = 1.35, "bullet" = 1.25, "laser" = 1.3, "energy" = 1.25, "bomb" = 1, "bio" = 1, "rad" = 1, "fire" = 1, "acid" = 0.7)
