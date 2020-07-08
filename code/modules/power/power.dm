@@ -99,6 +99,7 @@
 		return
 	if(chan == -1)
 		chan = power_channel
+	add_flux()
 	A.use_power(amount, chan)
 
 /obj/machinery/proc/addStaticPower(value, powerchannel)

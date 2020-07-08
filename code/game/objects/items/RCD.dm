@@ -819,7 +819,7 @@ RLD
 /obj/item/construction/plumbing/attack_self(mob/user)
 	..()
 	if(!choices.len)
-		for(var/A in subtypesof(/obj/machinery/plumbing))
+		for(var/A in subtypesof(/obj/machinery/plumbing)-typesof(/obj/machinery/plumbing/flux))
 			var/obj/machinery/plumbing/M = A
 			if(initial(M.rcd_constructable))
 				choices += list(initial(M.name) = image(icon = initial(M.icon), icon_state = initial(M.icon_state)))

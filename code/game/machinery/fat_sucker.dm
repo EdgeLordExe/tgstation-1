@@ -7,6 +7,9 @@
 	state_open = FALSE
 	density = TRUE
 	req_access = list(ACCESS_KITCHEN)
+
+	flux_gen = FLUX_GEN_MED
+
 	var/processing = FALSE
 	var/start_at = NUTRITION_LEVEL_WELL_FED
 	var/stop_at = NUTRITION_LEVEL_STARVING
@@ -26,6 +29,7 @@
 	"Saturated fat should form no more than 11% of your daily calories.", \
 	"Unsaturated fat, that is monounsaturated fats, polyunsaturated fats and omega-3 fatty acids, is found in plant foods and fish." \
 	)
+
 
 /obj/machinery/fat_sucker/Initialize()
 	. = ..()

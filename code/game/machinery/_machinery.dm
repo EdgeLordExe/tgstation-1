@@ -132,6 +132,10 @@ Class Procs:
 	var/ui_x // Default size of TGUI window, in pixels
 	var/ui_y
 
+	var/flux_gen = FLUX_GEN_NONE
+	var/flux_amount = 0
+	var/flux_max = FLUX_THRESHOLD_MED
+
 /obj/machinery/Initialize()
 	if(!armor)
 		armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 70)
@@ -245,10 +249,10 @@ Class Procs:
 	return 1
 
 /obj/machinery/proc/is_operational()
-	return !(machine_stat & (NOPOWER|BROKEN|MAINT))
+	return !(machine_stat & (NOPOWER|BROKEN|MAINT|FLUX_OVERLOAD))
 
 /obj/machinery/can_interact(mob/user)
-	if((machine_stat & (NOPOWER|BROKEN)) && !(interaction_flags_machine & INTERACT_MACHINE_OFFLINE)) // Check if the machine is broken, and if we can still interact with it if so
+	if((machine_stat & (NOPOWER|BROKEN|FLUX_OVERLOAD)) && !(interaction_flags_machine & INTERACT_MACHINE_OFFLINE)) // Check if the machine is broken, and if we can still interact with it if so
 		return FALSE
 
 	var/silicon = issilicon(user)
@@ -305,6 +309,19 @@ Class Procs:
 				nap_violation(occupant)
 				return FALSE
 	return TRUE
+
+/obj/machinery/proc/remove_flux(num)
+	var/change = flux_amount - num
+	var/og_flux_amt = flux_amount
+	flux_amount = max(change,0)
+	if(flux_amount < flux_max && machine_stat & FLUX_OVERLOAD)
+		machine_stat &= ~FLUX_OVERLOAD
+	return max(og_flux_amt - change,0)
+
+/obj/machinery/proc/add_flux()
+	flux_amount += flux_gen
+	if(flux_amount >= flux_max && !(machine_stat & FLUX_OVERLOAD))
+		machine_stat &= FLUX_OVERLOAD
 
 /obj/machinery/proc/nap_violation(mob/violator)
 	return

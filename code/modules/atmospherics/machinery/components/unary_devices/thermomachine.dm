@@ -84,6 +84,7 @@
 	if(temperature_delta > 1)
 		active_power_usage = (heat_capacity * temperature_delta) / 10 + idle_power_usage
 		update_parents()
+		add_flux()
 	else
 		active_power_usage = idle_power_usage
 	return 1
@@ -190,6 +191,7 @@
 	max_temperature = T20C
 	min_temperature = 170 //actual minimum temperature is defined by RefreshParts()
 	circuit = /obj/item/circuitboard/machine/thermomachine/freezer
+	flux_gen = FLUX_GEN_MED
 
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer/on
 	on = TRUE
@@ -229,6 +231,7 @@
 	max_temperature = 140 //actual maximum temperature is defined by RefreshParts()
 	min_temperature = T20C
 	circuit = /obj/item/circuitboard/machine/thermomachine/heater
+	flux_gen = FLUX_GEN_MED
 
 /obj/machinery/atmospherics/components/unary/thermomachine/heater/on
 	on = TRUE

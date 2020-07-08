@@ -126,3 +126,14 @@
 //these flags are used to tell the DNA modifier if a plant gene cannot be extracted or modified.
 #define PLANT_GENE_REMOVABLE	(1<<0)
 #define PLANT_GENE_EXTRACTABLE	(1<<1)
+
+#define FLUX_GEN_NONE 0
+#define FLUX_GEN_LOW 0.5
+#define FLUX_GEN_MED 1
+#define FLUX_GEN_HIGH 2
+#define FLUX_GEN_EXTREME 3
+
+#define FLUX_THRESHOLD_LOW 2500
+#define FLUX_THRESHOLD_MED 5000
+#define FLUX_THRESHOLD_HIGH 10000
+#define FLUX_THRESHOLD_EXTREME 15000

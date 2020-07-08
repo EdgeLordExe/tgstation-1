@@ -2579,6 +2579,7 @@
 #include "code\modules\plumbing\plumbers\destroyer.dm"
 #include "code\modules\plumbing\plumbers\fermenter.dm"
 #include "code\modules\plumbing\plumbers\filter.dm"
+#include "code\modules\plumbing\plumbers\flux_collector.dm"
 #include "code\modules\plumbing\plumbers\grinder_chemical.dm"
 #include "code\modules\plumbing\plumbers\pill_press.dm"
 #include "code\modules\plumbing\plumbers\pumps.dm"

@@ -2335,3 +2335,15 @@
 		M.adjustOxyLoss(2, FALSE)
 		M.adjustBruteLoss(2, FALSE)
 	..()
+
+
+/datum/reagent/flux
+	name = "Flux"
+	description = "Chemical waste. Created by machinery, it can clog up and make them stop working. Maybe there is a way to make it into something useful?"
+	taste_description = "Ag'hsj'saje'sh"
+	color = "#473622"
+
+/datum/reagent/flux/on_mob_metabolize(mob/living/L)
+	. = ..()
+	L.adjustToxLoss(2)
+

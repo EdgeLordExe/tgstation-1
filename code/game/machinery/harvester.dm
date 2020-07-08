@@ -16,6 +16,8 @@
 	var/allow_clothing = FALSE
 	var/allow_living = FALSE
 
+	flux_gen = FLUX_GEN_MED
+
 /obj/machinery/harvester/Initialize()
 	. = ..()
 	if(prob(1))

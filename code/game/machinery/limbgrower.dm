@@ -15,6 +15,8 @@
 	active_power_usage = 100
 	circuit = /obj/item/circuitboard/machine/limbgrower
 
+	flux_gen = FLUX_GEN_MED
+
 	var/operating = FALSE
 	var/disabled = FALSE
 	var/busy = FALSE
