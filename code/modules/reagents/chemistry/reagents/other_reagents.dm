@@ -2340,7 +2340,7 @@
 /datum/reagent/flux
 	name = "Flux"
 	description = "Chemical waste. Created by machinery, it can clog up and make them stop working. Maybe there is a way to make it into something useful?"
-	taste_description = "Ag'hsj'saje'sh"
+	taste_description = "Waste"
 	color = "#473622"
 
 /datum/reagent/flux/on_mob_metabolize(mob/living/L)
@@ -2350,9 +2350,15 @@
 /datum/reagent/condensed_flux
 	name = "Condensed Flux"
 	description = "Chemical waste. Created by machinery, it can clog up and make them stop working. Maybe there is a way to make it into something useful?"
-	taste_description = "Ag'hsj'saje'sh"
+	taste_description = "Disposal loop"
 	color = "#110b04"
 
 /datum/reagent/condensed_flux/on_mob_metabolize(mob/living/L)
 	. = ..()
 	L.adjustToxLoss(3)
+
+/datum/reagent/hydr_flux
+	name = "Hydrated Flux"
+	description = "Hydrated Flux, in the process of reclaiming it into something useful."
+	taste_description = "Dirty flakes"
+	color = "#260d5c"
