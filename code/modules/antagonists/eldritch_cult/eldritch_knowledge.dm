@@ -262,7 +262,15 @@
 		if(!LH.target)
 			var/datum/objective/A = new
 			A.owner = user.mind
-			var/datum/mind/targeted =  A.find_target()//easy way, i dont feel like copy pasting that entire block of code
+			var/list/targets = list()
+			for(var/I in 0 to 3)
+				var/datum/mind/targeted =  A.find_target()//easy way, i dont feel like copy pasting that entire block of code
+				if(!targeted)
+					break
+				targets += targeted
+
+
+			if(length(targets))
 			LH.target = targeted.current
 			qdel(A)
 			if(LH.target)
