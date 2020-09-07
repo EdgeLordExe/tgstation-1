@@ -202,7 +202,7 @@
 /area/space)
 "cd" = (
 /obj/structure/chair/sofa/right,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/vaporwave,
 /area/space)
 "cj" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -224,6 +224,9 @@
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/plasteel/white,
 /area/medical/surgery/room_b)
+"cJ" = (
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "cK" = (
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/structure/table/glass,
@@ -347,6 +350,12 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
+"ep" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 6
+	},
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "eq" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 1
@@ -358,12 +367,12 @@
 /area/space)
 "ez" = (
 /obj/structure/chair/sofa,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/vaporwave,
 /area/space)
 "eF" = (
 /obj/structure/chair/sofa,
 /obj/structure/chair/sofa,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/vaporwave,
 /area/space)
 "eG" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner{
@@ -381,7 +390,7 @@
 /area/medical/medbay/central)
 "eM" = (
 /obj/structure/chair/sofa/left,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/vaporwave,
 /area/space)
 "eP" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -455,7 +464,7 @@
 /area/space)
 "fE" = (
 /obj/structure/chair/stool/bar,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/vaporwave,
 /area/space)
 "fF" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -732,7 +741,7 @@
 /area/space)
 "iX" = (
 /obj/structure/table/glass,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/vaporwave,
 /area/space)
 "ja" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -756,6 +765,13 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/cmo)
+"jg" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 10
+	},
+/obj/machinery/food_cart,
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "jk" = (
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /turf/open/floor/plasteel/white,
@@ -1192,6 +1208,13 @@
 /obj/structure/flora/grass/jungle,
 /turf/open/floor/grass,
 /area/space)
+"nG" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 10
+	},
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "nO" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Medbay Maintenance";
@@ -1241,6 +1264,13 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/morgue)
+"oz" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/junction{
+	dir = 4
+	},
+/obj/structure/kitchenspike,
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "oG" = (
 /turf/open/floor/carpet/royalblue,
 /area/space)
@@ -1339,9 +1369,19 @@
 /obj/structure/table/wood,
 /turf/open/floor/carpet/royalblack,
 /area/space)
+"pE" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 5
+	},
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "pI" = (
 /turf/closed/wall,
 /area/maintenance/department/medical)
+"pM" = (
+/obj/structure/curtain/cloth/fancy,
+/turf/open/floor/wood,
+/area/space)
 "pN" = (
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 9
@@ -1824,6 +1864,10 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
+"vf" = (
+/obj/machinery/deepfryer,
+/turf/open/floor/plasteel/cafeteria,
+/area/space)
 "vh" = (
 /obj/structure/table/wood,
 /obj/structure/table/wood,
@@ -2031,6 +2075,11 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/space)
+"xo" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/curtain/cloth/fancy,
+/turf/open/floor/plating,
+/area/space)
 "xp" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/trimline/blue/corner,
@@ -2087,6 +2136,10 @@
 /obj/structure/table/glass,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/aft)
+"xH" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on/coldroom,
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "xN" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
@@ -2102,6 +2155,11 @@
 /obj/item/storage/box/beakers,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/aft)
+"xV" = (
+/obj/structure/table,
+/obj/structure/table,
+/turf/open/floor/plasteel/cafeteria,
+/area/space)
 "xX" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Medbay Desk";
@@ -2499,6 +2557,12 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/lobby)
+"DK" = (
+/mob/living/simple_animal/hostile/retaliate/goat{
+	name = "Pete"
+	},
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "DL" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Medbay Maintenance";
@@ -2669,6 +2733,11 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/morgue)
+"FW" = (
+/obj/structure/table/reinforced,
+/obj/structure/curtain/cloth/fancy,
+/turf/open/floor/plasteel/cafeteria,
+/area/space)
 "Ga" = (
 /obj/structure/table,
 /obj/effect/turf_decal/trimline/blue/corner,
@@ -2685,12 +2754,22 @@
 /obj/structure/flora/grass/jungle,
 /turf/open/floor/grass,
 /area/medical/medbay/central)
+"Gg" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 9
+	},
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "Gl" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 8
 	},
 /obj/effect/turf_decal/trimline/green/filled/corner,
 /turf/open/floor/plasteel/white,
+/area/space)
+"GK" = (
+/obj/structure/table/wood/fancy/blue,
+/turf/open/floor/plasteel/vaporwave,
 /area/space)
 "GW" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2751,6 +2830,13 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"Hx" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 9
+	},
+/obj/machinery/icecream_vat,
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "HI" = (
 /obj/effect/turf_decal/trimline/yellow/line{
 	dir = 10
@@ -2850,12 +2936,24 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/surgery/room_c)
+"IB" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "ID" = (
 /obj/item/chair/wood,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/maintenance/department/medical)
+"IG" = (
+/obj/structure/table,
+/obj/machinery/microwave,
+/turf/open/floor/plasteel/cafeteria,
+/area/space)
 "IH" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel/white,
@@ -3088,6 +3186,13 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"MG" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 8
+	},
+/obj/structure/kitchenspike,
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "ML" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/machinery/power/apc/auto_name/south,
@@ -3402,7 +3507,11 @@
 /turf/closed/wall,
 /area/medical/pharmacy)
 "Qu" = (
-/turf/open/floor/plasteel/freezer,
+/obj/machinery/atmospherics/components/unary/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
 /area/space)
 "Qx" = (
 /turf/closed/wall,
@@ -3811,9 +3920,7 @@
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/medical)
 "XH" = (
-/obj/structure/table,
-/obj/structure/table,
-/turf/open/floor/plasteel/cafeteria,
+/turf/open/floor/plasteel/vaporwave,
 /area/space)
 "XJ" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -3889,6 +3996,13 @@
 /obj/machinery/chem_master,
 /turf/open/floor/plasteel/white,
 /area/medical/pharmacy)
+"YM" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/junction{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/open/floor/plasteel/kitchen_coldroom/freezerfloor,
+/area/space)
 "YN" = (
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 8
@@ -3954,6 +4068,11 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"ZG" = (
+/obj/machinery/grill,
+/obj/item/stack/sheet/mineral/coal/five,
+/turf/open/floor/plasteel/cafeteria,
+/area/space)
 "ZK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood,
@@ -32883,11 +33002,11 @@ Eh
 Eh
 Eh
 bN
-bN
-bN
-bN
-bN
-bN
+xo
+xo
+xo
+xo
+xo
 bN
 Eh
 Eh
@@ -33139,13 +33258,13 @@ jM
 Eh
 Eh
 jM
-bN
-xz
-xz
-xz
-xz
-xz
-bN
+xo
+XH
+XH
+XH
+XH
+XH
+xo
 jM
 Eh
 Eh
@@ -33396,13 +33515,13 @@ jM
 Eh
 jM
 jM
-xz
+XH
 gb
 gb
 gb
 gb
 gb
-xz
+XH
 jM
 jM
 bN
@@ -33660,8 +33779,8 @@ hw
 hw
 hw
 gb
-xz
-kf
+XH
+pM
 kf
 kf
 kf
@@ -33917,7 +34036,7 @@ id
 id
 id
 gb
-xz
+XH
 jM
 bN
 jM
@@ -34174,8 +34293,8 @@ hw
 id
 id
 gb
-xz
-bN
+XH
+xo
 Eh
 bN
 rE
@@ -34432,7 +34551,7 @@ hw
 id
 hb
 fE
-bN
+xo
 Eh
 bN
 kf
@@ -34688,7 +34807,7 @@ hw
 hw
 hw
 js
-jJ
+GK
 jM
 bN
 jM
@@ -34937,7 +35056,7 @@ Eh
 jM
 Eh
 jM
-xz
+XH
 hb
 hb
 gb
@@ -34945,7 +35064,7 @@ gb
 gb
 gb
 js
-xz
+XH
 jM
 kf
 kf
@@ -35202,7 +35321,7 @@ hb
 gH
 hb
 js
-xz
+XH
 jM
 kf
 jM
@@ -35216,7 +35335,7 @@ jM
 jM
 jM
 jM
-jM
+Eh
 jM
 xz
 xz
@@ -35459,9 +35578,9 @@ hb
 gH
 hb
 js
-xz
-xz
-xz
+XH
+XH
+XH
 bN
 zw
 zw
@@ -35708,7 +35827,7 @@ Eh
 jM
 Eh
 jM
-xz
+XH
 hb
 hb
 gb
@@ -35716,19 +35835,19 @@ gb
 gb
 gb
 js
-xz
-xz
-xz
-kz
-zw
-zw
-zw
-zw
-on
-on
-on
-on
 XH
+XH
+XH
+FW
+zw
+zw
+zw
+zw
+zw
+zw
+zw
+zw
+zw
 zw
 zw
 kz
@@ -35965,7 +36084,7 @@ Eh
 jM
 Eh
 jM
-xz
+XH
 hb
 hb
 gb
@@ -35973,19 +36092,19 @@ hb
 hb
 gb
 js
-xz
-xz
-xz
-kz
+XH
+XH
+XH
+FW
 zw
 zw
+ZG
 zw
-zw
 on
 on
 on
 on
-on
+xV
 zw
 zw
 kz
@@ -36230,13 +36349,13 @@ gH
 gH
 gb
 js
-xz
-xz
-xz
-kz
+XH
+XH
+XH
+FW
 zw
 zw
-zw
+ZG
 zw
 zw
 zw
@@ -36487,19 +36606,19 @@ hb
 hb
 gb
 js
-xz
-xz
-xz
-kz
+XH
+XH
+XH
+FW
 zw
 zw
+ZG
 zw
-zw
-zw
-zw
-zw
-zw
-zw
+on
+on
+on
+on
+on
 zw
 zw
 kz
@@ -36736,7 +36855,7 @@ Eh
 jM
 Eh
 jM
-xz
+XH
 hb
 hb
 gb
@@ -36744,9 +36863,9 @@ gb
 gb
 gb
 js
-xz
-xz
-xz
+XH
+XH
+XH
 bN
 zw
 zw
@@ -36994,26 +37113,26 @@ jM
 Eh
 jM
 jM
-xz
+XH
 hb
 hb
 gb
 gb
 hb
 jJ
-xz
-xz
-xz
+XH
+XH
+XH
 jM
 zw
 zw
 zw
-zw
-zw
-zw
+vf
+vf
+vf
 on
-on
-on
+IG
+IG
 zw
 on
 jM
@@ -37254,9 +37373,9 @@ jM
 jM
 iX
 iX
-xz
-xz
-xz
+XH
+XH
+XH
 jM
 jM
 jM
@@ -37271,7 +37390,7 @@ jM
 jM
 jM
 jM
-Qu
+cJ
 jM
 jM
 xz
@@ -37527,9 +37646,9 @@ kf
 kf
 jM
 Qu
-Qu
-Qu
-Qu
+cJ
+cJ
+xH
 jM
 xz
 xz
@@ -37783,10 +37902,10 @@ kf
 kf
 kf
 jM
-Qu
-Qu
-Qu
-Qu
+YM
+DK
+cJ
+oz
 jM
 xz
 xz
@@ -38040,10 +38159,10 @@ kf
 kf
 kf
 jM
-Qu
-Qu
-Qu
-Qu
+IB
+ep
+pE
+MG
 jM
 xz
 xz
@@ -38297,10 +38416,10 @@ kf
 kf
 kf
 jM
-Qu
-Qu
-Qu
-Qu
+nG
+Gg
+jg
+Hx
 jM
 xz
 xz
@@ -38552,10 +38671,10 @@ jM
 jM
 jM
 jM
+Eh
 jM
 jM
-jM
-jM
+Eh
 jM
 jM
 jM
@@ -38815,7 +38934,7 @@ Eh
 Eh
 Eh
 Eh
-jM
+Eh
 xz
 xz
 xz
@@ -40095,7 +40214,7 @@ jM
 jM
 jM
 jM
-jM
+Eh
 jM
 jM
 xz
