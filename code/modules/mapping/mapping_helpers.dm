@@ -394,17 +394,17 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 	var/list/valid_connectors = typecacheof(/obj/machinery/atmospherics)
 	for(var/direction in connections)
 		var/turf/T = get_step(src,  text2dir(direction))
-		for(var/_type in T.contents)
-			if(istype(_type,type))
-				var/obj/effect/mapping_helpers/simple_pipes/found = _type
+		for(var/machine_type_owo in T.contents)
+			if(istype(machine_type_owo,type))
+				var/obj/effect/mapping_helpers/simple_pipes/found = machine_type_owo
 				if(found.piping_layer != piping_layer)
 					continue
 				connections[direction] = TRUE
 				connection_num++
 				break
-			if(!is_type_in_typecache(_type,valid_connectors))
+			if(!is_type_in_typecache(machine_type_owo,valid_connectors))
 				continue
-			var/obj/machinery/atmospherics/machine = _type
+			var/obj/machinery/atmospherics/machine = machine_type_owo
 
 			if(machine.piping_layer != piping_layer)
 				continue
@@ -414,46 +414,37 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 				connection_num++
 				break
 
-	var/turf/this_turf = get_turf(src)
 	switch(connection_num)
 		if(1)
 			for(var/direction in connections)
 				if(connections[direction] != TRUE)
 					continue
-				spawn_pipe(direction)
+				spawn_pipe(direction,/obj/machinery/atmospherics/pipe/simple)
 		if(2)
 			for(var/direction in connections)
 				if(connections[direction] != TRUE)
 					continue
 				//Detects straight pipes connected from east to west , north to south etc.
 				if(connections[dir2text(angle2dir(dir2angle(text2dir(direction))+180))] == TRUE)
-					spawn_pipe(direction)
+					spawn_pipe(direction,/obj/machinery/atmospherics/pipe/simple)
 					break
 
 				for(var/direction2 in connections - direction)
 					if(connections[direction2] != TRUE)
 						continue
-					spawn_pipe(dir2text(text2dir(direction)+text2dir(direction2)))
+					spawn_pipe(dir2text(text2dir(direction)+text2dir(direction2)),/obj/machinery/atmospherics/pipe/simple)
 		if(3)
 			for(var/direction in connections)
 				if(connections[direction] == FALSE)
-					var/obj/machinery/atmospherics/pipe/manifold/pipe = new(this_turf,TRUE,text2dir(direction))
-					pipe.hide = hide
-					pipe.piping_layer = piping_layer
-					pipe.update_layer()
-					pipe.paint(pipe_color)
+					spawn_pipe(direction,/obj/machinery/atmospherics/pipe/manifold)
 		if(4)
-			var/obj/machinery/atmospherics/pipe/manifold4w/pipe = new(this_turf)
-			pipe.hide = hide
-			pipe.piping_layer = piping_layer
-			pipe.update_layer()
-			pipe.paint(pipe_color)
+			spawn_pipe(dir2text(NORTH),/obj/machinery/atmospherics/pipe/manifold4w)
 
 	qdel(src)
 
-
-/obj/effect/mapping_helpers/simple_pipes/proc/spawn_pipe(direction)
-	var/obj/machinery/atmospherics/pipe/simple/pipe = new/obj/machinery/atmospherics/pipe/simple(get_turf(src),TRUE,text2dir(direction))
+//spawn pipe
+/obj/effect/mapping_helpers/simple_pipes/proc/spawn_pipe(direction,type )
+	var/obj/machinery/atmospherics/pipe/pipe = new type(get_turf(src),TRUE,text2dir(direction))
 	pipe.hide = hide
 	pipe.piping_layer = piping_layer
 	pipe.update_layer()
