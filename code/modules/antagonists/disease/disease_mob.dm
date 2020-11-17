@@ -71,7 +71,7 @@ the new instance inside the host to be updated to the template's stats.
 	freemove_end = world.time + FREEMOVE_TIME
 	freemove_end_timerid = addtimer(CALLBACK(src, .proc/infect_random_patient_zero), FREEMOVE_TIME, TIMER_STOPPABLE)
 
-/mob/camera/disease/Destroy()
+/mob/camera/disease/Deinitialize()
 	. = ..()
 	QDEL_NULL(adaptation_menu_action)
 	for(var/V in GLOB.sentient_disease_instances)

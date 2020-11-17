@@ -65,7 +65,7 @@
 	testing("Holocall started")
 
 //cleans up ALL references :)
-/datum/holocall/Destroy()
+/datum/holocall/Deinitialize()
 	QDEL_NULL(hangup)
 
 	if(!QDELETED(eye))
@@ -239,7 +239,7 @@
 	if(preset_record_text)
 		INVOKE_ASYNC(src, .proc/build_record)
 
-/obj/item/disk/holodisk/Destroy()
+/obj/item/disk/holodisk/Deinitialize()
 	QDEL_NULL(record)
 	return ..()
 

@@ -56,7 +56,7 @@
 		START_PROCESSING(SSobj, src)
 
 
-/obj/item/gun/magic/Destroy()
+/obj/item/gun/magic/Deinitialize()
 	if(can_charge)
 		STOP_PROCESSING(SSobj, src)
 	return ..()

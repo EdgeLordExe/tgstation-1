@@ -103,7 +103,7 @@
 	AddComponent(/datum/component/footstep, FOOTSTEP_MOB_SLIME, 0)
 	add_cell_sample()
 
-/mob/living/simple_animal/slime/Destroy()
+/mob/living/simple_animal/slime/Deinitialize()
 	for (var/A in actions)
 		var/datum/action/AC = A
 		AC.Remove(src)

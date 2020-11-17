@@ -51,7 +51,7 @@
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 
-/obj/effect/mob_spawn/human/fugitive/bounty/Destroy()
+/obj/effect/mob_spawn/human/fugitive/bounty/Deinitialize()
 	var/obj/structure/fluff/empty_sleeper/S = new(drop_location())
 	S.setDir(dir)
 	return ..()

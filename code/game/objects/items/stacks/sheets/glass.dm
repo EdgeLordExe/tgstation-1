@@ -292,7 +292,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	if(T && is_station_level(T.z))
 		SSblackbox.record_feedback("tally", "station_mess_created", 1, name)
 
-/obj/item/shard/Destroy()
+/obj/item/shard/Deinitialize()
 	. = ..()
 
 	var/turf/T = get_turf(src)

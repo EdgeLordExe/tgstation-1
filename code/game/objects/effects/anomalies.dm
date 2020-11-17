@@ -58,7 +58,7 @@
 			detonate()
 		qdel(src)
 
-/obj/effect/anomaly/Destroy()
+/obj/effect/anomaly/Deinitialize()
 	GLOB.poi_list.Remove(src)
 	STOP_PROCESSING(SSobj, src)
 	qdel(countdown)
@@ -149,7 +149,7 @@
 /obj/effect/anomaly/grav/high/proc/setup_grav_field()
 	grav_field = make_field(/datum/proximity_monitor/advanced/gravity, list("current_range" = 7, "host" = src, "gravity_value" = rand(0,3)))
 
-/obj/effect/anomaly/grav/high/Destroy()
+/obj/effect/anomaly/grav/high/Deinitialize()
 	QDEL_NULL(grav_field)
 	. = ..()
 

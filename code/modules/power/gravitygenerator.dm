@@ -67,7 +67,7 @@ GLOBAL_LIST_EMPTY(gravity_generators) // We will keep track of this by adding ne
 /obj/machinery/gravity_generator/proc/set_fix()
 	set_machine_stat(machine_stat & ~BROKEN)
 
-/obj/machinery/gravity_generator/part/Destroy()
+/obj/machinery/gravity_generator/part/Deinitialize()
 	if(main_part)
 		qdel(main_part)
 	set_broken()
@@ -133,7 +133,7 @@ GLOBAL_LIST_EMPTY(gravity_generators) // We will keep track of this by adding ne
 	var/broken_state = 0
 	var/setting = 1	//Gravity value when on
 
-/obj/machinery/gravity_generator/main/Destroy() // If we somehow get deleted, remove all of our other parts.
+/obj/machinery/gravity_generator/main/Deinitialize() // If we somehow get deleted, remove all of our other parts.
 	investigate_log("was destroyed!", INVESTIGATE_GRAVITY)
 	on = FALSE
 	update_list()

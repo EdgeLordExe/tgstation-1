@@ -35,7 +35,7 @@
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
 
-/obj/item/flamethrower/Destroy()
+/obj/item/flamethrower/Deinitialize()
 	if(weldtool)
 		qdel(weldtool)
 	if(igniter)

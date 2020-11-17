@@ -170,7 +170,7 @@
 	else
 		icon_state = "dominator"
 
-/obj/machinery/shuttle_scrambler/Destroy()
+/obj/machinery/shuttle_scrambler/Deinitialize()
 	toggle_off()
 	return ..()
 

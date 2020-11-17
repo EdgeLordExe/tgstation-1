@@ -85,7 +85,7 @@
 	martial_art = default_martial_art
 	init_known_skills()
 
-/datum/mind/Destroy()
+/datum/mind/Deinitialize()
 	SSticker.minds -= src
 	if(islist(antag_datums))
 		QDEL_LIST(antag_datums)

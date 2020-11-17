@@ -442,7 +442,7 @@
 	scatter()
 	return (OXYLOSS)
 
-/obj/item/ectoplasm/revenant/Destroy()
+/obj/item/ectoplasm/revenant/Deinitialize()
 	if(!QDELETED(revenant))
 		qdel(revenant)
 	..()

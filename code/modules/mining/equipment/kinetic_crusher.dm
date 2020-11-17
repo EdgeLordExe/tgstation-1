@@ -41,7 +41,7 @@
 	AddComponent(/datum/component/butchering, 60, 110) //technically it's huge and bulky, but this provides an incentive to use it
 	AddComponent(/datum/component/two_handed, force_unwielded=0, force_wielded=20)
 
-/obj/item/kinetic_crusher/Destroy()
+/obj/item/kinetic_crusher/Deinitialize()
 	QDEL_LIST(trophies)
 	return ..()
 
@@ -177,7 +177,7 @@
 	log_override = TRUE
 	var/obj/item/kinetic_crusher/hammer_synced
 
-/obj/projectile/destabilizer/Destroy()
+/obj/projectile/destabilizer/Deinitialize()
 	hammer_synced = null
 	return ..()
 

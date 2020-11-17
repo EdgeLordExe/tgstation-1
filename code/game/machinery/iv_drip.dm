@@ -21,7 +21,7 @@
 	. = ..()
 	update_icon()
 
-/obj/machinery/iv_drip/Destroy()
+/obj/machinery/iv_drip/Deinitialize()
 	attached = null
 	QDEL_NULL(beaker)
 	return ..()

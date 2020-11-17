@@ -116,7 +116,7 @@
 			if("purple")
 				set_light_color(LIGHT_COLOR_LAVENDER)
 
-/obj/item/dualsaber/Destroy()
+/obj/item/dualsaber/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

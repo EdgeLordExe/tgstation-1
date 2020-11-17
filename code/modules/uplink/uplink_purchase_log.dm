@@ -15,7 +15,7 @@ GLOBAL_LIST(uplink_purchase_logs_by_key)	//assoc key = /datum/uplink_purchase_lo
 		GLOB.uplink_purchase_logs_by_key[owner] = src
 	purchase_log = list()
 
-/datum/uplink_purchase_log/Destroy()
+/datum/uplink_purchase_log/Deinitialize()
 	purchase_log = null
 	if(GLOB.uplink_purchase_logs_by_key[owner] == src)
 		GLOB.uplink_purchase_logs_by_key -= owner

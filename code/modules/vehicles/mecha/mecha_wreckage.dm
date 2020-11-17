@@ -28,7 +28,7 @@
 			var/part = pick(parts)
 			welder_salvage += part
 		parts = null
-	if(!AI_pilot) //Type-checking for this is already done in mecha/Destroy()
+	if(!AI_pilot) //Type-checking for this is already done in mecha/Deinitialize()
 		return
 	AI = AI_pilot
 	AI.apply_damage(150, BURN) //Give the AI a bit of damage from the "shock" of being suddenly shut down
@@ -38,7 +38,7 @@
 	AI.controlled_mech = null
 	AI.remote_control = null
 
-/obj/structure/mecha_wreckage/Destroy()
+/obj/structure/mecha_wreckage/Deinitialize()
 	if(AI)
 		QDEL_NULL(AI)
 	QDEL_LIST(crowbar_salvage)

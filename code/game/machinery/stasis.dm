@@ -27,7 +27,7 @@
 			op_computer.sbed = src
 			break
 
-/obj/machinery/stasis/Destroy()
+/obj/machinery/stasis/Deinitialize()
 	. = ..()
 	if(op_computer && op_computer.sbed == src)
 		op_computer.sbed = null

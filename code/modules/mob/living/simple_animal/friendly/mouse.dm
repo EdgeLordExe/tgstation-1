@@ -161,7 +161,7 @@
 	icon_state = "mouse_brown"
 	held_state = "mouse_brown"
 
-/mob/living/simple_animal/mouse/Destroy()
+/mob/living/simple_animal/mouse/Deinitialize()
 	SSmobs.cheeserats -= src
 	return ..()
 

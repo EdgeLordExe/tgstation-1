@@ -45,7 +45,7 @@ GLOBAL_LIST_INIT(tendrils, list())
 	return ..()
 
 
-/obj/structure/spawner/lavaland/Destroy()
+/obj/structure/spawner/lavaland/Deinitialize()
 	var/last_tendril = TRUE
 	if(GLOB.tendrils.len>1)
 		last_tendril = FALSE
@@ -85,7 +85,7 @@ GLOBAL_LIST_INIT(tendrils, list())
 	playsound(loc,'sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
 	addtimer(CALLBACK(src, .proc/collapse), 50)
 
-/obj/effect/collapse/Destroy()
+/obj/effect/collapse/Deinitialize()
 	QDEL_NULL(emitted_light)
 	return ..()
 

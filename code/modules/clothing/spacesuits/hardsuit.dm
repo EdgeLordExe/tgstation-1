@@ -31,7 +31,7 @@
 	soundloop.volume = 5
 	START_PROCESSING(SSobj, src)
 
-/obj/item/clothing/head/helmet/space/hardsuit/Destroy()
+/obj/item/clothing/head/helmet/space/hardsuit/Deinitialize()
 	. = ..()
 	STOP_PROCESSING(SSobj, src)
 
@@ -715,7 +715,7 @@
 	if(listeningTo)
 		UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
 
-/obj/item/clothing/suit/space/hardsuit/ancient/Destroy()
+/obj/item/clothing/suit/space/hardsuit/ancient/Deinitialize()
 	listeningTo = null
 	return ..()
 

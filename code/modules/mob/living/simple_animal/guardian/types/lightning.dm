@@ -35,7 +35,7 @@
 			enemychains -= C
 		enemychains += Beam(target, "lightning[rand(1,12)]", time=70, maxdistance=7, beam_type=/obj/effect/ebeam/chain)
 
-/mob/living/simple_animal/hostile/guardian/beam/Destroy()
+/mob/living/simple_animal/hostile/guardian/beam/Deinitialize()
 	removechains()
 	return ..()
 

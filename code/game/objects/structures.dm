@@ -25,7 +25,7 @@
 			icon_state = ""
 	GLOB.cameranet.updateVisibility(src)
 
-/obj/structure/Destroy()
+/obj/structure/Deinitialize()
 	GLOB.cameranet.updateVisibility(src)
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)

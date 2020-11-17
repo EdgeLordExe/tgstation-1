@@ -116,7 +116,7 @@
 			return F
 	return null
 
-/obj/item/computer_hardware/hard_drive/Destroy()
+/obj/item/computer_hardware/hard_drive/Deinitialize()
 	stored_files = null
 	return ..()
 

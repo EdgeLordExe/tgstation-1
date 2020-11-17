@@ -26,7 +26,7 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 	. = ..()
 	ev = GLOB.keycard_events.addEvent("triggerEvent", CALLBACK(src, .proc/triggerEvent))
 
-/obj/machinery/keycard_auth/Destroy()
+/obj/machinery/keycard_auth/Deinitialize()
 	GLOB.keycard_events.clearEvent("triggerEvent", ev)
 	QDEL_NULL(ev)
 	return ..()

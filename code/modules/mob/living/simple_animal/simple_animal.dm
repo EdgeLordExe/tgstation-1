@@ -196,7 +196,7 @@
 	if(staminaloss > 0)
 		adjustStaminaLoss(-stamina_recovery, FALSE, TRUE)
 
-/mob/living/simple_animal/Destroy()
+/mob/living/simple_animal/Deinitialize()
 	GLOB.simple_animals[AIStatus] -= src
 	if (SSnpcpool.state == SS_PAUSED && LAZYLEN(SSnpcpool.currentrun))
 		SSnpcpool.currentrun -= src
@@ -461,7 +461,7 @@
 			emote("deathgasp")
 	if(del_on_death)
 		..()
-		//Prevent infinite loops if the mob Destroy() is overridden in such
+		//Prevent infinite loops if the mob Deinitialize() is overridden in such
 		//a manner as to cause a call to death() again
 		del_on_death = FALSE
 		qdel(src)

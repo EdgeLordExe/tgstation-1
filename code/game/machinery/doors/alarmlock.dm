@@ -14,7 +14,7 @@
 	. = ..()
 	air_connection = new
 
-/obj/machinery/door/airlock/alarmlock/Destroy()
+/obj/machinery/door/airlock/alarmlock/Deinitialize()
 	SSradio.remove_object(src,air_frequency)
 	air_connection = null
 	return ..()

@@ -73,7 +73,7 @@
 				alter_engine_power(-engine_power)
 	return TRUE
 
-/obj/structure/shuttle/engine/Destroy()
+/obj/structure/shuttle/engine/Deinitialize()
 	if(state == ENGINE_WELDED)
 		alter_engine_power(-engine_power)
 	. = ..()

@@ -164,7 +164,7 @@ RSF
 	. = ..()
 	START_PROCESSING(SSprocessing, src)
 
-/obj/item/rsf/cookiesynth/Destroy()
+/obj/item/rsf/cookiesynth/Deinitialize()
 	STOP_PROCESSING(SSprocessing, src)
 	return ..()
 

@@ -47,7 +47,7 @@
 	else
 		open_flame(heat)
 
-/obj/item/sparkler/Destroy()
+/obj/item/sparkler/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	..()
 

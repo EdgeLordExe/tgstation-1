@@ -180,7 +180,7 @@
 	var/pressure_decrease = 0.25
 	var/obj/item/gun/energy/kinetic_accelerator/kinetic_gun
 
-/obj/projectile/kinetic/Destroy()
+/obj/projectile/kinetic/Deinitialize()
 	kinetic_gun = null
 	return ..()
 

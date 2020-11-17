@@ -129,7 +129,7 @@
 		if(ishuman(owner))
 			human_owner = owner
 
-/datum/status_effect/incapacitating/sleeping/Destroy()
+/datum/status_effect/incapacitating/sleeping/Deinitialize()
 	carbon_owner = null
 	human_owner = null
 	return ..()
@@ -353,7 +353,7 @@
 		return TRUE
 	return FALSE
 
-/datum/status_effect/crusher_mark/Destroy()
+/datum/status_effect/crusher_mark/Deinitialize()
 	hammer_synced = null
 	if(owner)
 		owner.underlays -= marked_underlay
@@ -395,7 +395,7 @@
 
 	overlays += marked_underlay
 
-/datum/status_effect/eldritch/Destroy()
+/datum/status_effect/eldritch/Deinitialize()
 	QDEL_NULL(marked_underlay)
 	return ..()
 
@@ -553,7 +553,7 @@
 	if(.)
 		apply_curse(set_curse)
 
-/datum/status_effect/necropolis_curse/Destroy()
+/datum/status_effect/necropolis_curse/Deinitialize()
 	if(!QDELETED(wasting_effect))
 		qdel(wasting_effect)
 		wasting_effect = null
@@ -951,6 +951,6 @@
 		owner.overlays -= mob_overlay
 		owner.update_icon()
 
-/datum/status_effect/cloudstruck/Destroy()
+/datum/status_effect/cloudstruck/Deinitialize()
 	. = ..()
 	QDEL_NULL(mob_overlay)

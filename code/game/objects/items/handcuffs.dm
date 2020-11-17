@@ -5,7 +5,7 @@
 	user.visible_message("<span class='suicide'>[user] is strangling [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return(OXYLOSS)
 
-/obj/item/restraints/Destroy()
+/obj/item/restraints/Deinitialize()
 	if(iscarbon(loc))
 		var/mob/living/carbon/M = loc
 		if(M.handcuffed == src)

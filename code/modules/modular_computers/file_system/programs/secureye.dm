@@ -52,7 +52,7 @@
 	cam_background.assigned_map = map_name
 	cam_background.del_on_map_removal = FALSE
 
-/datum/computer_file/program/secureye/Destroy()
+/datum/computer_file/program/secureye/Deinitialize()
 	qdel(cam_screen)
 	QDEL_LIST(cam_plane_masters)
 	qdel(cam_background)

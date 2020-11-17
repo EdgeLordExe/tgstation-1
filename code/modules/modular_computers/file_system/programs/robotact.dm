@@ -16,7 +16,7 @@
 	///A typed reference to the computer, specifying the borg tablet type
 	var/obj/item/modular_computer/tablet/integrated/tablet
 
-/datum/computer_file/program/robotact/Destroy()
+/datum/computer_file/program/robotact/Deinitialize()
 	tablet = null
 	return ..()
 

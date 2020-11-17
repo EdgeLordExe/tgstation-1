@@ -53,7 +53,7 @@
 
 	. = ..()
 
-/obj/machinery/chem_master/Destroy()
+/obj/machinery/chem_master/Deinitialize()
 	QDEL_NULL(beaker)
 	QDEL_NULL(bottle)
 	return ..()

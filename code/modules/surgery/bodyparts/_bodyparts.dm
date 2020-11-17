@@ -103,7 +103,7 @@
 		RegisterSignal(src, SIGNAL_REMOVETRAIT(TRAIT_PARALYSIS), .proc/on_paralysis_trait_loss)
 
 
-/obj/item/bodypart/Destroy()
+/obj/item/bodypart/Deinitialize()
 	if(owner)
 		owner.remove_bodypart(src)
 		set_owner(null)

@@ -12,7 +12,7 @@
 	///Where we cannot create the rune?
 	var/static/list/blacklisted_turfs = typecacheof(list(/turf/closed,/turf/open/space,/turf/open/lava))
 
-/obj/item/forbidden_book/Destroy()
+/obj/item/forbidden_book/Deinitialize()
 	last_user = null
 	. = ..()
 

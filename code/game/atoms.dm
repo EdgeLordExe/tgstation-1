@@ -90,7 +90,7 @@
 
 	var/list/alternate_appearances
 
-	///Mobs that are currently do_after'ing this atom, to be cleared from on Destroy()
+	///Mobs that are currently do_after'ing this atom, to be cleared from on Deinitialize()
 	var/list/targeted_by
 
 	/// Last appearance of the atom for demo saving purposes
@@ -266,7 +266,7 @@
   * * clears overlays and priority overlays
   * * clears the light object
   */
-/atom/Destroy()
+/atom/Deinitialize()
 	if(alternate_appearances)
 		for(var/K in alternate_appearances)
 			var/datum/atom_hud/alternate_appearance/AA = alternate_appearances[K]

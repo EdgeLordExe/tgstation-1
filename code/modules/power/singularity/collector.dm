@@ -31,7 +31,7 @@
 	desc = "A device which uses Hawking Radiation and plasma to produce power. This model allows access by Atmospheric Technicians."
 	req_access = list(ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS)
 
-/obj/machinery/power/rad_collector/Destroy()
+/obj/machinery/power/rad_collector/Deinitialize()
 	return ..()
 
 /obj/machinery/power/rad_collector/should_have_node()

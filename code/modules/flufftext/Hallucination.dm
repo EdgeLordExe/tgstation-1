@@ -57,7 +57,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	target.set_screwyhud(SCREWYHUD_NONE)
 	target.SetSleeping(0)
 
-/datum/hallucination/Destroy()
+/datum/hallucination/Deinitialize()
 	target.investigate_log("was afflicted with a hallucination of type [type] by [natural?"hallucination status":"an external source"]. [feedback_details]", INVESTIGATE_HALLUCINATIONS)
 	target = null
 	return ..()
@@ -137,7 +137,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	. = ..()
 	Show()
 
-/obj/effect/hallucination/simple/Destroy()
+/obj/effect/hallucination/simple/Deinitialize()
 	if(target.client)
 		target.client.images.Remove(current_image)
 	active = FALSE
@@ -216,7 +216,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	if(target.client)
 		target.client.images |= flood_images
 
-/datum/hallucination/fake_flood/Destroy()
+/datum/hallucination/fake_flood/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	qdel(flood_turfs)
 	flood_turfs = list()
@@ -339,7 +339,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	sleep(30)
 	qdel(src)
 
-/datum/hallucination/oh_yeah/Destroy()
+/datum/hallucination/oh_yeah/Deinitialize()
 	if(target.client)
 		target.client.images.Remove(fakebroken)
 		target.client.images.Remove(fakerune)
@@ -569,7 +569,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	if(duration)
 		QDEL_IN(src, duration)
 
-/datum/hallucination/delusion/Destroy()
+/datum/hallucination/delusion/Deinitialize()
 	for(var/image/I in delusions)
 		if(target.client)
 			target.client.images.Remove(I)
@@ -611,7 +611,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 		target.client.images |= A
 	QDEL_IN(src, duration)
 
-/datum/hallucination/self_delusion/Destroy()
+/datum/hallucination/self_delusion/Deinitialize()
 	if(target.client)
 		target.client.images.Remove(delusion)
 	return ..()
@@ -1086,7 +1086,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	show_icon()
 	QDEL_IN(src, rand(200, 450))
 
-/obj/effect/hallucination/danger/Destroy()
+/obj/effect/hallucination/danger/Deinitialize()
 	clear_icon()
 	. = ..()
 
@@ -1134,7 +1134,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	if(DT_PROB(45, delta_time))
 		step(src,pick(GLOB.alldirs))
 
-/obj/effect/hallucination/danger/anomaly/Destroy()
+/obj/effect/hallucination/danger/anomaly/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

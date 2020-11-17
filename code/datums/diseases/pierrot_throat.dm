@@ -55,7 +55,7 @@
 	speech_args[SPEECH_MESSAGE] = message
 
 
-/datum/disease/pierrot_throat/Destroy()
+/datum/disease/pierrot_throat/Deinitialize()
 	UnregisterSignal(affected_mob, COMSIG_MOB_SAY)
 	return ..()
 

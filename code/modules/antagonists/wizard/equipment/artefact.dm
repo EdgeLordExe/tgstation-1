@@ -165,7 +165,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/scrying/Destroy()
+/obj/item/scrying/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -461,7 +461,7 @@
 	on_cooldown = 2
 	addtimer(VARSET_CALLBACK(src, on_cooldown, 0), 4 SECONDS)
 
-/obj/item/warpwhistle/Destroy()
+/obj/item/warpwhistle/Deinitialize()
 	if(on_cooldown == 1 && last_user) //Flute got dunked somewhere in the teleport
 		end_effect(last_user)
 	return ..()

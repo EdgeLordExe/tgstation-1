@@ -111,7 +111,7 @@
 	if(!(. & EMP_PROTECT_SELF))
 		qdel(src)
 
-/obj/item/mecha_parts/mecha_tracking/Destroy()
+/obj/item/mecha_parts/mecha_tracking/Deinitialize()
 	if(chassis)
 		if(src in chassis.trackers)
 			chassis.trackers -= src

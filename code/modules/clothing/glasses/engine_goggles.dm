@@ -31,7 +31,7 @@
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
 
-/obj/item/clothing/glasses/meson/engine/Destroy()
+/obj/item/clothing/glasses/meson/engine/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

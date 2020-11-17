@@ -8,7 +8,7 @@
 	w_class = WEIGHT_CLASS_HUGE
 	flags_1 = CONDUCT_1
 
-/obj/item/assembly/shock_kit/Destroy()
+/obj/item/assembly/shock_kit/Deinitialize()
 	qdel(part1)
 	qdel(part2)
 	return ..()

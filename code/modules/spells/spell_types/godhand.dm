@@ -40,7 +40,7 @@
 	if(charges <= 0)
 		qdel(src)
 
-/obj/item/melee/touch_attack/Destroy()
+/obj/item/melee/touch_attack/Deinitialize()
 	if(attached_spell)
 		attached_spell.on_hand_destroy(src)
 	return ..()

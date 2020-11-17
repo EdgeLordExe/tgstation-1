@@ -204,7 +204,7 @@
 	var/list/repairable_damage = list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH)
 	selectable = 0
 
-/obj/item/mecha_parts/mecha_equipment/repair_droid/Destroy()
+/obj/item/mecha_parts/mecha_equipment/repair_droid/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	chassis?.cut_overlay(droid_overlay)
 	return ..()
@@ -280,7 +280,7 @@
 	var/list/use_channels = list(AREA_USAGE_EQUIP,AREA_USAGE_ENVIRON,AREA_USAGE_LIGHT)
 	selectable = FALSE
 
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay/Destroy()
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -364,7 +364,7 @@
 	. = ..()
 	generator_init()
 
-/obj/item/mecha_parts/mecha_equipment/generator/Destroy()
+/obj/item/mecha_parts/mecha_equipment/generator/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -480,7 +480,7 @@
 		chassis.active_thrusters = null
 	return ..()
 
-/obj/item/mecha_parts/mecha_equipment/thrusters/Destroy()
+/obj/item/mecha_parts/mecha_equipment/thrusters/Deinitialize()
 	if(chassis?.active_thrusters == src)
 		chassis.active_thrusters = null
 	return ..()

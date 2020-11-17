@@ -29,7 +29,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	if(currentArea.type == /area/ruin/space/has_grav/hilbertresearchfacility)
 		ruinSpawned = TRUE
 
-/obj/item/hilbertshotel/Destroy()
+/obj/item/hilbertshotel/Deinitialize()
 	ejectRooms()
 	return ..()
 

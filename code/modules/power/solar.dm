@@ -39,7 +39,7 @@
 	connect_to_network()
 	RegisterSignal(SSsun, COMSIG_SUN_MOVED, .proc/queue_update_solar_exposure)
 
-/obj/machinery/power/solar/Destroy()
+/obj/machinery/power/solar/Deinitialize()
 	unset_control() //remove from control computer
 	return ..()
 
@@ -320,7 +320,7 @@
 	if(powernet)
 		set_panels(azimuth_target)
 
-/obj/machinery/power/solar_control/Destroy()
+/obj/machinery/power/solar_control/Deinitialize()
 	for(var/obj/machinery/power/solar/M in connected_panels)
 		M.unset_control()
 	if(connected_tracker)

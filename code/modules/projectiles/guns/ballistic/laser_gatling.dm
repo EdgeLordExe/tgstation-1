@@ -22,7 +22,7 @@
 	gun = new(src)
 	START_PROCESSING(SSobj, src)
 
-/obj/item/minigunpack/Destroy()
+/obj/item/minigunpack/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

@@ -18,7 +18,7 @@
 	display_name = "Orbital Pad - [get_area_name(src)]"
 	GLOB.mechpad_list += src
 
-/obj/machinery/mechpad/Destroy()
+/obj/machinery/mechpad/Deinitialize()
 	if(connected_console)
 		connected_console.connected_mechpad = null
 		connected_console = null

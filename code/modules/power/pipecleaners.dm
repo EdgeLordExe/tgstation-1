@@ -99,7 +99,7 @@ By design, d1 is the smallest direction and d2 is the highest
 		pipe_cleaner_color = pipe_cleaner_colors[pipe_cleaner_color]
 	update_icon()
 
-/obj/structure/pipe_cleaner/Destroy()					// called when a pipe_cleaner is deleted
+/obj/structure/pipe_cleaner/Deinitialize()					// called when a pipe_cleaner is deleted
 	//If we have a stored item at this point, lets just delete it, since that should be
 	//handled by deconstruction
 	if(stored)

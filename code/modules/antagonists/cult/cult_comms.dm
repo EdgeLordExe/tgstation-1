@@ -234,7 +234,7 @@
 		return FALSE
 	return ..()
 
-/datum/action/innate/cult/master/cultmark/Destroy()
+/datum/action/innate/cult/master/cultmark/Deinitialize()
 	QDEL_NULL(CM)
 	return ..()
 
@@ -247,7 +247,7 @@
 	ranged_mousepointer = 'icons/effects/mouse_pointers/cult_target.dmi'
 	var/datum/action/innate/cult/master/cultmark/attached_action
 
-/obj/effect/proc_holder/cultmark/Destroy()
+/obj/effect/proc_holder/cultmark/Deinitialize()
 	attached_action = null
 	return ..()
 
@@ -405,7 +405,7 @@
 		return FALSE
 	return ..()
 
-/datum/action/innate/cult/master/pulse/Destroy()
+/datum/action/innate/cult/master/pulse/Deinitialize()
 	PM.attached_action = null //What the fuck is even going on here.
 	QDEL_NULL(PM)
 	return ..()
@@ -420,7 +420,7 @@
 	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
 	var/datum/action/innate/cult/master/pulse/attached_action
 
-/obj/effect/proc_holder/pulse/Destroy()
+/obj/effect/proc_holder/pulse/Deinitialize()
 	attached_action = null
 	return ..()
 

@@ -106,7 +106,7 @@
 		inserted_key.equip_to_best_slot(user, check_hand = FALSE)
 	inserted_key = null
 
-/obj/vehicle/sealed/Destroy()
+/obj/vehicle/sealed/Deinitialize()
 	dump_mobs()
 	return ..()
 

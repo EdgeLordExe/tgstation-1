@@ -19,7 +19,7 @@
 		return "It is currently sustaining a blobbernaut, making it fragile and unable to produce blob spores."
 	return "Will produce a blob spore every few seconds."
 
-/obj/structure/blob/factory/Destroy()
+/obj/structure/blob/factory/Deinitialize()
 	for(var/mob/living/simple_animal/hostile/blob/blobspore/spore in spores)
 		if(spore.factory == src)
 			spore.factory = null

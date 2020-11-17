@@ -171,7 +171,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 	SSticker.news_report = BLOB_WIN
 	SSticker.force_ending = 1
 
-/mob/camera/blob/Destroy()
+/mob/camera/blob/Deinitialize()
 	for(var/BL in GLOB.blobs)
 		var/obj/structure/blob/B = BL
 		if(B && B.overmind == src)

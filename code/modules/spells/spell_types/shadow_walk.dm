@@ -76,7 +76,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/effect/dummy/phased_mob/shadow/Destroy()
+/obj/effect/dummy/phased_mob/shadow/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

@@ -16,7 +16,7 @@
 	name = "record"
 	var/list/fields = list()
 
-/datum/data/record/Destroy()
+/datum/data/record/Deinitialize()
 	if(src in GLOB.data_core.medical)
 		GLOB.data_core.medical -= src
 	if(src in GLOB.data_core.security)

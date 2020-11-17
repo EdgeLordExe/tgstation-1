@@ -25,7 +25,7 @@
 	. = ..()
 	GLOB.pinpointer_list += src
 
-/obj/item/pinpointer/Destroy()
+/obj/item/pinpointer/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	GLOB.pinpointer_list -= src
 	target = null
@@ -189,7 +189,7 @@
 	desc = "A handheld tracking device that locks onto its other half of the matching pair."
 	var/other_pair
 
-/obj/item/pinpointer/pair/Destroy()
+/obj/item/pinpointer/pair/Deinitialize()
 	other_pair = null
 	. = ..()
 
@@ -229,6 +229,6 @@
 /obj/item/pinpointer/shuttle/scan_for_target()
 	target = shuttleport
 
-/obj/item/pinpointer/shuttle/Destroy()
+/obj/item/pinpointer/shuttle/Deinitialize()
 	shuttleport = null
 	. = ..()

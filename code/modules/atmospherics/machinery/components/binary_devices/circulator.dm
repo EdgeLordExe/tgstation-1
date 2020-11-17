@@ -29,7 +29,7 @@
 	. = ..()
 	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE | ROTATION_COUNTERCLOCKWISE | ROTATION_VERBS )
 
-/obj/machinery/atmospherics/components/binary/circulator/Destroy()
+/obj/machinery/atmospherics/components/binary/circulator/Deinitialize()
 	if(generator)
 		disconnectFromGenerator()
 	return ..()

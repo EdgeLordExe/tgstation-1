@@ -22,7 +22,7 @@
 	var/warned = FALSE
 	var/list/calculated_projectile_vars
 
-/obj/machinery/manned_turret/Destroy()
+/obj/machinery/manned_turret/Deinitialize()
 	target = null
 	target_turf = null
 	..()
@@ -191,7 +191,7 @@
 	if(!istype(turret))
 		return INITIALIZE_HINT_QDEL
 
-/obj/item/gun_control/Destroy()
+/obj/item/gun_control/Deinitialize()
 	turret = null
 	..()
 

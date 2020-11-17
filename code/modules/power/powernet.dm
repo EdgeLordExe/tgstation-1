@@ -18,7 +18,7 @@
 /datum/powernet/New()
 	SSmachines.powernets += src
 
-/datum/powernet/Destroy()
+/datum/powernet/Deinitialize()
 	//Go away references, you suck!
 	for(var/obj/structure/cable/C in cables)
 		cables -= C

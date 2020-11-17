@@ -24,7 +24,7 @@
 	SSresearch.servers |= src
 	current_temp = get_env_temp()
 
-/obj/machinery/rnd/server/Destroy()
+/obj/machinery/rnd/server/Deinitialize()
 	SSresearch.servers -= src
 	return ..()
 

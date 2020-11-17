@@ -17,7 +17,7 @@
 /obj/effect/cult_turf/overlay/singularity_pull()
 	return
 
-/obj/effect/cult_turf/overlay/Destroy()
+/obj/effect/cult_turf/overlay/Deinitialize()
 	if(linked)
 		linked = null
 	. = ..()

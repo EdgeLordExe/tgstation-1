@@ -31,7 +31,7 @@
 	if(!pin)
 		pin = new
 
-/obj/item/gun/blastcannon/Destroy()
+/obj/item/gun/blastcannon/Deinitialize()
 	QDEL_NULL(bomb)
 	return ..()
 

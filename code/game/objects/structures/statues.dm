@@ -316,7 +316,7 @@
 	/// Currently sculpting
 	var/sculpting = FALSE
 
-/obj/item/chisel/Destroy()
+/obj/item/chisel/Deinitialize()
 	prepared_block = null
 	tracked_user = null
 	return ..()
@@ -431,7 +431,7 @@
 	/// HSV color filters parameters
 	var/static/list/greyscale_with_value_bump = list(0,0,0, 0,0,0, 0,0,1, 0,0,-0.05)
 
-/obj/structure/carving_block/Destroy()
+/obj/structure/carving_block/Deinitialize()
 	current_target = null
 	target_appearance_with_filters = null
 	return ..()
@@ -542,7 +542,7 @@
 	var/mutable_appearance/content_ma
 	var/static/list/greyscale_with_value_bump = list(0,0,0, 0,0,0, 0,0,1, 0,0,-0.05)
 
-/obj/structure/statue/custom/Destroy()
+/obj/structure/statue/custom/Deinitialize()
 	content_ma = null
 	return ..()
 

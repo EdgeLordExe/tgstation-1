@@ -142,7 +142,7 @@
 	if(new_range)
 		instrument_range = new_range
 
-/datum/song/Destroy()
+/datum/song/Deinitialize()
 	stop_playing()
 	SSinstruments.on_song_del(src)
 	lines = null

@@ -250,7 +250,7 @@
 		fried.forceMove(src)
 
 
-/obj/item/food/deepfryholder/Destroy()
+/obj/item/food/deepfryholder/Deinitialize()
 	if(contents)
 		QDEL_LIST(contents)
 	return ..()

@@ -12,7 +12,7 @@ GLOBAL_LIST_EMPTY(GPS_list)
 	gpstag = _gpstag
 	GLOB.GPS_list += src
 
-/datum/component/gps/Destroy()
+/datum/component/gps/Deinitialize()
 	GLOB.GPS_list -= src
 	return ..()
 

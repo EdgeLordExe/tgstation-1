@@ -47,7 +47,7 @@
 	UnregisterSignal(parent, COMSIG_PARENT_ATTACKBY)
 	UnregisterSignal(parent, COMSIG_ATOM_FIRE_ACT)
 
-/datum/component/thermite/Destroy()
+/datum/component/thermite/Deinitialize()
 	var/turf/master = parent
 	master.cut_overlay(overlay)
 	return ..()

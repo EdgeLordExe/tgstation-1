@@ -6,7 +6,7 @@
 	density = TRUE
 	deconstructible = FALSE
 
-/obj/structure/fluff/iced_abductor/Destroy()
+/obj/structure/fluff/iced_abductor/Deinitialize()
 	var/turf/T = get_turf(src)
 	new /obj/effect/mob_spawn/human/abductor(T)
 	. = ..()

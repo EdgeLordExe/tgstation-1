@@ -33,7 +33,7 @@ GLOBAL_PROTECT(protected_ranks)
 	if(init_edit_rights)
 		can_edit_rights = init_edit_rights
 
-/datum/admin_rank/Destroy()
+/datum/admin_rank/Deinitialize()
 	if(IsAdminAdvancedProcCall())
 		var/msg = " has tried to elevate permissions!"
 		message_admins("[key_name_admin(usr)][msg]")

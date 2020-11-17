@@ -19,7 +19,7 @@
 	cl = C
 	cl.images += I
 
-/obj/effect/buildmode_line/Destroy()
+/obj/effect/buildmode_line/Deinitialize()
 	if(I)
 		if(istype(cl))
 			cl.images -= I

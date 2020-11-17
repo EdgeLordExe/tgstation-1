@@ -4,7 +4,7 @@
 	/// Handles an internal ore box for working mechs
 	var/obj/structure/ore_box/box
 
-/obj/vehicle/sealed/mecha/working/Destroy()
+/obj/vehicle/sealed/mecha/working/Deinitialize()
 	QDEL_NULL(box)
 	return ..()
 

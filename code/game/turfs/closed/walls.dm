@@ -46,7 +46,7 @@
 		underlays += underlay_appearance
 
 
-/turf/closed/wall/Destroy()
+/turf/closed/wall/Deinitialize()
 	if(is_station_level(z))
 		GLOB.station_turfs -= src
 	return ..()

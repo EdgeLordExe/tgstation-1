@@ -36,7 +36,7 @@
 	. = ..()
 	. += "<span class='notice'>[reagents.total_volume]/[reagents.maximum_volume] liquids remaining.</span>"
 
-/obj/machinery/shower/Destroy()
+/obj/machinery/shower/Deinitialize()
 	QDEL_NULL(soundloop)
 	QDEL_NULL(reagents)
 	return ..()

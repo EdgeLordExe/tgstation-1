@@ -25,7 +25,7 @@
 	..()
 	START_PROCESSING(SSobj, src)
 
-/obj/structure/transit_tube/station/Destroy()
+/obj/structure/transit_tube/station/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

@@ -35,7 +35,7 @@
 	setDir(pick(GLOB.alldirs))
 	update_icon()
 
-/obj/item/ammo_casing/Destroy()
+/obj/item/ammo_casing/Deinitialize()
 	. = ..()
 
 	var/turf/T = get_turf(src)

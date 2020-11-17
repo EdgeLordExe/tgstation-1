@@ -71,7 +71,7 @@
 	//Ding ding
 	finish()
 
-/obj/effect/sliding_puzzle/Destroy()
+/obj/effect/sliding_puzzle/Deinitialize()
 	if(LAZYLEN(elements))
 		for(var/obj/structure/puzzle_element/E in elements)
 			E.source = null
@@ -223,7 +223,7 @@
 		puzzle_small.pixel_y = 7
 		add_overlay(puzzle_small)
 
-/obj/structure/puzzle_element/Destroy()
+/obj/structure/puzzle_element/Deinitialize()
 	if(source)
 		source.elements -= src
 		source.validate()
@@ -280,7 +280,7 @@
 	I.Scale(96,96)
 	return I
 
-/obj/effect/sliding_puzzle/prison/Destroy()
+/obj/effect/sliding_puzzle/prison/Deinitialize()
 	if(prisoner)
 		to_chat(prisoner,"<span class='userdanger'>With the cube broken by force, you can feel your body falling apart.</span>")
 		prisoner.death()

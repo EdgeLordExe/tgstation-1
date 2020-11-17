@@ -196,7 +196,7 @@ GLOBAL_LIST_EMPTY(employmentCabinets)
 	. = ..()
 	GLOB.employmentCabinets += src
 
-/obj/structure/filingcabinet/employment/Destroy()
+/obj/structure/filingcabinet/employment/Deinitialize()
 	GLOB.employmentCabinets -= src
 	return ..()
 

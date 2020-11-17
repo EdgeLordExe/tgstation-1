@@ -18,7 +18,7 @@
 	. = ..()
 	tank = new
 
-/obj/structure/closet/crate/critter/Destroy()
+/obj/structure/closet/crate/critter/Deinitialize()
 	var/turf/T = get_turf(src)
 	if(tank)
 		tank.forceMove(T)

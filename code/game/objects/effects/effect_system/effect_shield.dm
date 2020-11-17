@@ -13,7 +13,7 @@
 	old_heat_capacity=location.heat_capacity
 	location.heat_capacity = INFINITY
 
-/obj/effect/shield/Destroy()
+/obj/effect/shield/Deinitialize()
 	var/turf/location = get_turf(src)
 	location.heat_capacity=old_heat_capacity
 	..()

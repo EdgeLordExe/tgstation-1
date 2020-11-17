@@ -40,7 +40,7 @@
 /datum/cinematic/New()
 	screen = new(src)
 
-/datum/cinematic/Destroy()
+/datum/cinematic/Deinitialize()
 	for(var/CC in watching)
 		if(!CC)
 			continue

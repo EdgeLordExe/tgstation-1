@@ -219,7 +219,7 @@
 	else
 		..()
 
-/obj/item/organ/brain/Destroy() //copypasted from MMIs.
+/obj/item/organ/brain/Deinitialize() //copypasted from MMIs.
 	if(brainmob)
 		QDEL_NULL(brainmob)
 	QDEL_LIST(traumas)

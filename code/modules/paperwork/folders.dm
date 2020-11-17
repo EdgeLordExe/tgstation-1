@@ -56,7 +56,7 @@
 			name = "folder[(inputvalue ? " - '[inputvalue]'" : null)]"
 
 
-/obj/item/folder/Destroy()
+/obj/item/folder/Deinitialize()
 	for(var/obj/important_thing in contents)
 		if(!(important_thing.resistance_flags & INDESTRUCTIBLE))
 			continue

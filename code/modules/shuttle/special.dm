@@ -64,7 +64,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/structure/table/abductor/wabbajack/Destroy()
+/obj/structure/table/abductor/wabbajack/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
@@ -169,7 +169,7 @@
 	RegisterSignal(src, COMSIG_ENTER_AREA, .proc/check_barstaff_godmode)
 	check_barstaff_godmode()
 
-/mob/living/simple_animal/hostile/alien/maid/barmaid/Destroy()
+/mob/living/simple_animal/hostile/alien/maid/barmaid/Deinitialize()
 	qdel(access_card)
 	. = ..()
 

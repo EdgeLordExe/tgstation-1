@@ -41,7 +41,7 @@
 	udder = new()
 	. = ..()
 
-/mob/living/simple_animal/hostile/retaliate/goat/Destroy()
+/mob/living/simple_animal/hostile/retaliate/goat/Deinitialize()
 	qdel(udder)
 	udder = null
 	return ..()
@@ -155,7 +155,7 @@
 /mob/living/simple_animal/cow/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_COW, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
-/mob/living/simple_animal/cow/Destroy()
+/mob/living/simple_animal/cow/Deinitialize()
 	qdel(udder)
 	udder = null
 	return ..()
@@ -355,7 +355,7 @@
 /mob/living/simple_animal/chicken/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CHICKEN, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
-/mob/living/simple_animal/chicken/Destroy()
+/mob/living/simple_animal/chicken/Deinitialize()
 	--chicken_count
 	return ..()
 

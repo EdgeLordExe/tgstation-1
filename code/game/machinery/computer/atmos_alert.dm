@@ -15,7 +15,7 @@
 	. = ..()
 	set_frequency(receive_frequency)
 
-/obj/machinery/computer/atmos_alert/Destroy()
+/obj/machinery/computer/atmos_alert/Deinitialize()
 	SSradio.remove_object(src, receive_frequency)
 	return ..()
 

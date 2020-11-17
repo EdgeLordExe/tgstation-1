@@ -32,7 +32,7 @@
 	if(T && is_station_level(T.z))
 		SSblackbox.record_feedback("tally", "station_mess_created", 1, name)
 
-/obj/effect/decal/cleanable/Destroy()
+/obj/effect/decal/cleanable/Deinitialize()
 	var/turf/T = get_turf(src)
 	if(T && is_station_level(T.z))
 		SSblackbox.record_feedback("tally", "station_mess_destroyed", 1, name)

@@ -61,7 +61,7 @@
 	eye = new /mob/camera/ai_eye/remote/ai_detector()
 	toggle_action = new /datum/action/item_action/toggle_multitool(src)
 
-/obj/item/multitool/ai_detect/Destroy()
+/obj/item/multitool/ai_detect/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	if(hud_on && ismob(loc))
 		remove_hud(loc)

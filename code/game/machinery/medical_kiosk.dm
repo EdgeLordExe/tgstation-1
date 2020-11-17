@@ -118,7 +118,7 @@
 	playsound(src, 'sound/machines/click.ogg', 60, TRUE)
 	scanner_wand = null
 
-/obj/machinery/medical_kiosk/Destroy()
+/obj/machinery/medical_kiosk/Deinitialize()
 	qdel(scanner_wand)
 	return ..()
 

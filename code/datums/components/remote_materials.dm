@@ -43,7 +43,7 @@ handles linking back and forth.
 	else
 		_MakeLocal()
 
-/datum/component/remote_materials/Destroy()
+/datum/component/remote_materials/Deinitialize()
 	if (silo)
 		silo.connected -= src
 		silo.updateUsrDialog()

@@ -60,7 +60,7 @@
 	add_sensors()
 	ADD_TRAIT(src, TRAIT_ADVANCEDTOOLUSER, ROUNDSTART_TRAIT)
 
-/mob/living/silicon/Destroy()
+/mob/living/silicon/Deinitialize()
 	QDEL_NULL(radio)
 	QDEL_NULL(aicamera)
 	QDEL_NULL(builtInCamera)

@@ -152,7 +152,7 @@
 	RegisterSignal(shape, list(COMSIG_PARENT_QDELETING, COMSIG_LIVING_DEATH), .proc/shape_death)
 	RegisterSignal(stored, list(COMSIG_PARENT_QDELETING, COMSIG_LIVING_DEATH), .proc/caster_death)
 
-/obj/shapeshift_holder/Destroy()
+/obj/shapeshift_holder/Deinitialize()
 	// Restore manages signal unregistering. If restoring is TRUE, we've already unregistered the signals and we're here
 	// because restore() qdel'd src.
 	if(!restoring)
@@ -192,7 +192,7 @@
 		restore()
 
 /obj/shapeshift_holder/proc/restore(death=FALSE)
-	// Destroy() calls this proc if it hasn't been called. Unregistering here prevents multiple qdel loops
+	// Deinitialize() calls this proc if it hasn't been called. Unregistering here prevents multiple qdel loops
 	// when caster and shape both die at the same time.
 	UnregisterSignal(shape, list(COMSIG_PARENT_QDELETING, COMSIG_LIVING_DEATH))
 	UnregisterSignal(stored, list(COMSIG_PARENT_QDELETING, COMSIG_LIVING_DEATH))

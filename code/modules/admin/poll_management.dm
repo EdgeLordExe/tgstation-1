@@ -339,7 +339,7 @@
 	edit_ready = dbload
 	GLOB.polls += src
 
-/datum/poll_question/Destroy()
+/datum/poll_question/Deinitialize()
 	GLOB.polls -= src
 	return ..()
 
@@ -624,7 +624,7 @@
 	src.default_percentage_calc = text2num(default_percentage_calc)
 	GLOB.poll_options += src
 
-/datum/poll_option/Destroy()
+/datum/poll_option/Deinitialize()
 	parent_poll.options -= src
 	parent_poll = null
 	GLOB.poll_options -= src

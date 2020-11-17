@@ -424,7 +424,7 @@
 		qdel(src)
 	. = ..()
 
-/obj/item/riding_offhand/Destroy()
+/obj/item/riding_offhand/Deinitialize()
 	var/atom/movable/AM = parent
 	if(selfdeleting)
 		if(rider in AM.buckled_mobs)

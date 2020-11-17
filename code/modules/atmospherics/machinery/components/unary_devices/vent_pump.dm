@@ -40,7 +40,7 @@
 	if(!id_tag)
 		id_tag = assign_uid_vents()
 
-/obj/machinery/atmospherics/components/unary/vent_pump/Destroy()
+/obj/machinery/atmospherics/components/unary/vent_pump/Deinitialize()
 	var/area/vent_area = get_area(src)
 	if(vent_area)
 		vent_area.air_vent_info -= id_tag

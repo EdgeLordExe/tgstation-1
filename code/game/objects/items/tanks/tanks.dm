@@ -69,7 +69,7 @@
 /obj/item/tank/proc/populate_gas()
 	return
 
-/obj/item/tank/Destroy()
+/obj/item/tank/Deinitialize()
 	if(air_contents)
 		QDEL_NULL(air_contents)
 

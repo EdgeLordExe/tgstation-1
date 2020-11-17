@@ -27,7 +27,7 @@
 /obj/item/assembly/infra/proc/after_rotation()
 	refreshBeam()
 
-/obj/item/assembly/infra/Destroy()
+/obj/item/assembly/infra/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	listeningTo = null
 	QDEL_LIST(beams)

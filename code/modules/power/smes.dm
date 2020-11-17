@@ -178,7 +178,7 @@
 	for(var/obj/item/stock_parts/cell/cell in component_parts)
 		cell.charge = (charge / capacity) * cell.maxcharge
 
-/obj/machinery/power/smes/Destroy()
+/obj/machinery/power/smes/Deinitialize()
 	if(SSticker.IsRoundInProgress())
 		var/turf/T = get_turf(src)
 		message_admins("SMES deleted at [ADMIN_VERBOSEJMP(T)]")

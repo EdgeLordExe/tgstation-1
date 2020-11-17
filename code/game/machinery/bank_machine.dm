@@ -18,7 +18,7 @@
 	radio.canhear_range = 0
 	radio.recalculateChannels()
 
-/obj/machinery/computer/bank_machine/Destroy()
+/obj/machinery/computer/bank_machine/Deinitialize()
 	QDEL_NULL(radio)
 	. = ..()
 

@@ -19,7 +19,7 @@
 	unwrap_contents()
 	qdel(src)
 
-/obj/structure/big_delivery/Destroy()
+/obj/structure/big_delivery/Deinitialize()
 	var/turf/T = get_turf(src)
 	for(var/atom/movable/AM in contents)
 		AM.forceMove(T)

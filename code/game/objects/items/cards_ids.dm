@@ -89,7 +89,7 @@
 		access = text2access(access_txt)
 	RegisterSignal(src, COMSIG_ATOM_UPDATED_ICON, .proc/update_in_wallet)
 
-/obj/item/card/id/Destroy()
+/obj/item/card/id/Deinitialize()
 	if (registered_account)
 		registered_account.bank_cards -= src
 	if (my_store && my_store.my_card == src)
@@ -727,7 +727,7 @@ update_label()
 		desc = "Provides access to the [department_name]."
 	SSeconomy.dep_cards += src
 
-/obj/item/card/id/departmental_budget/Destroy()
+/obj/item/card/id/departmental_budget/Deinitialize()
 	SSeconomy.dep_cards -= src
 	return ..()
 

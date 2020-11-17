@@ -43,7 +43,7 @@
 		//Only then can we tell the duct next to us they can connect, because only then is the component really added. this was a fun one
 		addtimer(CALLBACK(src, .proc/enable), 0)
 
-/datum/component/plumbing/Destroy()
+/datum/component/plumbing/Deinitialize()
 	ducts = null
 	reagents = null
 	return ..()

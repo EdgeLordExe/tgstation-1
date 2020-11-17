@@ -222,7 +222,7 @@
 	..()
 	update_icon()
 
-/obj/item/ticket_machine_ticket/Destroy()
+/obj/item/ticket_machine_ticket/Deinitialize()
 	if(owner && source)
 		source.ticket_holders -= owner
 		source.tickets[ticket_number] = null

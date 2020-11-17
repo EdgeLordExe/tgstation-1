@@ -14,7 +14,7 @@
 	C.reagents.metabolize(C, can_overdose = TRUE)
 	C.reagents.clear_reagents()
 
-/datum/unit_test/metabolization/Destroy()
+/datum/unit_test/metabolization/Deinitialize()
 	SSmobs.ignite()
 	return ..()
 

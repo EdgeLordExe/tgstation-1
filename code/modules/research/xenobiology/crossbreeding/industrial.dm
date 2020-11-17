@@ -24,7 +24,7 @@ Industrial extracts:
 	create_reagents(100, INJECTABLE | DRAWABLE)
 	START_PROCESSING(SSobj,src)
 
-/obj/item/slimecross/industrial/Destroy()
+/obj/item/slimecross/industrial/Deinitialize()
 	STOP_PROCESSING(SSobj,src)
 	return ..()
 

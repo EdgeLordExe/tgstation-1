@@ -24,7 +24,7 @@
 	sparks.set_up(2, 0, src)
 	sparks.attach(src)
 
-/obj/item/assembly/igniter/Destroy()
+/obj/item/assembly/igniter/Deinitialize()
 	if(sparks)
 		qdel(sparks)
 	sparks = null

@@ -40,7 +40,7 @@
 		qdel(src)
 	..()
 
-/obj/effect/immovablerod/wizard/Destroy()
+/obj/effect/immovablerod/wizard/Deinitialize()
 	if(wizard)
 		wizard.status_flags &= ~GODMODE
 		wizard.notransform = FALSE

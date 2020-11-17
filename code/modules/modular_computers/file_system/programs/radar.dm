@@ -35,7 +35,7 @@
 	STOP_PROCESSING(SSfastprocess, src)
 	return ..()
 
-/datum/computer_file/program/radar/Destroy()
+/datum/computer_file/program/radar/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	return ..()
 

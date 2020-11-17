@@ -45,7 +45,7 @@
 		4 ; "graft_mushroom" , \
 		1 ; "graft_doom" )
 
-/obj/item/graft/Destroy()
+/obj/item/graft/Deinitialize()
 	QDEL_NULL(stored_trait)
 	return ..()
 

@@ -439,7 +439,7 @@ SUBSYSTEM_DEF(timer)
 
 	bucketJoin()
 
-/datum/timedevent/Destroy()
+/datum/timedevent/Deinitialize()
 	..()
 	if (flags & TIMER_UNIQUE && hash)
 		SStimer.hashes -= hash

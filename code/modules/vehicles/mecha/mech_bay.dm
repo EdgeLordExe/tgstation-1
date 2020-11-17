@@ -29,7 +29,7 @@
 	. = ..()
 	recharging_turf = get_step(loc, dir)
 
-/obj/machinery/mech_bay_recharge_port/Destroy()
+/obj/machinery/mech_bay_recharge_port/Deinitialize()
 	if (recharge_console && recharge_console.recharge_port == src)
 		recharge_console.recharge_port = null
 	return ..()
@@ -146,7 +146,7 @@
 	. = ..()
 	reconnect()
 
-/obj/machinery/computer/mech_bay_power_console/Destroy()
+/obj/machinery/computer/mech_bay_power_console/Deinitialize()
 	if (recharge_port && recharge_port.recharge_console == src)
 		recharge_port.recharge_console = null
 	return ..()

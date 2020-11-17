@@ -672,7 +672,7 @@
 	chameleon_action.chameleon_name = "Neck Accessory"
 	chameleon_action.initialize_disguises()
 
-/obj/item/clothing/neck/chameleon/Destroy()
+/obj/item/clothing/neck/chameleon/Deinitialize()
 	qdel(chameleon_action)
 	return ..()
 
@@ -694,7 +694,7 @@
 	var/cooldown = 5 MINUTES
 	var/is_active = TRUE
 
-/datum/action/item_action/chameleon/change/skillchip/Destroy()
+/datum/action/item_action/chameleon/change/skillchip/Deinitialize()
 	if(skillchip_mimic)
 		skillchip_mimic.on_removal(FALSE)
 	QDEL_NULL(skillchip_mimic)

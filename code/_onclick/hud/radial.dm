@@ -278,7 +278,7 @@ GLOBAL_LIST_EMPTY(radial_menus)
 				next_check = world.time + check_delay
 		stoplag(1)
 
-/datum/radial_menu/Destroy()
+/datum/radial_menu/Deinitialize()
 	Reset()
 	hide()
 	QDEL_NULL(custom_check_callback)

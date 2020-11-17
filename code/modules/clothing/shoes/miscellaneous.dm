@@ -351,7 +351,7 @@
 	playsound(src, 'sound/weapons/tap.ogg', 10, TRUE)
 	update_icon()
 
-/obj/item/clothing/shoes/wheelys/Destroy()
+/obj/item/clothing/shoes/wheelys/Deinitialize()
 	QDEL_NULL(wheels)
 	. = ..()
 

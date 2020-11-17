@@ -67,7 +67,7 @@
 	sparks.set_up(1, 0, src)
 	sparks.attach(src)
 
-/obj/vehicle/ridden/scooter/skateboard/Destroy()
+/obj/vehicle/ridden/scooter/skateboard/Deinitialize()
 	if(sparks)
 		QDEL_NULL(sparks)
 	. = ..()

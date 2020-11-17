@@ -321,7 +321,7 @@
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, ABSTRACT_ITEM_TRAIT)
 
-/obj/item/offhand/Destroy()
+/obj/item/offhand/Deinitialize()
 	wielded = FALSE
 	return ..()
 

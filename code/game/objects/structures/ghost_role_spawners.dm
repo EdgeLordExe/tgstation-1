@@ -27,7 +27,7 @@
 		H.underwear = "Nude" //You're a plant, partner
 		H.update_body()
 
-/obj/effect/mob_spawn/human/seed_vault/Destroy()
+/obj/effect/mob_spawn/human/seed_vault/Deinitialize()
 	new/obj/structure/fluff/empty_terrarium(get_turf(src))
 	return ..()
 
@@ -58,7 +58,7 @@
 		egg.attack_ghost(user)
 	. = ..()
 
-/obj/structure/ash_walker_eggshell/Destroy()
+/obj/structure/ash_walker_eggshell/Deinitialize()
 	if(!egg)
 		return ..()
 	var/mob/living/carbon/human/yolk = new /mob/living/carbon/human/(get_turf(src))
@@ -144,7 +144,7 @@
 	did so, it has come at a cost: your very body rejects the light, dooming you to wander endlessly in this horrible wasteland."
 	assignedrole = "Exile"
 
-/obj/effect/mob_spawn/human/exile/Destroy()
+/obj/effect/mob_spawn/human/exile/Deinitialize()
 	new/obj/structure/fluff/empty_sleeper(get_turf(src))
 	return ..()
 
@@ -301,7 +301,7 @@
 			at one of Nanotrasen's state-of-the-art research facilities, were in one of the escape pods alone and saw the red button. It was big and shiny, and it caught your eye. You pressed \
 			it, and after a terrifying and fast ride for days, you landed here. You've had time to wisen up since then, and you think that your old friends wouldn't be laughing now."
 
-/obj/effect/mob_spawn/human/hermit/Destroy()
+/obj/effect/mob_spawn/human/hermit/Deinitialize()
 	new/obj/structure/fluff/empty_cryostasis_sleeper(get_turf(src))
 	return ..()
 
@@ -363,7 +363,7 @@
 	r_pocket = /obj/item/tank/internals/emergency_oxygen
 
 
-/obj/effect/mob_spawn/human/prisoner_transport/Destroy()
+/obj/effect/mob_spawn/human/prisoner_transport/Deinitialize()
 	new/obj/structure/fluff/empty_sleeper/syndicate(get_turf(src))
 	return ..()
 
@@ -411,7 +411,7 @@
 	back = /obj/item/storage/backpack/security
 	belt = /obj/item/storage/belt/security/full
 
-/obj/effect/mob_spawn/human/hotel_staff/Destroy()
+/obj/effect/mob_spawn/human/hotel_staff/Deinitialize()
 	new/obj/structure/fluff/empty_sleeper/syndicate(get_turf(src))
 	return ..()
 
@@ -510,7 +510,7 @@
 	l_pocket = /obj/item/assembly/flash/handheld
 	assignedrole = "Ancient Crew"
 
-/obj/effect/mob_spawn/human/oldsec/Destroy()
+/obj/effect/mob_spawn/human/oldsec/Deinitialize()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
 	return ..()
 
@@ -536,7 +536,7 @@
 	l_pocket = /obj/item/tank/internals/emergency_oxygen
 	assignedrole = "Ancient Crew"
 
-/obj/effect/mob_spawn/human/oldeng/Destroy()
+/obj/effect/mob_spawn/human/oldeng/Deinitialize()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
 	return ..()
 
@@ -561,7 +561,7 @@
 	l_pocket = /obj/item/stack/medical/bruise_pack
 	assignedrole = "Ancient Crew"
 
-/obj/effect/mob_spawn/human/oldsci/Destroy()
+/obj/effect/mob_spawn/human/oldsci/Deinitialize()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
 	return ..()
 
@@ -593,7 +593,7 @@
 	var/endings = strings(PIRATE_NAMES_FILE, "endings")
 	return "[rank] [pick(beggings)][pick(endings)]"
 
-/obj/effect/mob_spawn/human/pirate/Destroy()
+/obj/effect/mob_spawn/human/pirate/Deinitialize()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
 	return ..()
 
@@ -639,7 +639,7 @@
 /datum/outfit/syndicatespace/syndicaptain/post_equip(mob/living/carbon/human/H)
 	H.faction |= ROLE_SYNDICATE
 
-/obj/effect/mob_spawn/human/syndicatespace/captain/Destroy()
+/obj/effect/mob_spawn/human/syndicatespace/captain/Deinitialize()
 	new/obj/structure/fluff/empty_sleeper/syndicate/captain(get_turf(src))
 	return ..()
 

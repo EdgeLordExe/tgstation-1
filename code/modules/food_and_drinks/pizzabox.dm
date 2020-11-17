@@ -37,7 +37,7 @@
 	update_icon()
 
 
-/obj/item/pizzabox/Destroy()
+/obj/item/pizzabox/Deinitialize()
 	unprocess()
 	return ..()
 

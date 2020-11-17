@@ -209,7 +209,7 @@
 	..()
 	toggle_ai(AI_OFF)
 
-/mob/living/simple_animal/hostile/asteroid/elite/herald/mirror/Destroy()
+/mob/living/simple_animal/hostile/asteroid/elite/herald/mirror/Deinitialize()
 	if(my_master != null)
 		my_master.my_mirror = null
 	. = ..()

@@ -105,7 +105,7 @@
 	. = ..()
 	air_update_turf(TRUE)
 
-/obj/structure/plasticflaps/Destroy()
+/obj/structure/plasticflaps/Deinitialize()
 	var/atom/oldloc = loc
 	. = ..()
 	if (oldloc)

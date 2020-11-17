@@ -50,7 +50,7 @@
 		A.totalbeauty += beautyamount
 		A.update_beauty()
 
-/datum/component/beauty/Destroy()
+/datum/component/beauty/Deinitialize()
 	. = ..()
 	var/area/A = get_area(parent)
 	if(A)

@@ -19,7 +19,7 @@
 	song = new(src, allowed_instrument_ids, instrument_range)
 	allowed_instrument_ids = null			//We don't need this clogging memory after it's used.
 
-/obj/item/instrument/Destroy()
+/obj/item/instrument/Deinitialize()
 	QDEL_NULL(song)
 	return ..()
 

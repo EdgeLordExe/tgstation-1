@@ -20,7 +20,7 @@
 	attach(atom)
 	oldposition = get_turf(atom)
 
-/datum/effect_system/trail_follow/Destroy()
+/datum/effect_system/trail_follow/Deinitialize()
 	oldposition = null
 	stop()
 	return ..()

@@ -176,6 +176,6 @@
 		step(src, direction)
 	return
 
-/obj/effect/dummy/chameleon/Destroy()
+/obj/effect/dummy/chameleon/Deinitialize()
 	master.disrupt(0)
 	return ..()

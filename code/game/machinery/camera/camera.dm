@@ -97,7 +97,7 @@
 	area_motion = A
 	create_prox_monitor()
 
-/obj/machinery/camera/Destroy()
+/obj/machinery/camera/Deinitialize()
 	if(can_use())
 		toggle_cam(null, 0) //kick anyone viewing out and remove from the camera chunks
 	GLOB.cameranet.cameras -= src

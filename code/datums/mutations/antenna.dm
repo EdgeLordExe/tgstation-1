@@ -28,7 +28,7 @@
 	if(..())
 		return
 	if(linked_radio)
-		linked_radio.Destroy()
+		linked_radio.Deinitialize()
 
 /datum/mutation/human/antenna/New(class_ = MUT_OTHER, timer, datum/mutation/human/copymut)
 	..()

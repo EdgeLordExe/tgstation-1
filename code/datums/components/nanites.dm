@@ -94,7 +94,7 @@
 								COMSIG_NANITE_SIGNAL,
 								COMSIG_NANITE_COMM_SIGNAL))
 
-/datum/component/nanites/Destroy()
+/datum/component/nanites/Deinitialize()
 	STOP_PROCESSING(SSnanites, src)
 	QDEL_LIST(programs)
 	if(host_mob)

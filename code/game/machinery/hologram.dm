@@ -127,7 +127,7 @@ Possible to do for anyone motivated enough:
 	if(on_network)
 		holopads += src
 
-/obj/machinery/holopad/Destroy()
+/obj/machinery/holopad/Deinitialize()
 	if(outgoing_call)
 		outgoing_call.ConnectionFailure(src)
 
@@ -668,7 +668,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	var/mob/living/Impersonation
 	var/datum/holocall/HC
 
-/obj/effect/overlay/holo_pad_hologram/Destroy()
+/obj/effect/overlay/holo_pad_hologram/Deinitialize()
 	Impersonation = null
 	if(!QDELETED(HC))
 		HC.Disconnect(HC.calling_holopad)

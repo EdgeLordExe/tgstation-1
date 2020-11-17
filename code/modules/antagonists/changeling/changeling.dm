@@ -56,7 +56,7 @@
 		competitive_objectives = TRUE
 		break
 
-/datum/antagonist/changeling/Destroy()
+/datum/antagonist/changeling/Deinitialize()
 	QDEL_NULL(cellular_emporium)
 	QDEL_NULL(emporium_action)
 	. = ..()
@@ -494,7 +494,7 @@
 	/// What scars the target had when we copied them, in string form (like persistent scars)
 	var/list/stored_scars
 
-/datum/changelingprofile/Destroy()
+/datum/changelingprofile/Deinitialize()
 	qdel(dna)
 	LAZYCLEARLIST(stored_scars)
 	. = ..()

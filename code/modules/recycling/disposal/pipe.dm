@@ -46,7 +46,7 @@
 
 // pipe is deleted
 // ensure if holder is present, it is expelled
-/obj/structure/disposalpipe/Destroy()
+/obj/structure/disposalpipe/Deinitialize()
 	var/obj/structure/disposalholder/H = locate() in src
 	if(H)
 		H.active = FALSE
@@ -221,7 +221,7 @@
 	. = ..()
 	getlinked()
 
-/obj/structure/disposalpipe/trunk/Destroy()
+/obj/structure/disposalpipe/trunk/Deinitialize()
 	if(linked)
 		if(istype(linked, /obj/structure/disposaloutlet))
 			var/obj/structure/disposaloutlet/D = linked

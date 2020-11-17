@@ -41,7 +41,7 @@
 	var/comp_id = 0
 	var/efficiency
 
-/obj/machinery/power/compressor/Destroy()
+/obj/machinery/power/compressor/Deinitialize()
 	if (turbine && turbine.compressor == src)
 		turbine.compressor = null
 	turbine = null
@@ -62,7 +62,7 @@
 	var/lastgen
 	var/productivity = 1
 
-/obj/machinery/power/turbine/Destroy()
+/obj/machinery/power/turbine/Deinitialize()
 	if (compressor && compressor.turbine == src)
 		compressor.turbine = null
 	compressor = null

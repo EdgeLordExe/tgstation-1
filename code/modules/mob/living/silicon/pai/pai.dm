@@ -104,7 +104,7 @@
 		hostscan = null
 	return ..()
 
-/mob/living/silicon/pai/Destroy()
+/mob/living/silicon/pai/Deinitialize()
 	QDEL_NULL(internal_instrument)
 	QDEL_NULL(hacking_cable)
 	QDEL_NULL(newscaster)

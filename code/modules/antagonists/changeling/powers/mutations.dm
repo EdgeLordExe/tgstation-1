@@ -289,7 +289,7 @@
 	gun = loc
 	. = ..()
 
-/obj/item/ammo_casing/magic/tentacle/Destroy()
+/obj/item/ammo_casing/magic/tentacle/Deinitialize()
 	gun = null
 	return ..()
 
@@ -392,7 +392,7 @@
 				L.throw_at(get_step_towards(H,L), 8, 2)
 				. = BULLET_ACT_HIT
 
-/obj/projectile/tentacle/Destroy()
+/obj/projectile/tentacle/Deinitialize()
 	qdel(chain)
 	source = null
 	return ..()

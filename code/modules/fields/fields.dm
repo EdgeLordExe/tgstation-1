@@ -40,7 +40,7 @@
 	var/list/turf/field_turfs_new = list()
 	var/list/turf/edge_turfs_new = list()
 
-/datum/proximity_monitor/advanced/Destroy()
+/datum/proximity_monitor/advanced/Deinitialize()
 	full_cleanup()
 	STOP_PROCESSING(SSfields, src)
 	return ..()
@@ -289,7 +289,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/multitool/field_debug/Destroy()
+/obj/item/multitool/field_debug/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	QDEL_NULL(current)
 	listeningTo = null

@@ -17,7 +17,7 @@
 		projector = source_projector
 		LAZYADD(projector.signs, src)
 
-/obj/structure/holosign/Destroy()
+/obj/structure/holosign/Deinitialize()
 	if(projector)
 		LAZYREMOVE(projector.signs, src)
 		projector = null

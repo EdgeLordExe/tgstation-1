@@ -21,7 +21,7 @@
 /obj/machinery/mass_driver/trash
 	id = MASSDRIVER_DISPOSALS
 
-/obj/machinery/mass_driver/Destroy()
+/obj/machinery/mass_driver/Deinitialize()
 	for(var/obj/machinery/computer/pod/control in GLOB.machines)
 		if(control.id == id)
 			control.connected = null

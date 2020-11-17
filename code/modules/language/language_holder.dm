@@ -61,7 +61,7 @@ Key procs
 			update_atom_languages(M.current)
 	get_selected_language()
 
-/datum/language_holder/Destroy()
+/datum/language_holder/Deinitialize()
 	QDEL_NULL(language_menu)
 	return ..()
 

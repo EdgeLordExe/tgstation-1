@@ -19,7 +19,7 @@
 	. = ..()
 	link_power_station()
 
-/obj/machinery/teleport/hub/Destroy()
+/obj/machinery/teleport/hub/Deinitialize()
 	if (power_station)
 		power_station.teleporter_hub = null
 		power_station = null
@@ -151,7 +151,7 @@
 	return teleporter_hub && teleporter_console
 
 
-/obj/machinery/teleport/station/Destroy()
+/obj/machinery/teleport/station/Deinitialize()
 	if(teleporter_hub)
 		teleporter_hub.power_station = null
 		teleporter_hub.update_icon()

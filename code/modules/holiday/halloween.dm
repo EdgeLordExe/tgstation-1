@@ -195,7 +195,7 @@
 	. = ..()
 	status_flags |= GODMODE //Slightly easier to maintain.
 
-/mob/living/simple_animal/hostile/clown_insane/Destroy()
+/mob/living/simple_animal/hostile/clown_insane/Deinitialize()
 	timer = null
 	return ..()
 

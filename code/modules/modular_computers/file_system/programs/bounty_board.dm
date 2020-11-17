@@ -115,6 +115,6 @@
 			bounty_text = (params["bountytext"])
 	. = TRUE
 
-/datum/computer_file/program/bounty_board/Destroy()
+/datum/computer_file/program/bounty_board/Deinitialize()
 	GLOB.allbountyboards -= computer
 	. = ..()

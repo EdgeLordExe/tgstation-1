@@ -32,7 +32,7 @@
 	else
 		default = config_entry_value
 
-/datum/config_entry/Destroy()
+/datum/config_entry/Deinitialize()
 	config.RemoveEntry(src)
 	return ..()
 

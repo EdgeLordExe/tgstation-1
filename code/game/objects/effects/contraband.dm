@@ -27,7 +27,7 @@
 
 		name = "[name] - [poster_structure.original_name]"
 
-/obj/item/poster/Destroy()
+/obj/item/poster/Deinitialize()
 	poster_structure = null
 	. = ..()
 

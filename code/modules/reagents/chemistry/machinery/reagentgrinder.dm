@@ -36,7 +36,7 @@
 	QDEL_NULL(beaker)
 	update_icon()
 
-/obj/machinery/reagentgrinder/Destroy()
+/obj/machinery/reagentgrinder/Deinitialize()
 	if(beaker)
 		beaker.forceMove(drop_location())
 	drop_all_items()

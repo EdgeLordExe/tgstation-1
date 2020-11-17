@@ -17,7 +17,7 @@
 	id = "[rand(1000, 9999)]"
 	link_power_station()
 
-/obj/machinery/computer/teleporter/Destroy()
+/obj/machinery/computer/teleporter/Deinitialize()
 	if (power_station)
 		power_station.teleporter_console = null
 		power_station = null

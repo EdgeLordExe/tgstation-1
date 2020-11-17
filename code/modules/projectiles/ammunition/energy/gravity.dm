@@ -10,7 +10,7 @@
 		gun = loc
 	. = ..()
 
-/obj/item/ammo_casing/energy/gravity/Destroy()
+/obj/item/ammo_casing/energy/gravity/Deinitialize()
 	gun = null
 	. = ..()
 

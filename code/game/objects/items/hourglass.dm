@@ -60,7 +60,7 @@
 	visible_message("<span class='notice'>[src] stops.</span>")
 	stop()
 
-/obj/item/hourglass/Destroy()
+/obj/item/hourglass/Deinitialize()
 	QDEL_NULL(countdown)
 	. = ..()
 

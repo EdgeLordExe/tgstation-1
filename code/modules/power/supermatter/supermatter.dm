@@ -336,7 +336,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 		stack_trace("Supermatter created with non-path psyOverlay variable. This can break things, please fix.")
 		psyOverlay = new()
 
-/obj/machinery/power/supermatter_crystal/Destroy()
+/obj/machinery/power/supermatter_crystal/Deinitialize()
 	investigate_log("has been destroyed.", INVESTIGATE_SUPERMATTER)
 	SSair.stop_processing_machine(src)
 	QDEL_NULL(radio)

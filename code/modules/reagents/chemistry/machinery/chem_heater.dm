@@ -13,7 +13,7 @@
 	var/heater_coefficient = 0.05
 	var/on = FALSE
 
-/obj/machinery/chem_heater/Destroy()
+/obj/machinery/chem_heater/Deinitialize()
 	QDEL_NULL(beaker)
 	return ..()
 

@@ -36,7 +36,7 @@ GLOBAL_REAL(Failsafe, /datum/controller/failsafe)
 	if(!QDELETED(src))
 		qdel(src) //when Loop() returns, we delete ourselves and let the mc recreate us
 
-/datum/controller/failsafe/Destroy()
+/datum/controller/failsafe/Deinitialize()
 	running = FALSE
 	..()
 	return QDEL_HINT_HARDDEL_NOW

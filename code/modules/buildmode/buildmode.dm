@@ -42,7 +42,7 @@
 	holder.show_popup_menus = TRUE
 	qdel(src)
 
-/datum/buildmode/Destroy()
+/datum/buildmode/Deinitialize()
 	close_switchstates()
 	holder.player_details.post_login_callbacks -= li_cb
 	holder = null

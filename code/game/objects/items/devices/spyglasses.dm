@@ -35,7 +35,7 @@
 	if(slot == ITEM_SLOT_EYES)
 		return TRUE
 
-/obj/item/clothing/glasses/sunglasses/spy/Destroy()
+/obj/item/clothing/glasses/sunglasses/spy/Deinitialize()
 	if(linked_bug)
 		linked_bug.linked_glasses = null
 	. = ..()
@@ -76,7 +76,7 @@
 		instance.screen_loc = "spypopup_map:CENTER"
 		cam_plane_masters += instance
 
-/obj/item/spy_bug/Destroy()
+/obj/item/spy_bug/Deinitialize()
 	if(linked_glasses)
 		linked_glasses.linked_bug = null
 	qdel(cam_screen)

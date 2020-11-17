@@ -8,7 +8,7 @@
 	req_one_access = list(ACCESS_HEADS, ACCESS_CHANGE_IDS)
 	var/obj/item/card/id/inserted_id
 
-/obj/machinery/accounting/Destroy()
+/obj/machinery/accounting/Deinitialize()
 	if(inserted_id)
 		remove_card()
 	return ..()

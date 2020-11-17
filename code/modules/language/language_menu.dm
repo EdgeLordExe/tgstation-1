@@ -4,7 +4,7 @@
 /datum/language_menu/New(_language_holder)
 	language_holder = _language_holder
 
-/datum/language_menu/Destroy()
+/datum/language_menu/Deinitialize()
 	language_holder = null
 	. = ..()
 

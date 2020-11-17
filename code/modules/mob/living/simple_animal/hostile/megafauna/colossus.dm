@@ -619,7 +619,7 @@ Difficulty: Very Hard
 	activation_sound = 'sound/effects/ghost2.ogg'
 	var/ready_to_deploy = FALSE
 
-/obj/machinery/anomalous_crystal/helpers/Destroy()
+/obj/machinery/anomalous_crystal/helpers/Deinitialize()
 	GLOB.poi_list -= src
 	. = ..()
 

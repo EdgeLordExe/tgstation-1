@@ -234,7 +234,7 @@
 	if(SSevents.holidays && SSevents.holidays[APRIL_FOOLS])
 		icon_state = "honkmon"
 
-/mob/living/simple_animal/hostile/imp/slaughter/laughter/Destroy()
+/mob/living/simple_animal/hostile/imp/slaughter/laughter/Deinitialize()
 	release_friends()
 	. = ..()
 

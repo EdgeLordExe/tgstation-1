@@ -15,7 +15,7 @@
 
 	timerid = QDEL_IN(src, duration)
 
-/obj/effect/temp_visual/Destroy()
+/obj/effect/temp_visual/Deinitialize()
 	. = ..()
 	deltimer(timerid)
 

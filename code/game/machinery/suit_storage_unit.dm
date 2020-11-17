@@ -152,7 +152,7 @@
 		storage = new storage_type(src)
 	update_icon()
 
-/obj/machinery/suit_storage_unit/Destroy()
+/obj/machinery/suit_storage_unit/Deinitialize()
 	QDEL_NULL(suit)
 	QDEL_NULL(helmet)
 	QDEL_NULL(mask)

@@ -68,7 +68,7 @@
 /datum/turf_reservation/New()
 	LAZYADD(SSmapping.turf_reservations, src)
 
-/datum/turf_reservation/Destroy()
+/datum/turf_reservation/Deinitialize()
 	Release()
 	LAZYREMOVE(SSmapping.turf_reservations, src)
 	return ..()

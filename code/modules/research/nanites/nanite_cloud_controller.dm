@@ -10,7 +10,7 @@
 	var/current_view = 0 //0 is the main menu, any other number is the page of the backup with that ID
 	var/new_backup_id = 1
 
-/obj/machinery/computer/nanite_cloud_controller/Destroy()
+/obj/machinery/computer/nanite_cloud_controller/Deinitialize()
 	QDEL_LIST(cloud_backups) //rip backups
 	eject()
 	return ..()
@@ -243,7 +243,7 @@
 	storage.cloud_backups += src
 	SSnanites.cloud_backups += src
 
-/datum/nanite_cloud_backup/Destroy()
+/datum/nanite_cloud_backup/Deinitialize()
 	storage.cloud_backups -= src
 	SSnanites.cloud_backups -= src
 	return ..()

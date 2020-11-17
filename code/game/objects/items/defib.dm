@@ -201,7 +201,7 @@
 		M.dropItemToGround(paddles, TRUE)
 	return
 
-/obj/item/defibrillator/Destroy()
+/obj/item/defibrillator/Deinitialize()
 	if(on)
 		var/M = get(paddles, /mob)
 		remove_paddles(M)
@@ -324,7 +324,7 @@
 
 	wielded = FALSE
 
-/obj/item/shockpaddles/Destroy()
+/obj/item/shockpaddles/Deinitialize()
 	defib = null
 	return ..()
 

@@ -264,7 +264,7 @@
 	. = ..()
 	START_PROCESSING(SSfastprocess, src)
 
-/obj/item/reagent_containers/spray/waterflower/cyborg/Destroy()
+/obj/item/reagent_containers/spray/waterflower/cyborg/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	return ..()
 
@@ -341,7 +341,7 @@
 	. = ..()
 	START_PROCESSING(SSfastprocess, src)
 
-/obj/item/reagent_containers/spray/chemsprayer/janitor/Destroy()
+/obj/item/reagent_containers/spray/chemsprayer/janitor/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	return ..()
 

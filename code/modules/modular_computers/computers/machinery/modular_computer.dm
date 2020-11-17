@@ -32,7 +32,7 @@
 	cpu = new(src)
 	cpu.physical = src
 
-/obj/machinery/modular_computer/Destroy()
+/obj/machinery/modular_computer/Deinitialize()
 	QDEL_NULL(cpu)
 	return ..()
 

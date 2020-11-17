@@ -94,7 +94,7 @@ GLOBAL_LIST_EMPTY(telecomms_list)
 	for(var/obj/machinery/telecomms/T in (long_range_link ? GLOB.telecomms_list : urange(20, src, 1)))
 		add_link(T)
 
-/obj/machinery/telecomms/Destroy()
+/obj/machinery/telecomms/Deinitialize()
 	GLOB.telecomms_list -= src
 	QDEL_NULL(soundloop)
 	for(var/obj/machinery/telecomms/comm in GLOB.telecomms_list)

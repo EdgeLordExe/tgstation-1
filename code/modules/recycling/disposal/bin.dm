@@ -55,7 +55,7 @@
 		flush = initial(flush)
 		trunk.linked = src // link the pipe trunk to self
 
-/obj/machinery/disposal/Destroy()
+/obj/machinery/disposal/Deinitialize()
 	eject()
 	if(trunk)
 		trunk.linked = null

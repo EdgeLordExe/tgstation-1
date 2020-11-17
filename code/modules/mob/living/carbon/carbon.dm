@@ -5,7 +5,7 @@
 	update_body_parts() //to update the carbon's new bodyparts appearance
 	GLOB.carbon_list += src
 
-/mob/living/carbon/Destroy()
+/mob/living/carbon/Deinitialize()
 	//This must be done first, so the mob ghosts correctly before DNA etc is nulled
 	. =  ..()
 

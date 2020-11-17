@@ -70,7 +70,7 @@
 		charging.forceMove(drop_location())
 	return ..()
 
-/obj/machinery/cell_charger/Destroy()
+/obj/machinery/cell_charger/Deinitialize()
 	QDEL_NULL(charging)
 	return ..()
 

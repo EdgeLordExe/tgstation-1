@@ -20,7 +20,7 @@
 
 	power_change()
 
-/obj/machinery/computer/Destroy()
+/obj/machinery/computer/Deinitialize()
 	. = ..()
 
 /obj/machinery/computer/process()

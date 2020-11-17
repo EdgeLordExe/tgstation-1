@@ -54,7 +54,7 @@
 		if(spent)
 			. += "<span class='cult'>This shard is spent; it is now just a creepy rock.</span>"
 
-/obj/item/soulstone/Destroy() //Stops the shade from being qdel'd immediately and their ghost being sent back to the arrival shuttle.
+/obj/item/soulstone/Deinitialize() //Stops the shade from being qdel'd immediately and their ghost being sent back to the arrival shuttle.
 	for(var/mob/living/simple_animal/shade/A in src)
 		A.death()
 	return ..()

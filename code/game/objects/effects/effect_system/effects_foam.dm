@@ -99,7 +99,7 @@
 	if(slippery_foam)
 		AddComponent(/datum/component/slippery, 100)
 
-/obj/effect/particle_effect/foam/Destroy()
+/obj/effect/particle_effect/foam/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	return ..()
 
@@ -225,7 +225,7 @@
 	chemholder.reagents = R
 	R.my_atom = chemholder
 
-/datum/effect_system/foam_spread/Destroy()
+/datum/effect_system/foam_spread/Deinitialize()
 	qdel(chemholder)
 	chemholder = null
 	return ..()

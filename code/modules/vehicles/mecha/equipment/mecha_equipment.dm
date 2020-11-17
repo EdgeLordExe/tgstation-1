@@ -34,7 +34,7 @@
 		return TRUE
 	return
 
-/obj/item/mecha_parts/mecha_equipment/Destroy()
+/obj/item/mecha_parts/mecha_equipment/Deinitialize()
 	if(chassis)
 		LAZYREMOVE(chassis.equipment, src)
 		if(chassis.selected == src)

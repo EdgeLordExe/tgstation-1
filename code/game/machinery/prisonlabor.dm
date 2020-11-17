@@ -20,7 +20,7 @@
 	else
 		icon_state = "online"
 
-/obj/machinery/plate_press/Destroy()
+/obj/machinery/plate_press/Deinitialize()
 	QDEL_NULL(current_plate)
 	. = ..()
 

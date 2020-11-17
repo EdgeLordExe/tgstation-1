@@ -29,7 +29,7 @@
 		update_icon()
 
 /obj/item/paicard/handle_atom_del(atom/A)
-	if(A == pai) //double check /mob/living/silicon/pai/Destroy() if you change these.
+	if(A == pai) //double check /mob/living/silicon/pai/Deinitialize() if you change these.
 		pai = null
 		emotion_icon = initial(emotion_icon)
 		update_icon()
@@ -41,7 +41,7 @@
 	if(pai?.hacking_cable)
 		. += "[initial(icon_state)]-connector"
 
-/obj/item/paicard/Destroy()
+/obj/item/paicard/Deinitialize()
 	//Will stop people throwing friend pAIs into the singularity so they can respawn
 	SSpai.pai_card_list -= src
 	if(!QDELETED(pai))

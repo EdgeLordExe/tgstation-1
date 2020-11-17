@@ -50,7 +50,7 @@
 	. = ..()
 	set_frequency(frequency)
 
-/obj/item/assembly/signaler/Destroy()
+/obj/item/assembly/signaler/Deinitialize()
 	SSradio.remove_object(src,frequency)
 	suicider = null
 	. = ..()

@@ -17,7 +17,7 @@
 	if(floorbuffer)
 		AddElement(/datum/element/cleaning)
 
-/obj/vehicle/ridden/janicart/Destroy()
+/obj/vehicle/ridden/janicart/Deinitialize()
 	if(mybag)
 		qdel(mybag)
 		mybag = null

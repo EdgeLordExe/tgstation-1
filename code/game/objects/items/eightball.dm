@@ -138,7 +138,7 @@
 		votes[answer] = 0
 	GLOB.poi_list |= src
 
-/obj/item/toy/eightball/haunted/Destroy()
+/obj/item/toy/eightball/haunted/Deinitialize()
 	GLOB.poi_list -= src
 	. = ..()
 

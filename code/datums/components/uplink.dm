@@ -77,7 +77,7 @@
 	if(purchase_log && U.purchase_log)
 		purchase_log.MergeWithAndDel(U.purchase_log)
 
-/datum/component/uplink/Destroy()
+/datum/component/uplink/Deinitialize()
 	gamemode = null
 	purchase_log = null
 	return ..()

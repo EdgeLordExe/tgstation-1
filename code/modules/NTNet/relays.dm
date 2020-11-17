@@ -128,7 +128,7 @@
 		SSnetworks.station_network.add_log("New quantum relay activated. Current amount of linked relays: [NTNet.relays.len]")
 	. = ..()
 
-/obj/machinery/ntnet_relay/Destroy()
+/obj/machinery/ntnet_relay/Deinitialize()
 	if(SSnetworks.station_network)
 		SSnetworks.station_network.relays.Remove(src)
 		SSnetworks.station_network.add_log("Quantum relay connection severed. Current amount of linked relays: [NTNet.relays.len]")

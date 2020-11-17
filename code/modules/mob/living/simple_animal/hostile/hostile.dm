@@ -72,7 +72,7 @@
 	wanted_objects = typecacheof(wanted_objects)
 
 
-/mob/living/simple_animal/hostile/Destroy()
+/mob/living/simple_animal/hostile/Deinitialize()
 	targets_from = null
 	return ..()
 

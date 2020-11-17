@@ -687,7 +687,7 @@
 	/// The carbon who owns all of this mess
 	var/mob/living/carbon/user
 
-/obj/item/self_grasp/Destroy()
+/obj/item/self_grasp/Deinitialize()
 	if(user)
 		to_chat(user, "<span class='warning'>You stop holding onto your[grasped_part ? " [grasped_part.name]" : "self"].</span>")
 		UnregisterSignal(user, COMSIG_PARENT_QDELETING)

@@ -236,7 +236,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	. = ..()
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
 
-/obj/item/gibtonite/Destroy()
+/obj/item/gibtonite/Deinitialize()
 	qdel(wires)
 	wires = null
 	return ..()

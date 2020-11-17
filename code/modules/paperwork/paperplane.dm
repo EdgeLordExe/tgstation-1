@@ -48,7 +48,7 @@
 		if(!QDELETED(src))
 			qdel(src)
 
-/obj/item/paperplane/Destroy()
+/obj/item/paperplane/Deinitialize()
 	internalPaper = null
 	return ..()
 

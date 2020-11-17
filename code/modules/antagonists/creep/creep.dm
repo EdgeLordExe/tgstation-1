@@ -30,7 +30,7 @@
 		to_chat(policy)
 	owner.announce_objectives()
 
-/datum/antagonist/obsessed/Destroy()
+/datum/antagonist/obsessed/Deinitialize()
 	if(trauma)
 		qdel(trauma)
 	. = ..()

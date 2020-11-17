@@ -154,7 +154,7 @@
 		if(H && istype(H) && T && !(H in owner.GetAllContents()))
 			H.forceMove(T)
 
-/obj/item/dullahan_relay/Destroy()
+/obj/item/dullahan_relay/Deinitialize()
 	if(!QDELETED(owner))
 		var/mob/living/carbon/human/H = owner
 		if(isdullahan(H))

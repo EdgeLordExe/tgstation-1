@@ -55,7 +55,7 @@
 	else
 		maptext = null
 
-/obj/effect/countdown/Destroy()
+/obj/effect/countdown/Deinitialize()
 	attached_to = null
 	STOP_PROCESSING(SSfastprocess, src)
 	. = ..()

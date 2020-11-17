@@ -16,7 +16,7 @@
 	else
 		icon_state = "beacon-off"
 
-/obj/item/beacon/Destroy()
+/obj/item/beacon/Deinitialize()
 	GLOB.teleportbeacons.Remove(src)
 	return ..()
 

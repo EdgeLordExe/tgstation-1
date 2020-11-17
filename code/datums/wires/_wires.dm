@@ -62,7 +62,7 @@
 		else
 			colors = GLOB.wire_color_directory[key]
 
-/datum/wires/Destroy()
+/datum/wires/Deinitialize()
 	holder = null
 	assemblies = list()
 	return ..()

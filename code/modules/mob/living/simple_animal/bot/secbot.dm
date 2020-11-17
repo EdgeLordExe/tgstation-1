@@ -87,7 +87,7 @@
 	var/datum/atom_hud/secsensor = GLOB.huds[DATA_HUD_SECURITY_ADVANCED]
 	secsensor.add_hud_to(src)
 
-/mob/living/simple_animal/bot/secbot/Destroy()
+/mob/living/simple_animal/bot/secbot/Deinitialize()
 	QDEL_NULL(weapon)
 	return ..()
 

@@ -40,7 +40,7 @@
 /**
  * Called on qdel(), so we don't want a cool explosion to happen
  */
-/obj/structure/training_machine/Destroy()
+/obj/structure/training_machine/Deinitialize()
 	remove_attached_item()
 	return ..()
 

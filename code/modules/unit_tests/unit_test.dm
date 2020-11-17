@@ -5,7 +5,7 @@ Override /Run() to run your test code
 
 Call Fail() to fail the test (You should specify a reason)
 
-You may use /New() and /Destroy() for setup/teardown respectively
+You may use /New() and /Deinitialize() for setup/teardown respectively
 
 You can use the run_loc_bottom_left and run_loc_top_right to get turfs for testing
 
@@ -34,7 +34,7 @@ GLOBAL_VAR(test_log)
 	run_loc_bottom_left = locate(1, 1, 1)
 	run_loc_top_right = locate(5, 5, 1)
 
-/datum/unit_test/Destroy()
+/datum/unit_test/Deinitialize()
 	//clear the test area
 	for(var/atom/movable/AM in block(run_loc_bottom_left, run_loc_top_right))
 		qdel(AM)

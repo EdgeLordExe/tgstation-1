@@ -38,7 +38,7 @@ Recurring extracts:
 		extract.icon_state = "prismatic"
 		qdel(src)
 
-/obj/item/slimecross/recurring/Destroy()
+/obj/item/slimecross/recurring/Deinitialize()
 	. = ..()
 	STOP_PROCESSING(SSobj,src)
 

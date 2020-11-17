@@ -312,7 +312,7 @@ All the important duct code:
 	disconnect_duct()
 	anchored = FALSE
 
-/obj/machinery/duct/Destroy()
+/obj/machinery/duct/Deinitialize()
 	disconnect_duct()
 	return ..()
 

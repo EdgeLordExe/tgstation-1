@@ -50,7 +50,7 @@
 /obj/structure/closet/proc/PopulateContents()
 	return
 
-/obj/structure/closet/Destroy()
+/obj/structure/closet/Deinitialize()
 	dump_contents()
 	return ..()
 

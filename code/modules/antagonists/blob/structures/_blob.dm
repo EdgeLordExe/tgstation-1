@@ -38,7 +38,7 @@
 /obj/structure/blob/proc/creation_action() //When it's created by the overmind, do this.
 	return
 
-/obj/structure/blob/Destroy()
+/obj/structure/blob/Deinitialize()
 	if(atmosblock)
 		atmosblock = FALSE
 		air_update_turf(1)

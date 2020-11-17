@@ -136,7 +136,7 @@
 	if(in_range(user, src) || isobserver(user))
 		. += "<span class='notice'>The status display reads: Efficiency at <b>[efficiency*100]%</b>.</span>"
 
-/obj/machinery/atmospherics/components/unary/cryo_cell/Destroy()
+/obj/machinery/atmospherics/components/unary/cryo_cell/Deinitialize()
 	vis_contents.Cut()
 
 	QDEL_NULL(occupant_vis)

@@ -32,7 +32,7 @@
 	name = "distribution loop gas flow meter"
 	id_tag = ATMOS_GAS_MONITOR_LOOP_DISTRIBUTION
 
-/obj/machinery/meter/Destroy()
+/obj/machinery/meter/Deinitialize()
 	SSair.stop_processing_machine(src)
 	target = null
 	return ..()

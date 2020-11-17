@@ -41,7 +41,7 @@
 		audible_message("<span class='notice'>The Mauna Mug lets out a happy beep and turns off!</span>")
 		playsound(src, 'sound/machines/chime.ogg', 50)
 
-/obj/item/reagent_containers/glass/maunamug/Destroy()
+/obj/item/reagent_containers/glass/maunamug/Deinitialize()
 	if(cell)
 		QDEL_NULL(cell)
 	STOP_PROCESSING(SSobj, src)

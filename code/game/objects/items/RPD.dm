@@ -232,7 +232,7 @@ GLOBAL_LIST_INIT(transit_tube_recipes, list(
 
 	recipe = first_atmos
 
-/obj/item/pipe_dispenser/Destroy()
+/obj/item/pipe_dispenser/Deinitialize()
 	qdel(spark_system)
 	spark_system = null
 	return ..()

@@ -35,7 +35,7 @@
 	if(start)
 		INVOKE_ASYNC(src, .proc/timestop)
 
-/obj/effect/timestop/Destroy()
+/obj/effect/timestop/Deinitialize()
 	qdel(chronofield)
 	playsound(src, 'sound/magic/timeparadox2.ogg', 75, TRUE, frequency = -1) //reverse!
 	return ..()
@@ -64,7 +64,7 @@
 
 	var/static/list/global_frozen_atoms = list()
 
-/datum/proximity_monitor/advanced/timestop/Destroy()
+/datum/proximity_monitor/advanced/timestop/Deinitialize()
 	unfreeze_all()
 	return ..()
 

@@ -24,7 +24,7 @@
 		tank = null
 		SEND_SIGNAL(tank_, COMSIG_CONTAINER_TRY_ATTACH, src, null)
 
-/obj/structure/tank_holder/Destroy()
+/obj/structure/tank_holder/Deinitialize()
 	QDEL_NULL(tank)
 	return ..()
 

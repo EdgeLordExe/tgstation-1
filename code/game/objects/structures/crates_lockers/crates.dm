@@ -145,7 +145,7 @@
 	..()
 	recursive_organ_check(src)
 
-/obj/structure/closet/crate/freezer/Destroy()
+/obj/structure/closet/crate/freezer/Deinitialize()
 	recursive_organ_check(src)
 	..()
 

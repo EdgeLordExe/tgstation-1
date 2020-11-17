@@ -55,7 +55,7 @@
 	stored_research = new /datum/techweb/specialized/autounlocking/autolathe
 	matching_designs = list()
 
-/obj/machinery/autolathe/Destroy()
+/obj/machinery/autolathe/Deinitialize()
 	QDEL_NULL(wires)
 	return ..()
 

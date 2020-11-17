@@ -299,7 +299,7 @@
 	else
 		set_opacity(initial(opacity))
 
-/obj/structure/window/Destroy()
+/obj/structure/window/Deinitialize()
 	density = FALSE
 	air_update_turf(1)
 	update_nearby_icons()

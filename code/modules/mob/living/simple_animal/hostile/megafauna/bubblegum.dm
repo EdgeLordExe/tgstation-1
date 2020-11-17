@@ -542,7 +542,7 @@ Difficulty: Hard
 	..()
 	qdel(src)
 
-/mob/living/simple_animal/hostile/megafauna/bubblegum/hallucination/Destroy()
+/mob/living/simple_animal/hostile/megafauna/bubblegum/hallucination/Deinitialize()
 	new /obj/effect/decal/cleanable/blood(get_turf(src))
 	. = ..()
 

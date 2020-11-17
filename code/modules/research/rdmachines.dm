@@ -23,7 +23,7 @@
 	stored_research = SSresearch.science_tech
 	wires = new /datum/wires/rnd(src)
 
-/obj/machinery/rnd/Destroy()
+/obj/machinery/rnd/Deinitialize()
 	stored_research = null
 	QDEL_NULL(wires)
 	return ..()

@@ -100,7 +100,7 @@
 	. = ..()
 	START_PROCESSING(SSfastprocess, src)
 
-/obj/item/tk_grab/Destroy()
+/obj/item/tk_grab/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	focus = null
 	tk_user = null

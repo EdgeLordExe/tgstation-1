@@ -10,7 +10,7 @@
 	..()
 	GLOB.sentient_disease_instances += src
 
-/datum/disease/advance/sentient_disease/Destroy()
+/datum/disease/advance/sentient_disease/Deinitialize()
 	. = ..()
 	GLOB.sentient_disease_instances -= src
 

@@ -187,7 +187,7 @@
 	START_PROCESSING(SSfastprocess, src)
 	..()
 
-/obj/structure/destructible/cult/pylon/Destroy()
+/obj/structure/destructible/cult/pylon/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	return ..()
 

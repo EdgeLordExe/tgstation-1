@@ -217,7 +217,7 @@
 	START_PROCESSING(SSobj, src)
 
 
-/obj/structure/alien/weeds/node/Destroy()
+/obj/structure/alien/weeds/node/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

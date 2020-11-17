@@ -37,7 +37,7 @@
 		T.hotspot_expose(1000,100)
 	QDEL_IN(src, 20)
 
-/obj/effect/particle_effect/sparks/Destroy()
+/obj/effect/particle_effect/sparks/Deinitialize()
 	var/turf/T = loc
 	if(isturf(T))
 		T.hotspot_expose(1000,100)

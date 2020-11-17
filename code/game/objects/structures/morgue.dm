@@ -33,7 +33,7 @@ GLOBAL_LIST_EMPTY(bodycontainers) //Let them act as spawnpoints for revenants an
 	GLOB.bodycontainers += src
 	recursive_organ_check(src)
 
-/obj/structure/bodycontainer/Destroy()
+/obj/structure/bodycontainer/Deinitialize()
 	GLOB.bodycontainers -= src
 	open()
 	if(connected)
@@ -216,7 +216,7 @@ GLOBAL_LIST_EMPTY(crematoriums)
 	to_chat(user, "<span class='warning'>[src] is locked against you.</span>")
 	return
 
-/obj/structure/bodycontainer/crematorium/Destroy()
+/obj/structure/bodycontainer/crematorium/Deinitialize()
 	GLOB.crematoriums.Remove(src)
 	return ..()
 
@@ -317,7 +317,7 @@ GLOBAL_LIST_EMPTY(crematoriums)
 	pass_flags = LETPASSTHROW
 	max_integrity = 350
 
-/obj/structure/tray/Destroy()
+/obj/structure/tray/Deinitialize()
 	if(connected)
 		connected.connected = null
 		connected.update_icon()

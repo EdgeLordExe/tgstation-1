@@ -129,7 +129,7 @@
 	consume = new
 	consume.Grant(src)
 
-/mob/living/simple_animal/hostile/ooze/gelatinous/Destroy()
+/mob/living/simple_animal/hostile/ooze/gelatinous/Deinitialize()
 	. = ..()
 	QDEL_NULL(boost)
 	QDEL_NULL(consume)
@@ -299,7 +299,7 @@
 	gel_cocoon = new
 	gel_cocoon.Grant(src)
 
-/mob/living/simple_animal/hostile/ooze/grapes/Destroy()
+/mob/living/simple_animal/hostile/ooze/grapes/Deinitialize()
 	. = ..()
 	QDEL_NULL(gel_cocoon)
 	QDEL_NULL(globules)
@@ -394,7 +394,7 @@
 	var/obj/item/bodypart/bodypart
 	var/heals_left = 35
 
-/obj/item/mending_globule/Destroy()
+/obj/item/mending_globule/Deinitialize()
 	. = ..()
 	bodypart = null
 
@@ -468,7 +468,7 @@
 	max_integrity = 50
 	var/mob/living/carbon/inhabitant
 
-/obj/structure/gel_cocoon/Destroy()
+/obj/structure/gel_cocoon/Deinitialize()
 	if(inhabitant)
 		dump_inhabitant(FALSE)
 	return ..()

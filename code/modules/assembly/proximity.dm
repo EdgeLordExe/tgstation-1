@@ -17,7 +17,7 @@
 	proximity_monitor = new(src, 0)
 	START_PROCESSING(SSobj, src)
 
-/obj/item/assembly/prox_sensor/Destroy()
+/obj/item/assembly/prox_sensor/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

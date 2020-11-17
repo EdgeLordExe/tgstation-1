@@ -17,7 +17,7 @@
 	. = ..()
 	make_backgrounds()
 
-/atom/movable/screen/movable/pic_in_pic/Destroy()
+/atom/movable/screen/movable/pic_in_pic/Deinitialize()
 	for(var/C in shown_to)
 		unshow_to(C)
 	QDEL_NULL(button_x)

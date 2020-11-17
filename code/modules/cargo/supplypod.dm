@@ -265,7 +265,7 @@
 	if (landingSound)
 		playsound(turf_underneath, landingSound, soundVolume, FALSE, FALSE)
 	if (effectMissile) //If we are acting like a missile, then right after we land and finish fucking shit up w explosions, we should delete
-		opened = TRUE //We set opened to TRUE to avoid spending time trying to open (due to being deleted) during the Destroy() proc
+		opened = TRUE //We set opened to TRUE to avoid spending time trying to open (due to being deleted) during the Deinitialize() proc
 		qdel(src)
 		return
 	if (style == STYLE_GONDOLA) //Checks if we are supposed to be a gondola pod. If so, create a gondolapod mob, and move this pod to nullspace. I'd like to give a shout out, to my man oranges
@@ -458,7 +458,7 @@
 	glow_effect.fadeAway(delays[POD_OPENING])
 	glow_effect = null
 
-/obj/structure/closet/supplypod/Destroy()
+/obj/structure/closet/supplypod/Deinitialize()
 	deleteRubble()
 	endGlow()
 	open_pod(src, broken = TRUE) //Lets dump our contents by opening up

@@ -354,7 +354,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/sdql2_vv_all, new(null
 	id = id_assign++
 	qdel_on_finish = finished_qdel
 
-/datum/sdql2_query/Destroy()
+/datum/sdql2_query/Deinitialize()
 	state = SDQL2_STATE_HALTING
 	query_tree = null
 	obj_count_all = null

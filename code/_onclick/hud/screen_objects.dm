@@ -33,7 +33,7 @@
 	 */
 	var/del_on_map_removal = TRUE
 
-/atom/movable/screen/Destroy()
+/atom/movable/screen/Deinitialize()
 	master = null
 	hud = null
 	return ..()
@@ -710,7 +710,7 @@
 	if(qdel_after)
 		QDEL_IN(src, 30)
 
-/atom/movable/screen/splash/Destroy()
+/atom/movable/screen/splash/Deinitialize()
 	if(holder)
 		holder.screen -= src
 		holder = null

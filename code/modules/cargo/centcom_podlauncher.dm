@@ -775,7 +775,7 @@
 		var/turf/turf_to_clear = bayturf
 		turf_to_clear.ChangeTurf(/turf/open/floor/plasteel)
 
-/datum/centcom_podlauncher/Destroy() //The Destroy() proc. This is called by ui_close proc, or whenever the user leaves the game
+/datum/centcom_podlauncher/Deinitialize() //The Deinitialize() proc. This is called by ui_close proc, or whenever the user leaves the game
 	updateCursor(TRUE) //Make sure our moues cursor resets to default. False means we are not in launch mode
 	QDEL_NULL(temp_pod) //Delete the temp_pod
 	QDEL_NULL(selector) //Delete the selector effect

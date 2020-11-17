@@ -104,7 +104,7 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 		if(istype(ghost))
 			ghost.ManualFollow(src)
 
-/obj/effect/immovablerod/Destroy()
+/obj/effect/immovablerod/Deinitialize()
 	GLOB.poi_list -= src
 	. = ..()
 

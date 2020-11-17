@@ -46,7 +46,7 @@
 
 		src.colorlist += D
 
-/obj/machinery/pdapainter/Destroy()
+/obj/machinery/pdapainter/Deinitialize()
 	QDEL_NULL(storedpda)
 	return ..()
 

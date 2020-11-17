@@ -42,7 +42,7 @@
 		update_icon()
 	return ..()
 
-/obj/machinery/atmospherics/components/binary/pump/Destroy()
+/obj/machinery/atmospherics/components/binary/pump/Deinitialize()
 	SSradio.remove_object(src,frequency)
 	if(radio_connection)
 		radio_connection = null

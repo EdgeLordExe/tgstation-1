@@ -10,7 +10,7 @@
 		var/spell_to_add = text2path(spell)
 		new spell_to_add(src) //should result in adding to contents, needs testing
 
-/obj/effect/proc_holder/spell/pointed/trigger/Destroy()
+/obj/effect/proc_holder/spell/pointed/trigger/Deinitialize()
 	for(var/spell in contents)
 		qdel(spell)
 	linked_spells = null

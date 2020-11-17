@@ -61,7 +61,7 @@
 	. = ..()
 	sord = new(src)
 
-/mob/living/simple_animal/hostile/pirate/melee/Destroy()
+/mob/living/simple_animal/hostile/pirate/melee/Deinitialize()
 	QDEL_NULL(sord)
 	return ..()
 

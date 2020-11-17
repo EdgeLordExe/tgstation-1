@@ -39,7 +39,7 @@
 	. = ..()
 	SSblackmarket.telepads += src
 
-/obj/machinery/ltsrbt/Destroy()
+/obj/machinery/ltsrbt/Deinitialize()
 	SSblackmarket.telepads -= src
 	// Bye bye orders.
 	if(SSblackmarket.telepads.len)

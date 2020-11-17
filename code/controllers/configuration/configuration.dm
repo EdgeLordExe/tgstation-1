@@ -66,7 +66,7 @@
 	maplist = null
 	QDEL_NULL(defaultmap)
 
-/datum/controller/configuration/Destroy()
+/datum/controller/configuration/Deinitialize()
 	full_wipe()
 	config = null
 

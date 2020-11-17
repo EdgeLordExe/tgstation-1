@@ -17,7 +17,7 @@
 	fireaxe = new
 	update_icon()
 
-/obj/structure/fireaxecabinet/Destroy()
+/obj/structure/fireaxecabinet/Deinitialize()
 	if(fireaxe)
 		QDEL_NULL(fireaxe)
 	return ..()

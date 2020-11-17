@@ -130,7 +130,7 @@
 
 	client.images |= current_image
 
-/mob/camera/imaginary_friend/Destroy()
+/mob/camera/imaginary_friend/Deinitialize()
 	if(owner.client)
 		owner.client.images.Remove(human_image)
 	if(client)

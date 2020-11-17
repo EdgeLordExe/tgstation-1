@@ -181,7 +181,7 @@
 		path_hud.add_hud_to(src)
 
 
-/mob/living/simple_animal/bot/Destroy()
+/mob/living/simple_animal/bot/Deinitialize()
 	if(path_hud)
 		QDEL_NULL(path_hud)
 		path_hud = null

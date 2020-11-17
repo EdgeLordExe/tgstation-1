@@ -35,7 +35,7 @@
 /datum/client_colour/New(mob/_owner)
 	owner = _owner
 
-/datum/client_colour/Destroy()
+/datum/client_colour/Deinitialize()
 	if(!QDELETED(owner))
 		owner.client_colours -= src
 		if(fade_out)

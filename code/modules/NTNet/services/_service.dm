@@ -7,7 +7,7 @@
 	var/datum/component/ntnet_interface/N = AddComponent(/datum/component/ntnet_interface, id, name, FALSE)
 	id = N.hardware_id
 
-/datum/ntnet_service/Destroy()
+/datum/ntnet_service/Deinitialize()
 	for(var/i in networks_by_id)
 		var/datum/ntnet/N = i
 		disconnect(N, TRUE)

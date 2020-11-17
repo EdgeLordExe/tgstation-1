@@ -16,7 +16,7 @@
 	var/mob/living/silicon/owner
 	var/id = DEFAULT_AI_LAWID
 
-/datum/ai_laws/Destroy()
+/datum/ai_laws/Deinitialize()
 	owner = null
 	return ..()
 

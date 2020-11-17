@@ -11,7 +11,7 @@
 	icon_icon = 'icons/mob/actions/actions_mecha.dmi'
 	var/obj/vehicle/sealed/mecha/chassis
 
-/datum/action/vehicle/sealed/mecha/Destroy()
+/datum/action/vehicle/sealed/mecha/Deinitialize()
 	chassis = null
 	return ..()
 

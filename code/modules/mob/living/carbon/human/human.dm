@@ -36,7 +36,7 @@
 	if(!CONFIG_GET(flag/disable_human_mood))
 		AddComponent(/datum/component/mood)
 
-/mob/living/carbon/human/Destroy()
+/mob/living/carbon/human/Deinitialize()
 	QDEL_NULL(physiology)
 	GLOB.human_list -= src
 	return ..()

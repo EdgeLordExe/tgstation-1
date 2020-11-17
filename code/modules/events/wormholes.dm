@@ -56,7 +56,7 @@ GLOBAL_LIST_EMPTY(all_wormholes) // So we can pick wormholes to teleport to
 	. = ..()
 	GLOB.all_wormholes += src
 
-/obj/effect/portal/wormhole/Destroy()
+/obj/effect/portal/wormhole/Deinitialize()
 	. = ..()
 	GLOB.all_wormholes -= src
 

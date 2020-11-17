@@ -57,7 +57,7 @@
 	QDEL_IN(src, CREDIT_ROLL_SPEED)
 	P.screen += src
 
-/atom/movable/screen/credit/Destroy()
+/atom/movable/screen/credit/Deinitialize()
 	var/client/P = parent
 	P.screen -= src
 	icon = null

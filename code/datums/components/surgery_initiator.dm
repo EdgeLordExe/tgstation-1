@@ -20,7 +20,7 @@
 /datum/component/surgery_initiator/UnregisterFromParent()
 	UnregisterSignal(parent, COMSIG_ITEM_ATTACK)
 
-/datum/component/surgery_initiator/Destroy()
+/datum/component/surgery_initiator/Deinitialize()
 	if(after_select_cb)
 		QDEL_NULL(after_select_cb)
 	return ..()

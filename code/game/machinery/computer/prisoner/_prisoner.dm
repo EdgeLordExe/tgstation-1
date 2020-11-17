@@ -1,11 +1,11 @@
 /obj/machinery/computer/prisoner
 	var/obj/item/card/id/prisoner/contained_id
 
-/obj/machinery/computer/prisoner/Destroy()
+/obj/machinery/computer/prisoner/Deinitialize()
 	if(contained_id)
 		contained_id.forceMove(get_turf(src))
 	return ..()
-	
+
 
 /obj/machinery/computer/prisoner/examine(mob/user)
 	. = ..()

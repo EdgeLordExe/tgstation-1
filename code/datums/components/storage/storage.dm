@@ -101,7 +101,7 @@
 
 	update_actions()
 
-/datum/component/storage/Destroy()
+/datum/component/storage/Deinitialize()
 	close_all()
 	QDEL_NULL(boxes)
 	QDEL_NULL(closer)

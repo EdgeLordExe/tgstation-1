@@ -17,7 +17,7 @@
 
 	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE)
 
-/obj/machinery/bluespace_beacon/Destroy()
+/obj/machinery/bluespace_beacon/Deinitialize()
 	QDEL_NULL(Beacon)
 	return ..()
 

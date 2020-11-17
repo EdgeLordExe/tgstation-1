@@ -62,7 +62,7 @@
 	SetCollectBehavior()
 
 
-/mob/living/simple_animal/hostile/mining_drone/Destroy()
+/mob/living/simple_animal/hostile/mining_drone/Deinitialize()
 	for (var/datum/action/innate/minedrone/action in actions)
 		qdel(action)
 	return ..()

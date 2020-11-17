@@ -31,7 +31,7 @@
 	var/obj/effect/ctf/flag_reset/reset
 	var/reset_path = /obj/effect/ctf/flag_reset
 
-/obj/item/ctf/Destroy()
+/obj/item/ctf/Deinitialize()
 	QDEL_NULL(reset)
 	return ..()
 
@@ -171,7 +171,7 @@
 	. = ..()
 	GLOB.poi_list |= src
 
-/obj/machinery/capture_the_flag/Destroy()
+/obj/machinery/capture_the_flag/Deinitialize()
 	GLOB.poi_list.Remove(src)
 	..()
 

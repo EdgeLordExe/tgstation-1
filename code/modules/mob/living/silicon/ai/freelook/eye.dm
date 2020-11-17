@@ -121,7 +121,7 @@
 		return ai.client
 	return null
 
-/mob/camera/ai_eye/Destroy()
+/mob/camera/ai_eye/Deinitialize()
 	if(ai)
 		ai.all_eyes -= src
 		ai = null

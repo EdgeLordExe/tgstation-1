@@ -48,7 +48,7 @@
 		UnregisterSignal(source, COMSIG_MOB_LOGIN)
 		post_add()
 
-/datum/quirk/Destroy()
+/datum/quirk/Deinitialize()
 	STOP_PROCESSING(SSquirks, src)
 	remove()
 	if(quirk_holder)

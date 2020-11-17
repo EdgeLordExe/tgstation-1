@@ -135,7 +135,7 @@
 			atmos_destination.ImmediateCalculateAdjacentTurfs()
 		atmos_destination = null
 
-/obj/effect/portal/Destroy()
+/obj/effect/portal/Deinitialize()
 	GLOB.portals -= src
 	unlink_atmos()
 	if(hardlinked && !QDELETED(linked))

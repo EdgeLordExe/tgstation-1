@@ -516,7 +516,7 @@
 		to_chat(user, "<span class='warning'>The blade is dormant. Maybe you can try again later.</span>")
 		possessed = FALSE
 
-/obj/item/nullrod/scythe/talking/Destroy()
+/obj/item/nullrod/scythe/talking/Deinitialize()
 	for(var/mob/living/simple_animal/shade/S in contents)
 		to_chat(S, "<span class='userdanger'>You were destroyed!</span>")
 		qdel(S)
@@ -722,7 +722,7 @@
 	START_PROCESSING(SSobj, src)
 	AddComponent(/datum/component/butchering, 50, 100)
 
-/obj/item/nullrod/tribal_knife/Destroy()
+/obj/item/nullrod/tribal_knife/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

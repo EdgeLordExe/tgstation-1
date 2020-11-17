@@ -50,7 +50,7 @@
 		emag_modules += I
 		emag_modules -= i
 
-/obj/item/robot_module/Destroy()
+/obj/item/robot_module/Deinitialize()
 	basic_modules.Cut()
 	emag_modules.Cut()
 	modules.Cut()
@@ -556,7 +556,7 @@
 	if(!mining_scanner)
 		mining_scanner = new(src)
 
-/obj/item/robot_module/miner/Destroy()
+/obj/item/robot_module/miner/Deinitialize()
 	QDEL_NULL(mining_scanner)
 	return ..()
 

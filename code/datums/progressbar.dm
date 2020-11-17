@@ -50,7 +50,7 @@
 	RegisterSignal(user, COMSIG_MOB_LOGIN, .proc/on_user_login)
 
 
-/datum/progressbar/Destroy()
+/datum/progressbar/Deinitialize()
 	if(user)
 		for(var/pb in user.progressbars[bar_loc])
 			var/datum/progressbar/progress_bar = pb
@@ -76,7 +76,7 @@
 	return ..()
 
 
-///Called right before the user's Destroy()
+///Called right before the user's Deinitialize()
 /datum/progressbar/proc/on_user_delete(datum/source)
 	SIGNAL_HANDLER
 

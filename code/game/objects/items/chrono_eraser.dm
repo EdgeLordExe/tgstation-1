@@ -23,7 +23,7 @@
 	if(PA)
 		qdel(PA)
 
-/obj/item/chrono_eraser/Destroy()
+/obj/item/chrono_eraser/Deinitialize()
 	dropped()
 	return ..()
 
@@ -74,7 +74,7 @@
 		field_disconnect(field)
 	..()
 
-/obj/item/gun/energy/chrono_gun/Destroy()
+/obj/item/gun/energy/chrono_gun/Deinitialize()
 	if(TED)
 		TED.PA = null
 		TED = null
@@ -195,7 +195,7 @@
 	START_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/structure/chrono_field/Destroy()
+/obj/structure/chrono_field/Deinitialize()
 	if(gun?.field_check(src))
 		gun.field_disconnect(src)
 	return ..()

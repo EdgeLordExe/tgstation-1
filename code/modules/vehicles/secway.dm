@@ -83,7 +83,7 @@
 	explosion(src, -1, 0, 2, 4, flame_range = 3)
 	return ..()
 
-/obj/vehicle/ridden/secway/Destroy()
+/obj/vehicle/ridden/secway/Deinitialize()
 	STOP_PROCESSING(SSobj,src)
 	return ..()
 

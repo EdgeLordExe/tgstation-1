@@ -33,7 +33,7 @@
 	add_overlay(blob_overlay)
 	add_overlay(mutable_appearance('icons/mob/blob.dmi', "blob_core_overlay"))
 
-/obj/structure/blob/core/Destroy()
+/obj/structure/blob/core/Deinitialize()
 	GLOB.blob_cores -= src
 	if(overmind)
 		overmind.blob_core = null

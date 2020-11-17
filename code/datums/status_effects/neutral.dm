@@ -173,7 +173,7 @@
 	RegisterSignal(slap_item, list(COMSIG_PARENT_QDELETING, COMSIG_ITEM_DROPPED), .proc/dropped_slap)
 	RegisterSignal(owner, COMSIG_PARENT_EXAMINE_MORE, .proc/check_fake_out)
 
-/datum/status_effect/high_fiving/Destroy()
+/datum/status_effect/high_fiving/Deinitialize()
 	QDEL_NULL(slap_item)
 	for(var/i in possible_takers)
 		var/mob/living/carbon/lost_hope = i

@@ -110,7 +110,7 @@
 	updateUsrDialog()
 	return
 
-/obj/machinery/mineral/processing_unit_console/Destroy()
+/obj/machinery/mineral/processing_unit_console/Deinitialize()
 	machine = null
 	return ..()
 
@@ -137,7 +137,7 @@
 	stored_research = new /datum/techweb/specialized/autounlocking/smelter
 	selected_material = SSmaterials.GetMaterialRef(/datum/material/iron)
 
-/obj/machinery/mineral/processing_unit/Destroy()
+/obj/machinery/mineral/processing_unit/Deinitialize()
 	CONSOLE = null
 	QDEL_NULL(stored_research)
 	return ..()

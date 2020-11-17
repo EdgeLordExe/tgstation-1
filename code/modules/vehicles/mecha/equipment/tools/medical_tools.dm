@@ -7,7 +7,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/mecha_parts/mecha_equipment/medical/Destroy()
+/obj/item/mecha_parts/mecha_equipment/medical/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -41,7 +41,7 @@
 	var/mob/living/carbon/patient = null
 	var/inject_amount = 10
 
-/obj/item/mecha_parts/mecha_equipment/medical/sleeper/Destroy()
+/obj/item/mecha_parts/mecha_equipment/medical/sleeper/Deinitialize()
 	for(var/atom/movable/AM in src)
 		AM.forceMove(get_turf(src))
 	return ..()
@@ -283,7 +283,7 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/mecha_parts/mecha_equipment/medical/syringe_gun/Destroy()
+/obj/item/mecha_parts/mecha_equipment/medical/syringe_gun/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -512,7 +512,7 @@
 	medigun = new(src)
 
 
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam/Destroy()
+/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam/Deinitialize()
 	QDEL_NULL(medigun)
 	return ..()
 

@@ -13,7 +13,7 @@
 	var/list/params = args.Copy(2)
 	add_effects(arglist(params))
 
-/datum/mood_event/Destroy()
+/datum/mood_event/Deinitialize()
 	remove_effects()
 	owner = null
 	return ..()

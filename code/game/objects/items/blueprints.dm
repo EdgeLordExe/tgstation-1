@@ -56,7 +56,7 @@
 	var/legend = FALSE	//Viewing the wire legend
 
 
-/obj/item/areaeditor/blueprints/Destroy()
+/obj/item/areaeditor/blueprints/Deinitialize()
 	clear_viewer()
 	return ..()
 

@@ -41,7 +41,7 @@
 	GLOB.poi_list |= src
 	previous_level = get_security_level()
 
-/obj/machinery/nuclearbomb/Destroy()
+/obj/machinery/nuclearbomb/Deinitialize()
 	safety = FALSE
 	if(!exploding)
 		// If we're not exploding, set the alert level back to normal
@@ -700,7 +700,7 @@ This is here to make the tiles around the station mininuke change when it's arme
 	return ..()
 
 /obj/item/disk/nuclear/Destroy(force=FALSE)
-	// respawning is handled in /obj/Destroy()
+	// respawning is handled in /obj/Deinitialize()
 	if(force)
 		GLOB.poi_list -= src
 	. = ..()

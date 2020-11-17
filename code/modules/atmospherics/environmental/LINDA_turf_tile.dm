@@ -43,7 +43,7 @@
 		air.copy_from_turf(src)
 	. = ..()
 
-/turf/open/Destroy()
+/turf/open/Deinitialize()
 	if(active_hotspot)
 		QDEL_NULL(active_hotspot)
 	// Adds the adjacent turfs to the current atmos processing

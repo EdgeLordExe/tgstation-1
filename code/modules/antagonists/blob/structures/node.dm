@@ -27,7 +27,7 @@
 	add_overlay(blob_overlay)
 	add_overlay(mutable_appearance('icons/mob/blob.dmi', "blob_node_overlay"))
 
-/obj/structure/blob/node/Destroy()
+/obj/structure/blob/node/Deinitialize()
 	GLOB.blob_nodes -= src
 	STOP_PROCESSING(SSobj, src)
 	return ..()

@@ -59,7 +59,7 @@
 			var/area/A = I
 			LAZYREMOVE(A.firedoors, src)
 
-/obj/machinery/door/firedoor/Destroy()
+/obj/machinery/door/firedoor/Deinitialize()
 	remove_from_areas()
 	affecting_areas.Cut()
 	return ..()

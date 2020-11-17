@@ -29,7 +29,7 @@
 	atb.assign_abilities(boss_abilities)
 
 
-/mob/living/simple_animal/hostile/boss/Destroy()
+/mob/living/simple_animal/hostile/boss/Deinitialize()
 	qdel(atb)
 	atb = null
 	for(var/ab in boss_abilities)
@@ -133,7 +133,7 @@
 					break
 
 
-/datum/boss_active_timed_battle/Destroy()
+/datum/boss_active_timed_battle/Deinitialize()
 	abilities = null
 	SSobj.processing.Remove(src)
 	return ..()

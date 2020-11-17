@@ -97,7 +97,7 @@
 	return ..()
 
 
-/obj/structure/camera_assembly/Destroy()
+/obj/structure/camera_assembly/Deinitialize()
 	QDEL_NULL(xray_module)
 	QDEL_NULL(emp_module)
 	QDEL_NULL(proxy_module)

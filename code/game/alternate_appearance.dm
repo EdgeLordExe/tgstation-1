@@ -25,7 +25,7 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 	GLOB.active_alternate_appearances += src
 	appearance_key = key
 
-/datum/atom_hud/alternate_appearance/Destroy()
+/datum/atom_hud/alternate_appearance/Deinitialize()
 	GLOB.active_alternate_appearances -= src
 	return ..()
 
@@ -75,7 +75,7 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 		ghost_image.alpha = 128
 		ghost_appearance = new /datum/atom_hud/alternate_appearance/basic/observers(key + "_observer", ghost_image, NONE)
 
-/datum/atom_hud/alternate_appearance/basic/Destroy()
+/datum/atom_hud/alternate_appearance/basic/Deinitialize()
 	. = ..()
 	if(ghost_appearance)
 		QDEL_NULL(ghost_appearance)

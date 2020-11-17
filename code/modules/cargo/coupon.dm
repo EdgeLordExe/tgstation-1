@@ -43,7 +43,7 @@
 	inserted_console.say("Coupon for [initial(discounted_pack.name)] applied!")
 	forceMove(inserted_console)
 
-/obj/item/coupon/Destroy()
+/obj/item/coupon/Deinitialize()
 	if(inserted_console)
 		LAZYREMOVE(inserted_console.loaded_coupons, src)
 		inserted_console = null

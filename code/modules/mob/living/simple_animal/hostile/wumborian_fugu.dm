@@ -43,7 +43,7 @@
 	E = new
 	E.Grant(src)
 
-/mob/living/simple_animal/hostile/asteroid/fugu/Destroy()
+/mob/living/simple_animal/hostile/asteroid/fugu/Deinitialize()
 	QDEL_NULL(E)
 	return ..()
 

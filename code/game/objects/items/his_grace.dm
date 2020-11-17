@@ -31,7 +31,7 @@
 	GLOB.poi_list += src
 	RegisterSignal(src, COMSIG_MOVABLE_POST_THROW, .proc/move_gracefully)
 
-/obj/item/his_grace/Destroy()
+/obj/item/his_grace/Deinitialize()
 	STOP_PROCESSING(SSprocessing, src)
 	GLOB.poi_list -= src
 	for(var/mob/living/L in src)

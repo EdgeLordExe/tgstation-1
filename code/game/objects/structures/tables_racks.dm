@@ -326,7 +326,7 @@
 	debris += new frame
 	debris += new /obj/item/shard
 
-/obj/structure/table/glass/Destroy()
+/obj/structure/table/glass/Deinitialize()
 	QDEL_LIST(debris)
 	. = ..()
 
@@ -572,7 +572,7 @@
 			computer.table = src
 			break
 
-/obj/structure/table/optable/Destroy()
+/obj/structure/table/optable/Deinitialize()
 	. = ..()
 	if(computer && computer.table == src)
 		computer.table = null

@@ -43,7 +43,7 @@
 /obj/item/energy_katana/attack_self(mob/user)
 	dash_toggled = !dash_toggled
 	to_chat(user, "<span class='notice'>You [dash_toggled ? "enable" : "disable"] the dash function on [src].</span>")
-	
+
 /obj/item/energy_katana/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
 	if(dash_toggled && !Adjacent(target) && !target.density)
@@ -74,7 +74,7 @@
 
 	..()
 
-/obj/item/energy_katana/Destroy()
+/obj/item/energy_katana/Deinitialize()
 	QDEL_NULL(spark_system)
 	QDEL_NULL(jaunt)
 	return ..()

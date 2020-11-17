@@ -346,7 +346,7 @@
 /obj/structure/mineral_door/paperframe/ComponentInitialize()
 	return
 
-/obj/structure/mineral_door/paperframe/Destroy()
+/obj/structure/mineral_door/paperframe/Deinitialize()
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)
 	return ..()

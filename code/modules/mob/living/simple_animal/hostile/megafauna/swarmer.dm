@@ -108,7 +108,7 @@ GLOBAL_LIST_INIT(AISwarmerCapsByType, list(/mob/living/simple_animal/hostile/swa
 	GLOB.AISwarmersByType[type] += src
 
 
-/mob/living/simple_animal/hostile/swarmer/ai/Destroy()
+/mob/living/simple_animal/hostile/swarmer/ai/Deinitialize()
 	GLOB.AISwarmers -= src
 	GLOB.AISwarmersByType[type] -= src
 	return ..()

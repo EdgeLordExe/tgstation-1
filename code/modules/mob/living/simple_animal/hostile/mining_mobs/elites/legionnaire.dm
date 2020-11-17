@@ -285,7 +285,7 @@
 		L.IgniteMob()
 	. = ..()
 
-/obj/structure/legionnaire_bonfire/Destroy()
+/obj/structure/legionnaire_bonfire/Deinitialize()
 	if(myowner != null)
 		myowner.mypile = null
 	. = ..()

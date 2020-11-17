@@ -35,7 +35,7 @@
 		START_PROCESSING(SSfastprocess, src)
 	return TRUE
 
-/datum/status_effect/Destroy()
+/datum/status_effect/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	if(owner)
 		owner.clear_alert(id)
@@ -237,7 +237,7 @@
 	owner.underlays += status_underlay
 	return ..()
 
-/datum/status_effect/stacking/Destroy()
+/datum/status_effect/stacking/Deinitialize()
 	if(owner)
 		owner.cut_overlay(status_overlay)
 		owner.underlays -= status_underlay

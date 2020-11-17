@@ -49,7 +49,7 @@
 	generate_lock_visuals()
 	START_PROCESSING(SSfastprocess, src)
 
-/datum/component/lockon_aiming/Destroy()
+/datum/component/lockon_aiming/Deinitialize()
 	clear_visuals()
 	STOP_PROCESSING(SSfastprocess, src)
 	return ..()

@@ -23,7 +23,7 @@
 	mixer = new /obj/item/reagent_containers(src, MIXER_CAPACITY)
 	mixer.name = "Mixer"
 
-/obj/machinery/food_cart/Destroy()
+/obj/machinery/food_cart/Deinitialize()
 	QDEL_NULL(mixer)
 	return ..()
 

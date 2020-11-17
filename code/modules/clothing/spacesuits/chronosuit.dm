@@ -13,7 +13,7 @@
 		suit.deactivate(1, 1)
 	..()
 
-/obj/item/clothing/head/helmet/space/chronos/Destroy()
+/obj/item/clothing/head/helmet/space/chronos/Deinitialize()
 	dropped()
 	return ..()
 
@@ -63,7 +63,7 @@
 		deactivate()
 	..()
 
-/obj/item/clothing/suit/space/chronos/Destroy()
+/obj/item/clothing/suit/space/chronos/Deinitialize()
 	dropped()
 	return ..()
 
@@ -303,7 +303,7 @@
 /obj/effect/chronos_cam/on_unset_machine(mob/user)
 	user.reset_perspective(null)
 
-/obj/effect/chronos_cam/Destroy()
+/obj/effect/chronos_cam/Deinitialize()
 	if(holder)
 		if(holder.remote_control == src)
 			holder.remote_control = null

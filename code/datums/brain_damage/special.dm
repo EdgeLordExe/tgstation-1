@@ -381,6 +381,6 @@
 		if(prob(5))
 			to_chat(victim, "<span class='name'>[name]</span> exclaims, \"<span class='robotic'>Level 10 infraction alert!\"</span>")
 
-/obj/effect/hallucination/simple/securitron/Destroy()
+/obj/effect/hallucination/simple/securitron/Deinitialize()
 	STOP_PROCESSING(SSfastprocess,src)
 	return ..()

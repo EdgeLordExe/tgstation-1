@@ -86,7 +86,7 @@
 		qdel(B)
 	elements.Cut()
 
-/datum/beam/Destroy()
+/datum/beam/Deinitialize()
 	Reset()
 	qdel(visuals)
 	target = null
@@ -154,7 +154,7 @@
 	anchored = TRUE
 	var/datum/beam/owner
 
-/obj/effect/ebeam/Destroy()
+/obj/effect/ebeam/Deinitialize()
 	owner = null
 	return ..()
 

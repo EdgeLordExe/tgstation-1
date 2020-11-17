@@ -208,7 +208,7 @@
 	STOP_PROCESSING(SSfastprocess, src)
 	START_PROCESSING(SSprocessing, src) //this lasts 20 minutes, so SSfastprocess isn't needed.
 
-/datum/status_effect/exercised/Destroy()
+/datum/status_effect/exercised/Deinitialize()
 	. = ..()
 	STOP_PROCESSING(SSprocessing, src)
 

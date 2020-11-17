@@ -7,7 +7,7 @@
 	include_user = TRUE
 	range = -1
 
-/obj/effect/proc_holder/spell/targeted/touch/Destroy()
+/obj/effect/proc_holder/spell/targeted/touch/Deinitialize()
 	remove_hand()
 	if(action?.owner)
 		var/mob/guy_who_needs_to_know = action.owner

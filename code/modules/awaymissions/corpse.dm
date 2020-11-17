@@ -67,7 +67,7 @@
 		GLOB.poi_list |= src
 		LAZYADD(GLOB.mob_spawners[name], src)
 
-/obj/effect/mob_spawn/Destroy()
+/obj/effect/mob_spawn/Deinitialize()
 	GLOB.poi_list -= src
 	var/list/spawners = GLOB.mob_spawners[name]
 	LAZYREMOVE(spawners, src)

@@ -37,7 +37,7 @@ at the cost of risking a vicious bite.**/
 	loot = null
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOIST, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 20)
 
-/obj/structure/moisture_trap/Destroy()
+/obj/structure/moisture_trap/Deinitialize()
 	if(hidden_item)
 		QDEL_NULL(hidden_item)
 	return ..()

@@ -50,7 +50,7 @@
 	AddComponent(/datum/component/armor_plate,3,/obj/item/stack/sheet/animalhide/goliath_hide,list(MELEE = 10, BULLET = 5, LASER = 5))
 
 
-/obj/vehicle/sealed/mecha/working/ripley/Destroy()
+/obj/vehicle/sealed/mecha/working/ripley/Deinitialize()
 	for(var/atom/movable/A in cargo)
 		A.forceMove(drop_location())
 		step_rand(A)

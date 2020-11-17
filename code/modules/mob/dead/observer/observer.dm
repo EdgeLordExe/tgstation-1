@@ -159,7 +159,7 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	animate(src, color = old_color, time = 10, flags = ANIMATION_PARALLEL)
 	addtimer(CALLBACK(src, /atom/proc/update_atom_colour), 10)
 
-/mob/dead/observer/Destroy()
+/mob/dead/observer/Deinitialize()
 	// Update our old body's medhud since we're abandoning it
 	if(mind?.current)
 		mind.current.med_hud_set_status()

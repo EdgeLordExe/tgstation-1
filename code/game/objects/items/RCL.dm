@@ -105,7 +105,7 @@
 	if(loaded)
 		. += "<span class='info'>It contains [loaded.amount]/[max_amount] pipe cleaners.</span>"
 
-/obj/item/rcl/Destroy()
+/obj/item/rcl/Deinitialize()
 	QDEL_NULL(loaded)
 	last = null
 	listeningTo = null

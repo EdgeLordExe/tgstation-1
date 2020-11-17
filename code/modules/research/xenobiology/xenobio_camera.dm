@@ -56,7 +56,7 @@
 			connected_recycler = recycler
 			connected_recycler.connected += src
 
-/obj/machinery/computer/camera_advanced/xenobio/Destroy()
+/obj/machinery/computer/camera_advanced/xenobio/Deinitialize()
 	QDEL_NULL(current_potion)
 	for(var/thing in stored_slimes)
 		var/mob/living/simple_animal/slime/S = thing

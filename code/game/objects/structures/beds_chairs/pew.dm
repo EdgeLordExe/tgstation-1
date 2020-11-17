@@ -22,7 +22,7 @@
 /obj/structure/chair/pew/left/proc/GetLeftPewArmrest()
 	return mutable_appearance('icons/obj/sofa.dmi', "pewend_left_armrest")
 
-/obj/structure/chair/pew/left/Destroy()
+/obj/structure/chair/pew/left/Deinitialize()
 	QDEL_NULL(leftpewarmrest)
 	return ..()
 
@@ -53,7 +53,7 @@
 /obj/structure/chair/pew/right/proc/GetRightPewArmrest()
 	return mutable_appearance('icons/obj/sofa.dmi', "pewend_right_armrest")
 
-/obj/structure/chair/pew/right/Destroy()
+/obj/structure/chair/pew/right/Deinitialize()
 	QDEL_NULL(rightpewarmrest)
 	return ..()
 

@@ -38,7 +38,7 @@
 		update_icon()
 	return ..()
 
-/obj/machinery/atmospherics/components/unary/outlet_injector/Destroy()
+/obj/machinery/atmospherics/components/unary/outlet_injector/Deinitialize()
 	SSradio.remove_object(src,frequency)
 	return ..()
 

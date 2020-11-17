@@ -273,7 +273,7 @@
 	img = image(icon, src, image_state, OBJ_LAYER)
 	generate_name()
 
-/obj/effect/reality_smash/Destroy()
+/obj/effect/reality_smash/Deinitialize()
 	on_destroy()
 	return ..()
 

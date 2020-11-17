@@ -25,7 +25,7 @@
 		alight = new(src)
 
 
-/obj/item/clothing/head/helmet/Destroy()
+/obj/item/clothing/head/helmet/Deinitialize()
 	var/obj/item/flashlight/seclite/old_light = set_attached_light(null)
 	if(old_light)
 		qdel(old_light)
@@ -160,7 +160,7 @@
 	. = ..()
 	weewooloop = new(list(src), FALSE, FALSE)
 
-/obj/item/clothing/head/helmet/justice/Destroy()
+/obj/item/clothing/head/helmet/justice/Deinitialize()
 	QDEL_NULL(weewooloop)
 	return ..()
 
@@ -443,7 +443,7 @@
 		to_chat(magnification, policy)
 	icon_state = "[icon_state]up"
 
-/obj/item/clothing/head/helmet/monkey_sentience/Destroy()
+/obj/item/clothing/head/helmet/monkey_sentience/Deinitialize()
 	disconnect()
 	return ..()
 

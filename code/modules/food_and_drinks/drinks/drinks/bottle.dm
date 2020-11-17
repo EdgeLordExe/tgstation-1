@@ -593,7 +593,7 @@
 	. = ..()
 	RegisterSignal(src, COMSIG_MOVABLE_MOVED, .proc/check_fermentation)
 
-/obj/item/reagent_containers/food/drinks/bottle/pruno/Destroy()
+/obj/item/reagent_containers/food/drinks/bottle/pruno/Deinitialize()
 	UnregisterSignal(src, COMSIG_MOVABLE_MOVED)
 	return ..()
 

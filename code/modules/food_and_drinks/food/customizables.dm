@@ -138,7 +138,7 @@
 	slice.update_snack_overlays(src)
 
 
-/obj/item/reagent_containers/food/snacks/customizable/Destroy()
+/obj/item/reagent_containers/food/snacks/customizable/Deinitialize()
 	for(. in ingredients)
 		qdel(.)
 	return ..()

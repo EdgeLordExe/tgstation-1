@@ -36,7 +36,7 @@
 		return FALSE
 	return ..()
 
-/obj/projectile/curse_hand/Destroy()
+/obj/projectile/curse_hand/Deinitialize()
 	if(arm)
 		arm.End()
 		arm = null

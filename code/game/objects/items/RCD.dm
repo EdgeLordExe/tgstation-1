@@ -55,7 +55,7 @@ RLD
 		if(silo_link && silo_mats.mat_container && !silo_mats.on_hold())
 			. += "Remote connection has iron in equivalent to [silo_mats.mat_container.get_material_amount(/datum/material/iron)/500] RCD unit\s." //1 matter for 1 floor tile, as 4 tiles are produced from 1 metal
 
-/obj/item/construction/Destroy()
+/obj/item/construction/Deinitialize()
 	QDEL_NULL(spark_system)
 	silo_mats = null
 	return ..()
@@ -520,7 +520,7 @@ RLD
 	airlock_electronics.holder = src
 	GLOB.rcd_list += src
 
-/obj/item/construction/rcd/Destroy()
+/obj/item/construction/rcd/Deinitialize()
 	QDEL_NULL(airlock_electronics)
 	GLOB.rcd_list -= src
 	. = ..()

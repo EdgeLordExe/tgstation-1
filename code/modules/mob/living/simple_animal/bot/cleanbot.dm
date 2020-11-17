@@ -113,7 +113,7 @@
 	prefixes = list(command, security, engineering)
 	suffixes = list(research, medical, legal)
 
-/mob/living/simple_animal/bot/cleanbot/Destroy()
+/mob/living/simple_animal/bot/cleanbot/Deinitialize()
 	if(weapon)
 		var/atom/Tsec = drop_location()
 		weapon.force = weapon_orig_force

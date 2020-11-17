@@ -152,7 +152,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		light()
 	AddComponent(/datum/component/knockoff,90,list(BODY_ZONE_PRECISE_MOUTH),list(ITEM_SLOT_MASK))//90% to knock off when wearing a mask
 
-/obj/item/clothing/mask/cigarette/Destroy()
+/obj/item/clothing/mask/cigarette/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
@@ -527,7 +527,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	. = ..()
 	name = "empty [initial(name)]"
 
-/obj/item/clothing/mask/cigarette/pipe/Destroy()
+/obj/item/clothing/mask/cigarette/pipe/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

@@ -181,7 +181,7 @@
 		setting_overlay.icon_state = setting_iconstate()
 		. += setting_overlay
 
-/obj/item/gun/energy/dueling/Destroy()
+/obj/item/gun/energy/dueling/Deinitialize()
 	. = ..()
 	if(duel.gun_A == src)
 		duel.gun_A = null

@@ -129,7 +129,7 @@
 	if(combat_cooldown >= initial(combat_cooldown))
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/clothing/suit/armor/abductor/Destroy()
+/obj/item/clothing/suit/armor/abductor/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	for(var/obj/machinery/abductor/console/C in GLOB.machines)
 		if(C.vest == src)
@@ -242,7 +242,7 @@
 		marked = target
 		to_chat(user, "<span class='notice'>You finish preparing [target] for transport.</span>")
 
-/obj/item/abductor/gizmo/Destroy()
+/obj/item/abductor/gizmo/Deinitialize()
 	if(console)
 		console.gizmo = null
 	. = ..()
@@ -852,7 +852,7 @@ Congratulations! You are now trained for invasive xenobiology research!"}
 			if(C.reagents.get_reagent_amount(chemical) < inject_am * delta_time)
 				C.reagents.add_reagent(chemical, inject_am * delta_time)
 
-/obj/structure/table/optable/abductor/Destroy()
+/obj/structure/table/optable/abductor/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

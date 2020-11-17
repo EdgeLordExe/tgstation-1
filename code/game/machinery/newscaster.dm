@@ -235,7 +235,7 @@ GLOBAL_LIST_EMPTY(allCasters)
 	unit_no = GLOB.allCasters.len
 	update_icon()
 
-/obj/machinery/newscaster/Destroy()
+/obj/machinery/newscaster/Deinitialize()
 	GLOB.allCasters -= src
 	viewing_channel = null
 	picture = null

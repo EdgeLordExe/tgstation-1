@@ -107,7 +107,7 @@ To add a crossbreed:
 	if(del_on_empty)
 		START_PROCESSING(SSobj,src)
 
-/obj/item/slimecrossbeaker/Destroy()
+/obj/item/slimecrossbeaker/Deinitialize()
 	STOP_PROCESSING(SSobj,src)
 	return ..()
 

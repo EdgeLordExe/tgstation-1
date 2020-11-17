@@ -57,7 +57,7 @@ Nothing else in the console has ID requirements.
 	stored_research = SSresearch.science_tech
 	stored_research.consoles_accessing[src] = TRUE
 
-/obj/machinery/computer/rdconsole/Destroy()
+/obj/machinery/computer/rdconsole/Deinitialize()
 	if(stored_research)
 		stored_research.consoles_accessing -= src
 	if(t_disk)

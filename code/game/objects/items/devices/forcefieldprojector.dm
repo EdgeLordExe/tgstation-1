@@ -64,7 +64,7 @@
 	current_fields = list()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/forcefield_projector/Destroy()
+/obj/item/forcefield_projector/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -95,7 +95,7 @@
 	. = ..()
 	generator = origin
 
-/obj/structure/projected_forcefield/Destroy()
+/obj/structure/projected_forcefield/Deinitialize()
 	visible_message("<span class='warning'>[src] flickers and disappears!</span>")
 	playsound(src,'sound/weapons/resonator_blast.ogg',25,TRUE)
 	generator.current_fields -= src

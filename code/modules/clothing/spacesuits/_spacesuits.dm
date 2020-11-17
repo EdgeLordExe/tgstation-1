@@ -100,7 +100,7 @@
 	update_hud_icon(user)
 
 // Clean up the cell on destroy
-/obj/item/clothing/suit/space/Destroy()
+/obj/item/clothing/suit/space/Deinitialize()
 	if(cell)
 		QDEL_NULL(cell)
 	var/mob/living/carbon/human/human = src.loc

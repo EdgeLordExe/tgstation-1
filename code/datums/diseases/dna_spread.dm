@@ -67,7 +67,7 @@
 				carrier = 1 //Just chill out at stage 4
 
 
-/datum/disease/dnaspread/Destroy()
+/datum/disease/dnaspread/Deinitialize()
 	if (original_dna && transformed && affected_mob)
 		original_dna.transfer_identity(affected_mob, transfer_SE = 1)
 		affected_mob.real_name = affected_mob.dna.real_name

@@ -32,7 +32,7 @@
 	timerid = QDEL_IN(src, 600)
 	playsound(src, 'sound/effects/curse1.ogg', 100, TRUE, -1)
 
-/mob/living/simple_animal/hostile/asteroid/curseblob/Destroy()
+/mob/living/simple_animal/hostile/asteroid/curseblob/Deinitialize()
 	new /obj/effect/temp_visual/dir_setting/curse/blob(loc, dir)
 	doing_move_loop = FALSE
 	return ..()

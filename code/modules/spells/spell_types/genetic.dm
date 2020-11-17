@@ -31,7 +31,7 @@
 		if(duration < charge_max)
 			addtimer(CALLBACK(src, .proc/remove, target), duration, TIMER_OVERRIDE|TIMER_UNIQUE)
 
-/obj/effect/proc_holder/spell/targeted/genetic/Destroy()
+/obj/effect/proc_holder/spell/targeted/genetic/Deinitialize()
 	. = ..()
 	for(var/V in active_on)
 		remove(V)

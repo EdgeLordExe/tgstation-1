@@ -23,7 +23,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	. = ..()
 	GLOB.landmarks_list += src
 
-/obj/effect/landmark/Destroy()
+/obj/effect/landmark/Deinitialize()
 	GLOB.landmarks_list -= src
 	return ..()
 
@@ -49,7 +49,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	if(name != "start")
 		tag = "start*[name]"
 
-/obj/effect/landmark/start/Destroy()
+/obj/effect/landmark/start/Deinitialize()
 	GLOB.start_landmarks_list -= src
 	if(jobspawn_override)
 		LAZYREMOVEASSOC(GLOB.jobspawn_overrides, name, src)
@@ -225,7 +225,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	..()
 	GLOB.department_security_spawns += src
 
-/obj/effect/landmark/start/depsec/Destroy()
+/obj/effect/landmark/start/depsec/Deinitialize()
 	GLOB.department_security_spawns -= src
 	return ..()
 
@@ -410,7 +410,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	..()
 	GLOB.generic_event_spawns += src
 
-/obj/effect/landmark/event_spawn/Destroy()
+/obj/effect/landmark/event_spawn/Deinitialize()
 	GLOB.generic_event_spawns -= src
 	return ..()
 
@@ -423,7 +423,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	ruin_template = my_ruin_template
 	GLOB.ruin_landmarks |= src
 
-/obj/effect/landmark/ruin/Destroy()
+/obj/effect/landmark/ruin/Deinitialize()
 	GLOB.ruin_landmarks -= src
 	ruin_template = null
 	. = ..()

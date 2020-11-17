@@ -37,7 +37,7 @@
 		stack_trace("Network [type] with ID [network_id] failed to register and has been deleted.")
 		qdel(src)
 
-/datum/ntnet/Destroy()
+/datum/ntnet/Deinitialize()
 	for(var/i in connected_interfaces_by_id)
 		var/datum/component/ntnet_interface/I = i
 		I.unregister_connection(src)

@@ -400,7 +400,7 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 	narnar = new('icons/hud/screen_alert.dmi', "mini_nar")
 	START_PROCESSING(SSprocessing, src)
 
-/atom/movable/screen/alert/bloodsense/Destroy()
+/atom/movable/screen/alert/bloodsense/Deinitialize()
 	Cviewer = null
 	STOP_PROCESSING(SSprocessing, src)
 	return ..()
@@ -725,7 +725,7 @@ so as to remain in compliance with the most up-to-date laws."
 	if(master)
 		return usr.client.Click(master, location, control, params)
 
-/atom/movable/screen/alert/Destroy()
+/atom/movable/screen/alert/Deinitialize()
 	. = ..()
 	severity = 0
 	master = null

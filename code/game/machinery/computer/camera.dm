@@ -50,7 +50,7 @@
 	cam_background.assigned_map = map_name
 	cam_background.del_on_map_removal = FALSE
 
-/obj/machinery/computer/security/Destroy()
+/obj/machinery/computer/security/Deinitialize()
 	qdel(cam_screen)
 	QDEL_LIST(cam_plane_masters)
 	qdel(cam_background)

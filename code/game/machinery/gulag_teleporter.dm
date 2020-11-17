@@ -38,7 +38,7 @@ The console is located at computer/gulag_teleporter.dm
 	. = ..()
 	locate_reclaimer()
 
-/obj/machinery/gulag_teleporter/Destroy()
+/obj/machinery/gulag_teleporter/Deinitialize()
 	if(linked_reclaimer)
 		linked_reclaimer.linked_teleporter = null
 	return ..()

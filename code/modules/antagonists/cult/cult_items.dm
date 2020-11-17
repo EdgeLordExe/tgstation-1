@@ -675,7 +675,7 @@
 /obj/item/cult_spear/update_icon_state()
 	icon_state = "bloodspear0"
 
-/obj/item/cult_spear/Destroy()
+/obj/item/cult_spear/Deinitialize()
 	if(spear_act)
 		qdel(spear_act)
 	..()

@@ -175,7 +175,7 @@
 	for(var/datum/round_event_control/meteor_wave/meteors in SSevents.control)
 		meteors.weight *= mod
 
-/obj/machinery/satellite/meteor_shield/Destroy()
+/obj/machinery/satellite/meteor_shield/Deinitialize()
 	. = ..()
 	if(active && (obj_flags & EMAGGED))
 		change_meteor_chance(0.5)

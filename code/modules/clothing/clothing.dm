@@ -199,7 +199,7 @@
 
 	update_clothes_damaged_state(CLOTHING_DAMAGED)
 
-/obj/item/clothing/Destroy()
+/obj/item/clothing/Deinitialize()
 	user_vars_remembered = null //Oh god somebody put REFERENCES in here? not to worry, we'll clean it up
 	return ..()
 

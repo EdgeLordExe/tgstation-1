@@ -46,7 +46,7 @@
 			z_lock |= S.z
 	whitelist_turfs = typecacheof(whitelist_turfs)
 
-/obj/machinery/computer/camera_advanced/shuttle_docker/Destroy()
+/obj/machinery/computer/camera_advanced/shuttle_docker/Deinitialize()
 	. = ..()
 	GLOB.navigation_computers -= src
 

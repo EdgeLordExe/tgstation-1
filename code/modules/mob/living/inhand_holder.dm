@@ -23,7 +23,7 @@
 	deposit(M)
 	. = ..()
 
-/obj/item/clothing/head/mob_holder/Destroy()
+/obj/item/clothing/head/mob_holder/Deinitialize()
 	destroying = TRUE
 	if(held_mob)
 		release(FALSE)
@@ -97,7 +97,7 @@
 
 /obj/item/clothing/head/mob_holder/destructible
 
-/obj/item/clothing/head/mob_holder/destructible/Destroy()
+/obj/item/clothing/head/mob_holder/destructible/Deinitialize()
 	if(held_mob)
 		release(FALSE, TRUE, TRUE)
 	return ..()

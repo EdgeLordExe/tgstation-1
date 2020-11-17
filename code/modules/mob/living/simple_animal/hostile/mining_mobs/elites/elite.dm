@@ -171,7 +171,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	AddComponent(/datum/component/gps, "Menacing Signal")
 	START_PROCESSING(SSobj, src)
 
-/obj/structure/elite_tumor/Destroy()
+/obj/structure/elite_tumor/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	mychild = null
 	activator = null
@@ -322,7 +322,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 		QUEUE_SMOOTH_NEIGHBORS(src)
 		QUEUE_SMOOTH(src)
 
-/obj/effect/temp_visual/elite_tumor_wall/Destroy()
+/obj/effect/temp_visual/elite_tumor_wall/Deinitialize()
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)
 	activator = null

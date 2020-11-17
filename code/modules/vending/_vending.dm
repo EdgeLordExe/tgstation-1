@@ -214,7 +214,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	Radio = new /obj/item/radio(src)
 	Radio.listening = 0
 
-/obj/machinery/vending/Destroy()
+/obj/machinery/vending/Deinitialize()
 	QDEL_NULL(wires)
 	QDEL_NULL(coin)
 	QDEL_NULL(bill)
@@ -1155,7 +1155,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/custom/crowbar_act(mob/living/user, obj/item/I)
 	return FALSE
 
-/obj/machinery/vending/custom/Destroy()
+/obj/machinery/vending/custom/Deinitialize()
 	unbuckle_all_mobs(TRUE)
 	var/turf/T = get_turf(src)
 	if(T)

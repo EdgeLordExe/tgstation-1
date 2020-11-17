@@ -188,7 +188,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	update_icon()
 	return gun_properties
 
-/obj/machinery/porta_turret/Destroy()
+/obj/machinery/porta_turret/Deinitialize()
 	//deletes its own cover with it
 	QDEL_NULL(cover)
 	base = null
@@ -867,7 +867,7 @@ DEFINE_BITFIELD(turret_flags, list(
 		pixel_y = (dir & 3)? (dir ==1 ? -24 : 24) : 0
 	power_change() //Checks power and initial settings
 
-/obj/machinery/turretid/Destroy()
+/obj/machinery/turretid/Deinitialize()
 	turrets.Cut()
 	return ..()
 

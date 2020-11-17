@@ -74,7 +74,7 @@
 	generate_program_list()
 	load_program(offline_program, FALSE, FALSE)
 
-/obj/machinery/computer/holodeck/Destroy()
+/obj/machinery/computer/holodeck/Deinitialize()
 	emergency_shutdown()
 	if(linked)
 		linked.linked = null

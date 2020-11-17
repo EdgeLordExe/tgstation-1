@@ -131,7 +131,7 @@
 	M.emote("scream")
 	M.AdjustParalyzed(20)
 
-/obj/structure/kitchenspike/Destroy()
+/obj/structure/kitchenspike/Deinitialize()
 	if(has_buckled_mobs())
 		for(var/mob/living/L in buckled_mobs)
 			release_mob(L)

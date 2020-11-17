@@ -46,7 +46,7 @@
 	if(start_immediately)
 		start()
 
-/datum/looping_sound/Destroy()
+/datum/looping_sound/Deinitialize()
 	stop()
 	output_atoms = null
 	return ..()

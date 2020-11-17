@@ -166,7 +166,7 @@
 			break
 	. = ..()
 
-/obj/machinery/dna_vault/Destroy()
+/obj/machinery/dna_vault/Deinitialize()
 	for(var/V in fillers)
 		var/obj/structure/filler/filler = V
 		filler.parent = null

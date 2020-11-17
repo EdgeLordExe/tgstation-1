@@ -44,6 +44,6 @@ GLOBAL_LIST(gang_tags)
 	. = ..()
 	LAZYADD(GLOB.gang_tags, src)
 
-/obj/effect/decal/cleanable/crayon/gang/Destroy()
+/obj/effect/decal/cleanable/crayon/gang/Deinitialize()
 	LAZYREMOVE(GLOB.gang_tags, src)
 	..()

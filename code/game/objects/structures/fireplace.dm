@@ -20,7 +20,7 @@
 	..()
 	START_PROCESSING(SSobj, src)
 
-/obj/structure/fireplace/Destroy()
+/obj/structure/fireplace/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

@@ -98,7 +98,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	ADD_TRAIT(src, TRAIT_NODROP, HIGHLANDER)
 	START_PROCESSING(SSobj, src)
 
-/obj/item/claymore/highlander/Destroy()
+/obj/item/claymore/highlander/Deinitialize()
 	if(nuke_disk)
 		nuke_disk.forceMove(get_turf(src))
 		nuke_disk.visible_message("<span class='warning'>The nuke disk is vulnerable!</span>")
@@ -497,7 +497,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, HAND_REPLACEMENT_TRAIT)
 
-/obj/item/mounted_chainsaw/Destroy()
+/obj/item/mounted_chainsaw/Deinitialize()
 	var/obj/item/bodypart/part
 	new /obj/item/chainsaw(get_turf(src))
 	if(iscarbon(loc))
@@ -739,14 +739,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		return
 	RegisterSignal(owner, COMSIG_PARENT_EXAMINE, .proc/ownerExamined)
 
-/obj/item/circlegame/Destroy()
+/obj/item/circlegame/Deinitialize()
 	var/mob/owner = loc
 	if(istype(owner))
 		UnregisterSignal(owner, COMSIG_PARENT_EXAMINE)
 	return ..()
 
 /obj/item/circlegame/dropped(mob/user)
-	UnregisterSignal(user, COMSIG_PARENT_EXAMINE)		//loc will have changed by the time this is called, so Destroy() can't catch it
+	UnregisterSignal(user, COMSIG_PARENT_EXAMINE)		//loc will have changed by the time this is called, so Deinitialize() can't catch it
 	// this is a dropdel item.
 	return ..()
 

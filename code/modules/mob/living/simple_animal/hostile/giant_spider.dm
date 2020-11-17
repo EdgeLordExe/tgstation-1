@@ -94,7 +94,7 @@
 			mind.store_memory("<span class='spider'><b>[directive]</b></span>")
 	GLOB.spidermobs[src] = TRUE
 
-/mob/living/simple_animal/hostile/poison/giant_spider/Destroy()
+/mob/living/simple_animal/hostile/poison/giant_spider/Deinitialize()
 	GLOB.spidermobs -= src
 	return ..()
 

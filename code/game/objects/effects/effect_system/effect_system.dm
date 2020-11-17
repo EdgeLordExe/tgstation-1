@@ -16,7 +16,7 @@ would spawn and follow the beaker, even if it is carried or thrown.
 	. = ..()
 	GLOB.cameranet.updateVisibility(src)
 
-/obj/effect/particle_effect/Destroy()
+/obj/effect/particle_effect/Deinitialize()
 	GLOB.cameranet.updateVisibility(src)
 	return ..()
 
@@ -32,7 +32,7 @@ would spawn and follow the beaker, even if it is carried or thrown.
 	var/total_effects = 0
 	var/autocleanup = FALSE //will delete itself after use
 
-/datum/effect_system/Destroy()
+/datum/effect_system/Deinitialize()
 	holder = null
 	location = null
 	return ..()

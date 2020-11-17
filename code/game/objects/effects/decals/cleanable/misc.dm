@@ -70,7 +70,7 @@
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)
 
-/obj/effect/decal/cleanable/dirt/Destroy()
+/obj/effect/decal/cleanable/dirt/Deinitialize()
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)
 	return ..()

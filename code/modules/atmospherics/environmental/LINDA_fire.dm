@@ -211,7 +211,7 @@
 		location.to_be_destroyed = TRUE
 	return TRUE
 
-/obj/effect/hotspot/Destroy()
+/obj/effect/hotspot/Deinitialize()
 	SSair.hotspots -= src
 	var/turf/open/T = loc
 	if(istype(T) && T.active_hotspot == src)

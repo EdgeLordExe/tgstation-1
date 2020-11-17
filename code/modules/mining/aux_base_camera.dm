@@ -86,7 +86,7 @@
 	else
 		return ..()
 
-/obj/machinery/computer/camera_advanced/base_construction/Destroy()
+/obj/machinery/computer/camera_advanced/base_construction/Deinitialize()
 	qdel(RCD)
 	return ..()
 

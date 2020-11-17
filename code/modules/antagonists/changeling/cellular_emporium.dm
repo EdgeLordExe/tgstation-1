@@ -9,7 +9,7 @@
 	. = ..()
 	changeling = my_changeling
 
-/datum/cellular_emporium/Destroy()
+/datum/cellular_emporium/Deinitialize()
 	changeling = null
 	. = ..()
 

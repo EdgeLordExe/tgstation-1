@@ -30,7 +30,7 @@
 	if(!spear)
 		spear = bonespear ? new/obj/item/spear/bonespear(src) : new/obj/item/spear(src)
 
-/obj/structure/headpike/Destroy()
+/obj/structure/headpike/Deinitialize()
 	QDEL_NULL(victim)
 	QDEL_NULL(spear)
 	return ..()

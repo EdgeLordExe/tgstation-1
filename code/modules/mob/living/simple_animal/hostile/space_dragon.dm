@@ -547,7 +547,7 @@
 /obj/structure/carp_rift/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
 	playsound(src, 'sound/magic/lightningshock.ogg', 50, TRUE)
 
-/obj/structure/carp_rift/Destroy()
+/obj/structure/carp_rift/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	if(time_charged != max_charge + 1)
 		to_chat(dragon, "<span class='boldwarning'>The rift has been destroyed!  You have failed, and find yourself brought down by the weight of your failure.</span>")

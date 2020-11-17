@@ -64,7 +64,7 @@
 		SSair.start_processing_machine(src)
 	SetInitDirections()
 
-/obj/machinery/atmospherics/Destroy()
+/obj/machinery/atmospherics/Deinitialize()
 	for(var/i in 1 to device_type)
 		nullifyNode(i)
 

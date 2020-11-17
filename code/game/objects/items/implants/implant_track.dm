@@ -19,7 +19,7 @@
 	..()
 	GLOB.tracked_implants += src
 
-/obj/item/implant/tracking/Destroy()
+/obj/item/implant/tracking/Deinitialize()
 	. = ..()
 	GLOB.tracked_implants -= src
 

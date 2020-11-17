@@ -2,7 +2,7 @@
 	icon_state = "freezer"
 	var/jones = FALSE
 
-/obj/structure/closet/secure_closet/freezer/Destroy()
+/obj/structure/closet/secure_closet/freezer/Deinitialize()
 	recursive_organ_check(src)
 	..()
 

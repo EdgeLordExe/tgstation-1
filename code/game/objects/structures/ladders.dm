@@ -166,7 +166,7 @@
 	GLOB.ladders += src
 	return ..()
 
-/obj/structure/ladder/unbreakable/Destroy()
+/obj/structure/ladder/unbreakable/Deinitialize()
 	. = ..()
 	if (. != QDEL_HINT_LETMELIVE)
 		GLOB.ladders -= src

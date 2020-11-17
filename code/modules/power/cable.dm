@@ -102,7 +102,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 					C.linked_dirs &= ~inverse
 					C.update_icon()
 
-/obj/structure/cable/Destroy()					// called when a cable is deleted
+/obj/structure/cable/Deinitialize()					// called when a cable is deleted
 	Disconnect_cable()
 
 	if(powernet)
@@ -677,7 +677,7 @@ GLOBAL_LIST_INIT(wire_node_generating_types, typecacheof(list(/obj/structure/gri
 	vis_contents += cable_node_3
 	update_icon()
 
-/obj/structure/cable/multilayer/Destroy()					// called when a cable is deleted
+/obj/structure/cable/multilayer/Deinitialize()					// called when a cable is deleted
 	QDEL_NULL(machinery_node)
 	QDEL_NULL(cable_node_1)
 	QDEL_NULL(cable_node_2)

@@ -17,7 +17,7 @@
 		return
 	LAZYADD(GLOB.religious_sect.active_rites, src)
 
-/datum/religion_rites/Destroy()
+/datum/religion_rites/Deinitialize()
 	if(!GLOB?.religious_sect)
 		return
 	LAZYREMOVE(GLOB.religious_sect.active_rites, src)

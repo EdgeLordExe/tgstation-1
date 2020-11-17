@@ -17,7 +17,7 @@
 	active_power_usage = 0
 	var/machinery_layer = MACHINERY_LAYER_1 //cable layer to which the machine is connected
 
-/obj/machinery/power/Destroy()
+/obj/machinery/power/Deinitialize()
 	disconnect_from_network()
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/update_cable_icons_on_turf, get_turf(src)), 3)
 	return ..()

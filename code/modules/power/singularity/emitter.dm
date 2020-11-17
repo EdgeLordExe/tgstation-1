@@ -123,7 +123,7 @@
 /obj/machinery/power/emitter/should_have_node()
 	return welded
 
-/obj/machinery/power/emitter/Destroy()
+/obj/machinery/power/emitter/Deinitialize()
 	if(SSticker.IsRoundInProgress())
 		var/turf/T = get_turf(src)
 		message_admins("Emitter deleted at [ADMIN_VERBOSEJMP(T)]")

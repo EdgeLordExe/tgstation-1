@@ -29,7 +29,7 @@
 	if(damage_type == BRUTE || damage_type == BURN)
 		playsound(src, 'sound/weapons/slash.ogg', 80, TRUE)
 
-/obj/structure/energy_net/Destroy()
+/obj/structure/energy_net/Deinitialize()
 	if(!QDELETED(affecting))
 		affecting.visible_message("<span class='notice'>[affecting.name] is recovered from the energy net!</span>", "<span class='notice'>You are recovered from the energy net!</span>", "<span class='hear'>You hear a grunt.</span>")
 	affecting = null

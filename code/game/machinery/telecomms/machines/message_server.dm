@@ -46,7 +46,7 @@
 		return
 	return ..()
 
-/obj/machinery/blackbox_recorder/Destroy()
+/obj/machinery/blackbox_recorder/Deinitialize()
 	if(stored)
 		stored.forceMove(loc)
 		new /obj/effect/decal/cleanable/oil(loc)
@@ -99,7 +99,7 @@
 	else
 		pda_msgs += new /datum/data_pda_msg("System Administrator", "system", MESSAGE_SERVER_FUNCTIONING_MESSAGE)
 
-/obj/machinery/telecomms/message_server/Destroy()
+/obj/machinery/telecomms/message_server/Deinitialize()
 	for(var/obj/machinery/computer/message_monitor/monitor in GLOB.telecomms_list)
 		if(monitor.linkedServer && monitor.linkedServer == src)
 			monitor.linkedServer = null

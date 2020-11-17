@@ -9,7 +9,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/structure/closet/infinite/Destroy()
+/obj/structure/closet/infinite/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

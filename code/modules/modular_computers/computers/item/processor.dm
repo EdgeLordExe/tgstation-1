@@ -12,7 +12,7 @@
 
 	var/obj/machinery/modular_computer/machinery_computer = null
 
-/obj/item/modular_computer/processor/Destroy()
+/obj/item/modular_computer/processor/Deinitialize()
 	if(machinery_computer && (machinery_computer.cpu == src))
 		machinery_computer.cpu = null
 		machinery_computer.UnregisterSignal(src, COMSIG_ATOM_UPDATED_ICON)

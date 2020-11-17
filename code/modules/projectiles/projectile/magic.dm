@@ -426,7 +426,7 @@
 	created = TRUE
 	return ..()
 
-/obj/projectile/magic/locker/Destroy()
+/obj/projectile/magic/locker/Deinitialize()
 	locker_suck = FALSE
 	for(var/atom/movable/AM in contents)
 		AM.forceMove(get_turf(src))
@@ -659,7 +659,7 @@
 	zap_range = 4
 	zap_flags = ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE
 
-/obj/projectile/magic/aoe/lightning/Destroy()
+/obj/projectile/magic/aoe/lightning/Deinitialize()
 	qdel(chain)
 	. = ..()
 

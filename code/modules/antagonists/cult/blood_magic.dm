@@ -221,7 +221,7 @@
 	PH.attached_action = src
 	..()
 
-/datum/action/innate/cult/blood_spell/horror/Destroy()
+/datum/action/innate/cult/blood_spell/horror/Deinitialize()
 	var/obj/effect/proc_holder/horror/destroy = PH
 	. = ..()
 	if(destroy  && !QDELETED(destroy))
@@ -236,7 +236,7 @@
 	ranged_mousepointer = 'icons/effects/mouse_pointers/cult_target.dmi'
 	var/datum/action/innate/cult/blood_spell/attached_action
 
-/obj/effect/proc_holder/horror/Destroy()
+/obj/effect/proc_holder/horror/Deinitialize()
 	var/datum/action/innate/cult/blood_spell/AA = attached_action
 	. = ..()
 	if(AA && !QDELETED(AA))
@@ -363,7 +363,7 @@
 	health_cost = source.health_cost
 	..()
 
-/obj/item/melee/blood_magic/Destroy()
+/obj/item/melee/blood_magic/Deinitialize()
 	if(!QDELETED(source))
 		if(uses <= 0)
 			source.hand_magic = null

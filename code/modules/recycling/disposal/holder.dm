@@ -15,7 +15,7 @@
 	var/tomail = FALSE			// contains wrapped package
 	var/hasmob = FALSE			// contains a mob
 
-/obj/structure/disposalholder/Destroy()
+/obj/structure/disposalholder/Deinitialize()
 	QDEL_NULL(gas)
 	active = FALSE
 	return ..()

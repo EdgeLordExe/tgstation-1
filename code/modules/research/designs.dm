@@ -46,7 +46,7 @@ other types of metals and chemistry for reagents).
 	name = "ERROR"
 	desc = "This usually means something in the database has corrupted. If this doesn't go away automatically, inform Central Comamnd so their techs can fix this ASAP(tm)"
 
-/datum/design/Destroy()
+/datum/design/Deinitialize()
 	SSresearch.techweb_designs -= id
 	return ..()
 

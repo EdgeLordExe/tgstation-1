@@ -28,7 +28,7 @@
 	chameleon_action.chameleon_name = "Skillchip"
 	chameleon_action.initialize_disguises()
 
-/obj/item/skillchip/chameleon/Destroy()
+/obj/item/skillchip/chameleon/Deinitialize()
 	QDEL_NULL(chameleon_action)
 	return ..()
 

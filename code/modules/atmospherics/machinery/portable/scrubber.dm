@@ -30,7 +30,7 @@
 		/datum/gas/halon,
 	)
 
-/obj/machinery/portable_atmospherics/scrubber/Destroy()
+/obj/machinery/portable_atmospherics/scrubber/Deinitialize()
 	var/turf/T = get_turf(src)
 	T.assume_air(air_contents)
 	air_update_turf()

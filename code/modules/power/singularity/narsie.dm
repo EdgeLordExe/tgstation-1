@@ -105,7 +105,7 @@
 		sound_to_playing_players('sound/machines/alarm.ogg')
 		addtimer(CALLBACK(GLOBAL_PROC, .proc/cult_ending_helper), 120)
 
-/obj/singularity/narsie/large/cult/Destroy()
+/obj/singularity/narsie/large/cult/Deinitialize()
 	send_to_playing_players("<span class='narsie'>\"<b>[pick("Nooooo...", "Not die. How-", "Die. Mort-", "Sas tyen re-")]\"</b></span>")
 	sound_to_playing_players('sound/magic/demon_dies.ogg', 50)
 	var/list/all_cults = list()

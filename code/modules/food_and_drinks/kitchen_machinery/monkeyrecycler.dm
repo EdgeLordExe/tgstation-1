@@ -13,14 +13,14 @@ GLOBAL_LIST_EMPTY(monkey_recyclers)
 	circuit = /obj/item/circuitboard/machine/monkey_recycler
 	var/stored_matter = 0
 	var/cube_production = 0.2
-	var/list/connected = list()			//Keeps track of connected xenobio consoles, for deletion in /Destroy()
+	var/list/connected = list()			//Keeps track of connected xenobio consoles, for deletion in /Deinitialize()
 
 /obj/machinery/monkey_recycler/Initialize(mapload)
 	. = ..()
 	if (mapload)
 		GLOB.monkey_recyclers += src
 
-/obj/machinery/monkey_recycler/Destroy()
+/obj/machinery/monkey_recycler/Deinitialize()
 	GLOB.monkey_recyclers -= src
 	for(var/thing in connected)
 		var/obj/machinery/computer/camera_advanced/xenobio/console = thing

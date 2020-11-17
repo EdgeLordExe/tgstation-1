@@ -33,7 +33,7 @@
 	addtimer(CALLBACK(src, .proc/glow_loop, master), rand(1,19))//Things should look uneven
 	START_PROCESSING(SSradiation, src)
 
-/datum/component/radioactive/Destroy()
+/datum/component/radioactive/Deinitialize()
 	STOP_PROCESSING(SSradiation, src)
 	var/atom/movable/master = parent
 	master.remove_filter("rad_glow")

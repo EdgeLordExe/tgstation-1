@@ -84,7 +84,7 @@
 	syndie = 1
 	recalculateChannels()
 
-/obj/item/radio/Destroy()
+/obj/item/radio/Deinitialize()
 	remove_radio_all(src) //Just to be sure
 	QDEL_NULL(wires)
 	QDEL_NULL(keyslot)

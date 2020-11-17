@@ -12,7 +12,7 @@
 	max_integrity = 80
 	var/obj/machinery/porta_turret/parent_turret = null
 
-/obj/machinery/porta_turret_cover/Destroy()
+/obj/machinery/porta_turret_cover/Deinitialize()
 	if(parent_turret)
 		parent_turret.cover = null
 		parent_turret.invisibility = 0

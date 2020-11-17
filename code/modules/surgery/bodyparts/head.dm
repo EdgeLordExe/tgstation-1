@@ -38,7 +38,7 @@
 	var/lip_color = "white"
 
 
-/obj/item/bodypart/head/Destroy()
+/obj/item/bodypart/head/Deinitialize()
 	QDEL_NULL(brainmob) //order is sensitive, see warning in handle_atom_del() below
 	QDEL_NULL(brain)
 	QDEL_NULL(eyes)

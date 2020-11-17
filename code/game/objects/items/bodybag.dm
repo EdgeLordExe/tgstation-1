@@ -51,7 +51,7 @@
 		var/s = contents.len == 1 ? "" : "s"
 		. += "<span class='notice'>You can make out the shape[s] of [contents.len] object[s] through the fabric.</span>"
 
-/obj/item/bodybag/bluespace/Destroy()
+/obj/item/bodybag/bluespace/Deinitialize()
 	for(var/atom/movable/A in contents)
 		A.forceMove(get_turf(src))
 		if(isliving(A))

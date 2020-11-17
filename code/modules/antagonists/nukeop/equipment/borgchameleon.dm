@@ -31,7 +31,7 @@
 	. = ..()
 	friendlyName = pick(GLOB.ai_names)
 
-/obj/item/borg_chameleon/Destroy()
+/obj/item/borg_chameleon/Deinitialize()
 	listeningTo = null
 	return ..()
 

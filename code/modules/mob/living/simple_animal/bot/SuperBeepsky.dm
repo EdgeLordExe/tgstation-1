@@ -35,7 +35,7 @@
 	. = ..()
 	INVOKE_ASYNC(weapon, /obj/item.proc/attack_self, src)
 
-/mob/living/simple_animal/bot/secbot/grievous/Destroy()
+/mob/living/simple_animal/bot/secbot/grievous/Deinitialize()
 	QDEL_NULL(weapon)
 	return ..()
 

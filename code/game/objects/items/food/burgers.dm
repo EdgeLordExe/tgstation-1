@@ -175,7 +175,7 @@
 
 		//If i was less lazy i would make the burger forcefeed itself to a nearby mob here.
 
-/obj/item/food/burger/ghost/Destroy()
+/obj/item/food/burger/ghost/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

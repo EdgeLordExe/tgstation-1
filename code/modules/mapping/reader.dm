@@ -472,6 +472,6 @@
 	// fallback: string
 	return text
 
-/datum/parsed_map/Destroy()
+/datum/parsed_map/Deinitialize()
 	..()
 	return QDEL_HINT_HARDDEL_NOW

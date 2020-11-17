@@ -207,7 +207,7 @@
 		mori()
 
 //Just in case
-/obj/item/clothing/neck/necklace/memento_mori/Destroy()
+/obj/item/clothing/neck/necklace/memento_mori/Deinitialize()
 	if(active_owner)
 		mori()
 	return ..()
@@ -276,7 +276,7 @@
 	. = ..()
 	wisp = new(src)
 
-/obj/item/wisp_lantern/Destroy()
+/obj/item/wisp_lantern/Deinitialize()
 	if(wisp)
 		if(wisp.loc == src)
 			qdel(wisp)
@@ -435,7 +435,7 @@
 		//TODO: keep the chain beamed to A
 		//TODO: needs a callback to delete the chain
 
-/obj/projectile/hook/Destroy()
+/obj/projectile/hook/Deinitialize()
 	qdel(chain)
 	return ..()
 
@@ -841,7 +841,7 @@
 	GLOB.poi_list |= src
 	AddComponent(/datum/component/butchering, 150, 90)
 
-/obj/item/melee/ghost_sword/Destroy()
+/obj/item/melee/ghost_sword/Deinitialize()
 	for(var/mob/dead/observer/G in spirits)
 		G.invisibility = GLOB.observer_default_invisibility
 	spirits.Cut()

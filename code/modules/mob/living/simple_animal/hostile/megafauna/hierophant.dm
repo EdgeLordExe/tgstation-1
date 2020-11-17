@@ -412,7 +412,7 @@ Difficulty: Hard
 		set_stat(CONSCIOUS) // deathgasp won't run if dead, stupid
 		..(force_grant = stored_nearby)
 
-/mob/living/simple_animal/hostile/megafauna/hierophant/Destroy()
+/mob/living/simple_animal/hostile/megafauna/hierophant/Deinitialize()
 	qdel(spawned_beacon)
 	. = ..()
 
@@ -530,7 +530,7 @@ Difficulty: Hard
 		QUEUE_SMOOTH_NEIGHBORS(src)
 		QUEUE_SMOOTH(src)
 
-/obj/effect/temp_visual/hierophant/wall/Destroy()
+/obj/effect/temp_visual/hierophant/wall/Deinitialize()
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)
 	return ..()

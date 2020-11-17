@@ -19,7 +19,7 @@
 		SSnetworks.station_network.chat_channels.Add(src)
 	..()
 
-/datum/ntnet_conversation/Destroy()
+/datum/ntnet_conversation/Deinitialize()
 	if(SSnetworks.station_network)
 		SSnetworks.station_network.chat_channels.Remove(src)
 	return ..()

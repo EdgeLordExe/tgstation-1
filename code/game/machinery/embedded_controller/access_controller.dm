@@ -117,7 +117,7 @@
 	else if(O == exteriorAirlock)
 		exteriorAirlock = null
 
-/obj/machinery/door_buttons/airlock_controller/Destroy()
+/obj/machinery/door_buttons/airlock_controller/Deinitialize()
 	for(var/obj/machinery/door_buttons/access_button/A in GLOB.machines)
 		if(A.controller == src)
 			A.controller = null

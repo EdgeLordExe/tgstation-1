@@ -64,7 +64,7 @@
 		soundloop = new(list(src), enabled)
 	update_icon()
 
-/obj/item/modular_computer/Destroy()
+/obj/item/modular_computer/Deinitialize()
 	kill_program(forced = TRUE)
 	STOP_PROCESSING(SSobj, src)
 	QDEL_NULL(soundloop)

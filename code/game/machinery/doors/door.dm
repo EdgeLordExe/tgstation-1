@@ -82,7 +82,7 @@
 	else
 		layer = initial(layer)
 
-/obj/machinery/door/Destroy()
+/obj/machinery/door/Deinitialize()
 	update_freelook_sight()
 	GLOB.airlocks -= src
 	if(spark_system)

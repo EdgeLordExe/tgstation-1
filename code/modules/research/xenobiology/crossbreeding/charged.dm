@@ -210,7 +210,7 @@ Charged extracts:
 		visible_message("<span class='warning'>[src] collapses into a puddle of goo.</span>")
 		qdel(src)
 
-/obj/item/slimecross/charged/gold/Destroy()
+/obj/item/slimecross/charged/gold/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

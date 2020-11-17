@@ -39,7 +39,7 @@
 
 	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE)
 
-/obj/machinery/navbeacon/Destroy()
+/obj/machinery/navbeacon/Deinitialize()
 	glob_lists_deregister()
 	return ..()
 

@@ -612,7 +612,7 @@
 	START_PROCESSING(SSfastprocess, src)
 	host = loc
 
-/obj/item/borg/projectile_dampen/Destroy()
+/obj/item/borg/projectile_dampen/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	return ..()
 
@@ -795,7 +795,7 @@
 	. = ..()
 	RegisterSignal(loc.loc, COMSIG_BORG_SAFE_DECONSTRUCT, .proc/safedecon)
 
-/obj/item/borg/apparatus/Destroy()
+/obj/item/borg/apparatus/Deinitialize()
 	if(stored)
 		qdel(stored)
 	. = ..()
@@ -873,7 +873,7 @@
 	RegisterSignal(stored, COMSIG_ATOM_UPDATE_ICON, /atom/.proc/update_icon)
 	update_icon()
 
-/obj/item/borg/apparatus/beaker/Destroy()
+/obj/item/borg/apparatus/beaker/Deinitialize()
 	if(stored)
 		var/obj/item/reagent_containers/C = stored
 		C.SplashReagents(get_turf(src))

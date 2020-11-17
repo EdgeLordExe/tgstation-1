@@ -104,7 +104,7 @@
 		. += "<span class='notice'>\A [isobserver(load) ? "ghostly figure" : load] is on its load platform.</span>"
 
 
-/mob/living/simple_animal/bot/mulebot/Destroy()
+/mob/living/simple_animal/bot/mulebot/Deinitialize()
 	unload(0)
 	QDEL_NULL(wires)
 	QDEL_NULL(cell)

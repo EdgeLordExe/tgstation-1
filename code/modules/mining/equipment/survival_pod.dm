@@ -27,7 +27,7 @@
 		WARNING("Shelter template ([template_id]) not found!")
 		qdel(src)
 
-/obj/item/survivalcapsule/Destroy()
+/obj/item/survivalcapsule/Deinitialize()
 	template = null // without this, capsules would be one use. per round.
 	. = ..()
 

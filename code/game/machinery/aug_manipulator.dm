@@ -34,7 +34,7 @@
 	if(storedpart)
 		. += "[initial_icon_state]-closed"
 
-/obj/machinery/aug_manipulator/Destroy()
+/obj/machinery/aug_manipulator/Deinitialize()
 	QDEL_NULL(storedpart)
 	return ..()
 

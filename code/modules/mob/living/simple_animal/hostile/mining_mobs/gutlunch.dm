@@ -72,7 +72,7 @@
 
 	return FALSE
 
-/mob/living/simple_animal/hostile/asteroid/gutlunch/Destroy()
+/mob/living/simple_animal/hostile/asteroid/gutlunch/Deinitialize()
 	QDEL_NULL(udder)
 	return ..()
 
@@ -154,7 +154,7 @@
 	L.setDir(dir)
 	L.Stun(20, ignore_canstun = TRUE)
 	visible_message("<span class='notice'>[src] grows up into [L].</span>")
-	Destroy()
+	Deinitialize()
 
 //Gutlunch udder
 /obj/item/udder/gutlunch

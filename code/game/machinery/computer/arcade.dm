@@ -582,7 +582,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 		return FALSE
 
 
-/obj/machinery/computer/arcade/battle/Destroy()
+/obj/machinery/computer/arcade/battle/Deinitialize()
 	enemy_passive = null
 	weapons = null
 	last_three_move = null
@@ -691,7 +691,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 	Radio = new /obj/item/radio(src)
 	Radio.listening = 0
 
-/obj/machinery/computer/arcade/orion_trail/Destroy()
+/obj/machinery/computer/arcade/orion_trail/Deinitialize()
 	QDEL_NULL(Radio)
 	return ..()
 

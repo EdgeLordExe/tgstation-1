@@ -25,7 +25,7 @@
 	create_reagents(50, OPENCONTAINER)
 	GLOB.tracked_chem_implants += src
 
-/obj/item/implant/chem/Destroy()
+/obj/item/implant/chem/Deinitialize()
 	GLOB.tracked_chem_implants -= src
 	return ..()
 

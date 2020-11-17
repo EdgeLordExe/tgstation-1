@@ -20,7 +20,7 @@
 	. = ..()
 	update_icon()
 
-/obj/machinery/computer/pandemic/Destroy()
+/obj/machinery/computer/pandemic/Deinitialize()
 	QDEL_NULL(beaker)
 	return ..()
 

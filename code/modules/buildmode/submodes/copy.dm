@@ -2,7 +2,7 @@
 	key = "copy"
 	var/atom/movable/stored = null
 
-/datum/buildmode_mode/copy/Destroy()
+/datum/buildmode_mode/copy/Deinitialize()
 	stored = null
 	return ..()
 

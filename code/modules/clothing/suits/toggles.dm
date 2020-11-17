@@ -9,7 +9,7 @@
 	. = ..()
 	MakeHood()
 
-/obj/item/clothing/suit/hooded/Destroy()
+/obj/item/clothing/suit/hooded/Deinitialize()
 	. = ..()
 	qdel(hood)
 	hood = null
@@ -73,7 +73,7 @@
 	var/obj/item/clothing/suit/hooded/suit
 	dynamic_hair_suffix = ""
 
-/obj/item/clothing/head/hooded/Destroy()
+/obj/item/clothing/head/hooded/Deinitialize()
 	suit = null
 	return ..()
 
@@ -129,14 +129,14 @@
 	MakeHelmet()
 	. = ..()
 
-/obj/item/clothing/suit/space/hardsuit/Destroy()
+/obj/item/clothing/suit/space/hardsuit/Deinitialize()
 	if(helmet)
 		helmet.suit = null
 		qdel(helmet)
 	qdel(jetpack)
 	return ..()
 
-/obj/item/clothing/head/helmet/space/hardsuit/Destroy()
+/obj/item/clothing/head/helmet/space/hardsuit/Deinitialize()
 	if(suit)
 		suit.helmet = null
 	return ..()

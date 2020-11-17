@@ -33,7 +33,7 @@
 	new /obj/item/stack/sheet/metal(drop_location(), 1)
 	..()
 
-/obj/vehicle/ridden/wheelchair/Destroy()
+/obj/vehicle/ridden/wheelchair/Deinitialize()
 	if(has_buckled_mobs())
 		var/mob/living/carbon/H = buckled_mobs[1]
 		unbuckle_mob(H)

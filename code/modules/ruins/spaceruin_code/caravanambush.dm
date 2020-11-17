@@ -58,7 +58,7 @@
 	. = ..()
 	GLOB.jam_on_wardec += src
 
-/obj/machinery/computer/camera_advanced/shuttle_docker/caravan/Destroy()
+/obj/machinery/computer/camera_advanced/shuttle_docker/caravan/Deinitialize()
 	GLOB.jam_on_wardec -= src
 	return ..()
 

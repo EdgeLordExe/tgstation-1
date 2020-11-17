@@ -10,7 +10,7 @@
 	..()
 	events = new
 
-/datum/events/Destroy()
+/datum/events/Deinitialize()
 	for(var/elist in events)
 		for(var/e in events[elist])
 			qdel(e)
@@ -36,7 +36,7 @@
 //  Arguments: event_type as text, any number of additional arguments to pass to event handler
 //  Returns: null
 /datum/events/proc/fireEvent(eventName, ...)
-	
+
 	var/list/event = LAZYACCESS(events,eventName)
 	if(istype(event))
 		for(var/E in event)

@@ -1,9 +1,9 @@
 /datum/buildmode_mode/throwing
 	key = "throw"
-	
+
 	var/atom/movable/throw_atom = null
-	
-/datum/buildmode_mode/throwing/Destroy()
+
+/datum/buildmode_mode/throwing/Deinitialize()
 	throw_atom = null
 	return ..()
 

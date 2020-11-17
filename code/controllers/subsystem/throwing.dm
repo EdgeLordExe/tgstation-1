@@ -83,7 +83,7 @@ SUBSYSTEM_DEF(throwing)
 	src.target_zone = target_zone
 
 
-/datum/thrownthing/Destroy()
+/datum/thrownthing/Deinitialize()
 	SSthrowing.processing -= thrownthing
 	thrownthing.throwing = null
 	thrownthing = null

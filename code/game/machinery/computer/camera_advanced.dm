@@ -100,7 +100,7 @@
 	if(!can_use(user) || (issilicon(user) && !user.has_unlimited_silicon_privilege))
 		user.unset_machine()
 
-/obj/machinery/computer/camera_advanced/Destroy()
+/obj/machinery/computer/camera_advanced/Deinitialize()
 	if(current_user)
 		current_user.unset_machine()
 	if(eyeobj)
@@ -197,7 +197,7 @@
 	user.see_in_dark = 2
 	return 1
 
-/mob/camera/ai_eye/remote/Destroy()
+/mob/camera/ai_eye/remote/Deinitialize()
 	if(origin && eye_user)
 		origin.remove_eye_control(eye_user,src)
 	origin = null

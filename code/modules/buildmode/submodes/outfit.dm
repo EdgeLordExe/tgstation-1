@@ -2,7 +2,7 @@
 	key = "outfit"
 	var/datum/outfit/dressuptime
 
-/datum/buildmode_mode/outfit/Destroy()
+/datum/buildmode_mode/outfit/Deinitialize()
 	dressuptime = null
 	return ..()
 

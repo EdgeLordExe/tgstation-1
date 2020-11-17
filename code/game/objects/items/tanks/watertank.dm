@@ -24,7 +24,7 @@
 	noz = make_noz()
 
 
-/obj/item/watertank/Destroy()
+/obj/item/watertank/Deinitialize()
 	QDEL_NULL(noz)
 	return ..()
 
@@ -234,7 +234,7 @@
 	max_water = tank.volume
 
 
-/obj/item/extinguisher/mini/nozzle/Destroy()
+/obj/item/extinguisher/mini/nozzle/Deinitialize()
 	reagents = null //This is a borrowed reference from the tank.
 	tank = null
 	return ..()

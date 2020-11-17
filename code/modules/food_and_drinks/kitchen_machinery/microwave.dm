@@ -38,7 +38,7 @@
 	create_reagents(100)
 	soundloop = new(list(src), FALSE)
 
-/obj/machinery/microwave/Destroy()
+/obj/machinery/microwave/Deinitialize()
 	eject()
 	if(wires)
 		QDEL_NULL(wires)

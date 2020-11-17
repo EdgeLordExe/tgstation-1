@@ -32,7 +32,7 @@
 	//INPUT_MIN: Do not pass input_pressure_min
 	//OUTPUT_MAX: Do not pass output_pressure_max
 
-/obj/machinery/atmospherics/components/binary/dp_vent_pump/Destroy()
+/obj/machinery/atmospherics/components/binary/dp_vent_pump/Deinitialize()
 	SSradio.remove_object(src, frequency)
 	return ..()
 

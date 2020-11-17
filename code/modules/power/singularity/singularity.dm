@@ -47,7 +47,7 @@
 	AddElement(/datum/element/bsa_blocker)
 	RegisterSignal(src, COMSIG_ATOM_BSA_BEAM, .proc/bluespace_reaction)
 
-/obj/singularity/Destroy()
+/obj/singularity/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	GLOB.poi_list.Remove(src)
 	GLOB.singularities.Remove(src)

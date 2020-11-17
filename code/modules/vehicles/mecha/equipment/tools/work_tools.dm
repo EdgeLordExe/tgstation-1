@@ -241,7 +241,7 @@
 	. = ..()
 	GLOB.rcd_list += src
 
-/obj/item/mecha_parts/mecha_equipment/rcd/Destroy()
+/obj/item/mecha_parts/mecha_equipment/rcd/Deinitialize()
 	GLOB.rcd_list -= src
 	return ..()
 

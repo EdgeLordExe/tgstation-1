@@ -78,7 +78,7 @@
 
 	flags = new_flags
 
-/datum/reagents/Destroy()
+/datum/reagents/Deinitialize()
 	. = ..()
 	//We're about to delete all reagents, so lets cleanup
 	addiction_list.Cut()

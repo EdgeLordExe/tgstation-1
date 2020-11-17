@@ -34,7 +34,7 @@
 		cell = new cell(src)
 	update_icon()
 
-/obj/machinery/electrolyzer/Destroy()
+/obj/machinery/electrolyzer/Deinitialize()
 	if(cell)
 		QDEL_NULL(cell)
 	return ..()

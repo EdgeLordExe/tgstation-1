@@ -290,7 +290,7 @@
 		A = new /obj/machinery/door/airlock/cult/weak(T)
 	qdel(src)
 
-/obj/machinery/door/airlock/Destroy()
+/obj/machinery/door/airlock/Deinitialize()
 	QDEL_NULL(wires)
 	QDEL_NULL(electronics)
 	if (cyclelinkedairlock)

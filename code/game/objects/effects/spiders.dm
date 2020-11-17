@@ -162,7 +162,7 @@
 	var/directive = "" //Message from the mother
 	var/list/faction = list("spiders")
 
-/obj/structure/spider/spiderling/Destroy()
+/obj/structure/spider/spiderling/Deinitialize()
 	new/obj/item/reagent_containers/food/snacks/spiderling(get_turf(src))
 	. = ..()
 
@@ -295,7 +295,7 @@
 			return
 		qdel(src)
 
-/obj/structure/spider/cocoon/Destroy()
+/obj/structure/spider/cocoon/Deinitialize()
 	var/turf/T = get_turf(src)
 	src.visible_message("<span class='warning'>\The [src] splits open.</span>")
 	for(var/atom/movable/A in contents)

@@ -30,10 +30,10 @@ GLOBAL_LIST_EMPTY(antagonists)
 	GLOB.antagonists += src
 	typecache_datum_blacklist = typecacheof(typecache_datum_blacklist)
 
-/datum/antagonist/Destroy()
+/datum/antagonist/Deinitialize()
 	GLOB.antagonists -= src
 	if(!owner)
-		stack_trace("Destroy()ing antagonist datum when it has no owner.")
+		stack_trace("Deinitialize()ing antagonist datum when it has no owner.")
 	else
 		LAZYREMOVE(owner.antag_datums, src)
 	owner = null

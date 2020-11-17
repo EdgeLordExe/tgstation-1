@@ -11,7 +11,7 @@
 	aiEye = new /mob/camera/ai_eye/pic_in_pic()
 	aiEye.screen = src
 
-/atom/movable/screen/movable/pic_in_pic/ai/Destroy()
+/atom/movable/screen/movable/pic_in_pic/ai/Deinitialize()
 	set_ai(null)
 	QDEL_NULL(aiEye)
 	return ..()
@@ -108,7 +108,7 @@ GLOBAL_DATUM(ai_camera_room_landmark, /obj/effect/landmark/ai_multicam_room)
 	qdel(GLOB.ai_camera_room_landmark)
 	GLOB.ai_camera_room_landmark = src
 
-/obj/effect/landmark/ai_multicam_room/Destroy()
+/obj/effect/landmark/ai_multicam_room/Deinitialize()
 	if(GLOB.ai_camera_room_landmark == src)
 		GLOB.ai_camera_room_landmark = null
 	return ..()
@@ -187,7 +187,7 @@ GLOBAL_DATUM(ai_camera_room_landmark, /obj/effect/landmark/ai_multicam_room)
 		C.update_icon()
 	cameras_telegraphed.Cut()
 
-/mob/camera/ai_eye/pic_in_pic/Destroy()
+/mob/camera/ai_eye/pic_in_pic/Deinitialize()
 	disable_camera_telegraphing()
 	return ..()
 

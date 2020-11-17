@@ -29,7 +29,7 @@
 
 	var/datum/weakref/current
 
-/obj/item/hot_potato/Destroy()
+/obj/item/hot_potato/Deinitialize()
 	if(active)
 		deactivate()
 	return ..()

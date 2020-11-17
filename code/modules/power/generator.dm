@@ -26,7 +26,7 @@
 	. = ..()
 	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE | ROTATION_COUNTERCLOCKWISE | ROTATION_VERBS )
 
-/obj/machinery/power/generator/Destroy()
+/obj/machinery/power/generator/Deinitialize()
 	kill_circs()
 	SSair.stop_processing_machine(src)
 	return ..()

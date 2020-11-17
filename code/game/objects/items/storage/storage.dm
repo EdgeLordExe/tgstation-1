@@ -49,7 +49,7 @@
 	var/datum/component/storage/ST = GetComponent(/datum/component/storage)
 	ST.do_quick_empty()
 
-/obj/item/storage/Destroy()
+/obj/item/storage/Deinitialize()
 	for(var/obj/important_thing in contents)
 		if(!(important_thing.resistance_flags & INDESTRUCTIBLE))
 			continue

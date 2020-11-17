@@ -218,7 +218,7 @@ GLOBAL_LIST_EMPTY(tcgcard_radial_choices)
 		if(null)
 			return
 
-/obj/item/tcgcard_deck/Destroy()
+/obj/item/tcgcard_deck/Deinitialize()
 	for(var/card in 1 to contents.len)
 		var/obj/item/tcgcard/stored_card = contents[card]
 		stored_card.forceMove(drop_location())

@@ -21,7 +21,7 @@
 	var/datum/gas_mixture/air_contents = airs[1]
 	air_contents.volume = 0
 
-/obj/machinery/atmospherics/components/unary/portables_connector/Destroy()
+/obj/machinery/atmospherics/components/unary/portables_connector/Deinitialize()
 	if(connected_device)
 		connected_device.disconnect()
 	return ..()

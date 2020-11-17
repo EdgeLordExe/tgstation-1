@@ -19,7 +19,7 @@
 	owner.bioware += src
 	on_gain()
 
-/datum/bioware/Destroy()
+/datum/bioware/Deinitialize()
 	owner = null
 	if(active)
 		on_lose()

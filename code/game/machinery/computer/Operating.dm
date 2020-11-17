@@ -20,7 +20,7 @@
 	linked_techweb = SSresearch.science_tech
 	find_table()
 
-/obj/machinery/computer/operating/Destroy()
+/obj/machinery/computer/operating/Deinitialize()
 	for(var/direction in GLOB.alldirs)
 		table = locate(/obj/structure/table/optable) in get_step(src, direction)
 		if(table && table.computer == src)

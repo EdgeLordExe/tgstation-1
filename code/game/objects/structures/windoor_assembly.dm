@@ -36,7 +36,7 @@
 	ini_dir = dir
 	air_update_turf(1)
 
-/obj/structure/windoor_assembly/Destroy()
+/obj/structure/windoor_assembly/Deinitialize()
 	density = FALSE
 	air_update_turf(1)
 	return ..()

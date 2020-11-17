@@ -21,7 +21,7 @@
 	. = ..()
 	AddComponent(/datum/component/two_handed, force_unwielded=8, force_wielded=12)
 
-/obj/item/binoculars/Destroy()
+/obj/item/binoculars/Deinitialize()
 	listeningTo = null
 	return ..()
 

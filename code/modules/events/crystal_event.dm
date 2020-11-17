@@ -341,7 +341,7 @@ This section is for the destabilized SM
 	. = ..()
 	soundloop = new(list(src), TRUE)
 
-/obj/machinery/destabilized_crystal/Destroy()
+/obj/machinery/destabilized_crystal/Deinitialize()
 	QDEL_NULL(soundloop)
 	return ..()
 
@@ -542,7 +542,7 @@ This section is for the crystal portals variations
 		frequency++
 	a_signal.set_frequency(frequency)
 
-/obj/structure/crystal_portal/Destroy()
+/obj/structure/crystal_portal/Deinitialize()
 	GLOB.crystal_portals -= src
 	if(a_signal)
 		QDEL_NULL(a_signal)
@@ -633,7 +633,7 @@ This section is for the crystal portals variations
 	. = ..()
 	GLOB.huge_crystal_portals += src
 
-/obj/structure/crystal_portal/huge/Destroy()
+/obj/structure/crystal_portal/huge/Deinitialize()
 	GLOB.huge_crystal_portals -= src
 	return ..()
 
@@ -694,7 +694,7 @@ This section is for the crystal monsters variations
 	pull_force = MOVE_FORCE_WEAK
 	var/death_cloud_size = 2
 
-/mob/living/simple_animal/hostile/crystal_monster/minion/Destroy()
+/mob/living/simple_animal/hostile/crystal_monster/minion/Deinitialize()
 	if(isturf(loc))
 		var/datum/effect_system/smoke_spread/chem/S = new
 		create_reagents(3)

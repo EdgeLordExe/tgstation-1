@@ -195,7 +195,7 @@
 	. = ..()
 	ui_interact(user)
 
-/obj/structure/chisel_message/Destroy()
+/obj/structure/chisel_message/Deinitialize()
 	if(persists)
 		SSpersistence.SaveChiselMessage(src)
 	SSpersistence.chisel_messages -= src

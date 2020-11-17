@@ -34,7 +34,7 @@
 	var/process_dead = FALSE //if this ticks while the host is dead
 	var/copy_type = null //if this is null, copies will use the type of the instance being copied
 
-/datum/disease/Destroy()
+/datum/disease/Deinitialize()
 	. = ..()
 	if(affected_mob)
 		remove_disease()

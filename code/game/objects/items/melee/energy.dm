@@ -16,7 +16,7 @@
 	if(active)
 		START_PROCESSING(SSobj, src)
 
-/obj/item/melee/transforming/energy/Destroy()
+/obj/item/melee/transforming/energy/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

@@ -21,7 +21,7 @@
 	. = ..()
 	air_update_turf(TRUE)
 
-/obj/machinery/field/containment/Destroy()
+/obj/machinery/field/containment/Deinitialize()
 	FG1.fields -= src
 	FG2.fields -= src
 	CanAtmosPass = ATMOS_PASS_YES

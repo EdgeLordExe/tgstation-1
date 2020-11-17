@@ -42,7 +42,7 @@
 
 	update_indicator()
 
-/obj/machinery/launchpad/Destroy()
+/obj/machinery/launchpad/Deinitialize()
 	qdel(hud_list[DIAG_LAUNCHPAD_HUD])
 	return ..()
 
@@ -231,7 +231,7 @@
         return INITIALIZE_HINT_QDEL
     src.briefcase = briefcase
 
-/obj/machinery/launchpad/briefcase/Destroy()
+/obj/machinery/launchpad/briefcase/Deinitialize()
 	QDEL_NULL(briefcase)
 	return ..()
 
@@ -272,7 +272,7 @@
 	pad = new(null, src) //spawns pad in nullspace to hide it from briefcase contents
 	. = ..()
 
-/obj/item/storage/briefcase/launchpad/Destroy()
+/obj/item/storage/briefcase/launchpad/Deinitialize()
 	if(!QDELETED(pad))
 		QDEL_NULL(pad)
 	return ..()

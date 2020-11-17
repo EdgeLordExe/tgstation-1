@@ -79,7 +79,7 @@
 			linkedServer = S
 			break
 
-/obj/machinery/computer/message_monitor/Destroy()
+/obj/machinery/computer/message_monitor/Deinitialize()
 	GLOB.telecomms_list -= src
 	return ..()
 

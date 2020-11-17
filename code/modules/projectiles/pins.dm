@@ -350,7 +350,7 @@
 	suit_requirement = /obj/item/clothing/suit/bluetag
 	tagcolor = "blue"
 
-/obj/item/firing_pin/Destroy()
+/obj/item/firing_pin/Deinitialize()
 	if(gun)
 		gun.pin = null
 	return ..()

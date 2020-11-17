@@ -14,7 +14,7 @@
 	preview = list()
 	return ..()
 
-/datum/buildmode_mode/Destroy()
+/datum/buildmode_mode/Deinitialize()
 	cornerA = null
 	cornerB = null
 	QDEL_LIST(preview)

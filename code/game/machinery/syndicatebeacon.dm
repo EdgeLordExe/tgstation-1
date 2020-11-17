@@ -79,7 +79,7 @@
 	else
 		return ..()
 
-/obj/machinery/power/singularity_beacon/Destroy()
+/obj/machinery/power/singularity_beacon/Deinitialize()
 	if(active)
 		Deactivate()
 	return ..()

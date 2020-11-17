@@ -12,12 +12,12 @@
 	..()
 	uid = file_uid++
 
-/datum/computer_file/Destroy()
+/datum/computer_file/Deinitialize()
 	if(!holder)
 		return ..()
 
 	holder.remove_file(src)
-	// holder.holder is the computer that has drive installed. If we are Destroy()ing program that's currently running kill it.
+	// holder.holder is the computer that has drive installed. If we are Deinitialize()ing program that's currently running kill it.
 	if(holder.holder && holder.holder.active_program == src)
 		holder.holder.kill_program(forced = TRUE)
 	holder = null

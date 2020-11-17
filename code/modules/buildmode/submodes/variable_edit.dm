@@ -4,7 +4,7 @@
 	var/varholder = null
 	var/valueholder = null
 
-/datum/buildmode_mode/varedit/Destroy()
+/datum/buildmode_mode/varedit/Deinitialize()
 	varholder = null
 	valueholder = null
 	return ..()
@@ -23,7 +23,7 @@
 
 /datum/buildmode_mode/varedit/change_settings(client/c)
 	varholder = input(c, "Enter variable name:" ,"Name", "name")
-	
+
 	if(!vv_varname_lockcheck(varholder))
 		return
 

@@ -36,7 +36,7 @@
 		if(mechpads.len > maximum_pads)
 			break
 
-/obj/machinery/computer/mechpad/Destroy()
+/obj/machinery/computer/mechpad/Deinitialize()
 	if(connected_mechpad)
 		connected_mechpad.connected_console = null
 		connected_mechpad = null

@@ -8,7 +8,7 @@
 	///The sample stored on the dish
 	var/datum/biological_sample/sample
 
-/obj/item/petri_dish/Destroy()
+/obj/item/petri_dish/Deinitialize()
 	. = ..()
 	QDEL_NULL(sample)
 

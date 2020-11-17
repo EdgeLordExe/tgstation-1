@@ -211,7 +211,7 @@
 	status_effect_type = /datum/status_effect/wound/blunt/moderate
 	scar_keyword = "bluntmoderate"
 
-/datum/wound/blunt/moderate/Destroy()
+/datum/wound/blunt/moderate/Deinitialize()
 	if(victim)
 		UnregisterSignal(victim, COMSIG_LIVING_DOORCRUSHED)
 	return ..()

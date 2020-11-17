@@ -21,7 +21,7 @@
 	update_icon()
 	. = ..()
 
-/obj/item/clipboard/Destroy()
+/obj/item/clipboard/Deinitialize()
 	QDEL_NULL(haspen)
 	QDEL_NULL(toppaper)	//let movable/Destroy handle the rest
 	return ..()

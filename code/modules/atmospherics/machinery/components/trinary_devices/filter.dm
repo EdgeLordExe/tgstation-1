@@ -35,7 +35,7 @@
 	if(frequency)
 		radio_connection = SSradio.add_object(src, frequency, RADIO_ATMOSIA)
 
-/obj/machinery/atmospherics/components/trinary/filter/Destroy()
+/obj/machinery/atmospherics/components/trinary/filter/Deinitialize()
 	SSradio.remove_object(src,frequency)
 	return ..()
 

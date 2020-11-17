@@ -21,7 +21,7 @@
 	air_contents.temperature = T20C
 	SSair.start_processing_machine(src)
 
-/obj/machinery/portable_atmospherics/Destroy()
+/obj/machinery/portable_atmospherics/Deinitialize()
 	SSair.stop_processing_machine(src)
 
 	disconnect()

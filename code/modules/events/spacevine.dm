@@ -347,7 +347,7 @@
 	text += " vine."
 	. += text
 
-/obj/structure/spacevine/Destroy()
+/obj/structure/spacevine/Deinitialize()
 	for(var/datum/spacevine_mutation/SM in mutations)
 		SM.on_death(src)
 	if(master)
@@ -452,7 +452,7 @@
 /datum/spacevine_controller/proc/DeleteVines()	//this is kill
 	QDEL_LIST(vines)	//this will also qdel us
 
-/datum/spacevine_controller/Destroy()
+/datum/spacevine_controller/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

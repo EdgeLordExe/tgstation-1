@@ -28,7 +28,7 @@
 	last_host_loc = host.loc
 	SetRange(current_range,TRUE)
 
-/datum/proximity_monitor/Destroy()
+/datum/proximity_monitor/Deinitialize()
 	host = null
 	last_host_loc = null
 	hasprox_receiver = null
@@ -108,7 +108,7 @@
 		stack_trace("proximity_checker created without host")
 		return INITIALIZE_HINT_QDEL
 
-/obj/effect/abstract/proximity_checker/Destroy()
+/obj/effect/abstract/proximity_checker/Deinitialize()
 	monitor = null
 	return ..()
 

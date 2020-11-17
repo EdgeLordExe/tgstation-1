@@ -615,7 +615,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		if (I.failures)
 			dellog += "<li>Failures: [I.failures]</li>"
 		dellog += "<li>qdel() Count: [I.qdels]</li>"
-		dellog += "<li>Destroy() Cost: [I.destroy_time]ms</li>"
+		dellog += "<li>Deinitialize() Cost: [I.destroy_time]ms</li>"
 		if (I.hard_deletes)
 			dellog += "<li>Total Hard Deletes [I.hard_deletes]</li>"
 			dellog += "<li>Time Spent Hard Deleting: [I.hard_delete_time]ms</li>"

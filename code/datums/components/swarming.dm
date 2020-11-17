@@ -13,7 +13,7 @@
 	RegisterSignal(parent, COMSIG_MOVABLE_CROSSED, .proc/join_swarm)
 	RegisterSignal(parent, COMSIG_MOVABLE_UNCROSSED, .proc/leave_swarm)
 
-/datum/component/swarming/Destroy()
+/datum/component/swarming/Deinitialize()
 	for(var/other in swarm_members)
 		var/datum/component/swarming/other_swarm = other
 		other_swarm.swarm_members -= src

@@ -57,7 +57,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	. = ..()
 	recalculateChannels()
 
-/obj/item/radio/headset/Destroy()
+/obj/item/radio/headset/Deinitialize()
 	QDEL_NULL(keyslot2)
 	return ..()
 

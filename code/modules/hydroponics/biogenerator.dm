@@ -23,7 +23,7 @@
 	stored_research = new /datum/techweb/specialized/autounlocking/biogenerator
 	create_reagents(1000)
 
-/obj/machinery/biogenerator/Destroy()
+/obj/machinery/biogenerator/Deinitialize()
 	QDEL_NULL(beaker)
 	return ..()
 

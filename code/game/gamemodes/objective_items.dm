@@ -21,7 +21,7 @@
 	else
 		qdel(src)
 
-/datum/objective_item/steal/Destroy()
+/datum/objective_item/steal/Deinitialize()
 	GLOB.possible_items -= src
 	return ..()
 
@@ -180,7 +180,7 @@
 	else
 		qdel(src)
 
-/datum/objective_item/special/Destroy()
+/datum/objective_item/special/Deinitialize()
 	GLOB.possible_items_special -= src
 	return ..()
 
@@ -227,7 +227,7 @@
 	else
 		qdel(src)
 
-/datum/objective_item/stack/Destroy()
+/datum/objective_item/stack/Deinitialize()
 	GLOB.possible_items_special -= src
 	return ..()
 

@@ -11,7 +11,7 @@
 	song = new(src, allowed_instrument_ids)
 	allowed_instrument_ids = null
 
-/obj/structure/musician/Destroy()
+/obj/structure/musician/Deinitialize()
 	QDEL_NULL(song)
 	return ..()
 

@@ -303,7 +303,7 @@ Delayed insert mode was removed in mysql 7 and only works with MyISAM type table
 	src.sql = sql
 	src.arguments = arguments
 
-/datum/db_query/Destroy()
+/datum/db_query/Deinitialize()
 	Close()
 	SSdbcore.active_queries -= src
 	return ..()

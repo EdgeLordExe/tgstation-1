@@ -16,7 +16,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	var/obj/effect/statclick/ticket_list/cstatclick = new(null, null, AHELP_CLOSED)
 	var/obj/effect/statclick/ticket_list/rstatclick = new(null, null, AHELP_RESOLVED)
 
-/datum/admin_help_tickets/Destroy()
+/datum/admin_help_tickets/Deinitialize()
 	QDEL_LIST(active_tickets)
 	QDEL_LIST(closed_tickets)
 	QDEL_LIST(resolved_tickets)
@@ -215,7 +215,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 			heard_by_no_admins = TRUE
 	GLOB.ahelp_tickets.active_tickets += src
 
-/datum/admin_help/Destroy()
+/datum/admin_help/Deinitialize()
 	RemoveActive()
 	GLOB.ahelp_tickets.closed_tickets -= src
 	GLOB.ahelp_tickets.resolved_tickets -= src
@@ -486,7 +486,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 /obj/effect/statclick/ahelp/Click()
 	ahelp_datum.TicketPanel()
 
-/obj/effect/statclick/ahelp/Destroy()
+/obj/effect/statclick/ahelp/Deinitialize()
 	ahelp_datum = null
 	return ..()
 

@@ -26,7 +26,7 @@
 	charlie = new(locate(run_loc_bottom_left.x + 4, run_loc_bottom_left.y, run_loc_bottom_left.z))
 	charlie.name = "Charlie"
 
-/datum/unit_test/chain_pull_through_space/Destroy()
+/datum/unit_test/chain_pull_through_space/Deinitialize()
 	space_tile.copyTurf(claimed_tile)
 	qdel(alice)
 	qdel(bob)

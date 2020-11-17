@@ -69,7 +69,7 @@
 /obj/machinery/atmospherics/pipe/setPipenet(datum/pipeline/P)
 	parent = P
 
-/obj/machinery/atmospherics/pipe/Destroy()
+/obj/machinery/atmospherics/pipe/Deinitialize()
 	QDEL_NULL(parent)
 
 	releaseAirToTurf()

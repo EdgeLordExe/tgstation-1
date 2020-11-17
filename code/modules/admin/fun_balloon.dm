@@ -10,7 +10,7 @@
 	. = ..()
 	SSobj.processing |= src
 
-/obj/effect/fun_balloon/Destroy()
+/obj/effect/fun_balloon/Deinitialize()
 	SSobj.processing -= src
 	. = ..()
 

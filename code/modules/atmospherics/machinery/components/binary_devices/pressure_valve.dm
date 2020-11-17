@@ -35,7 +35,7 @@
 		update_icon()
 	return ..()
 
-/obj/machinery/atmospherics/components/binary/pressure_valve/Destroy()
+/obj/machinery/atmospherics/components/binary/pressure_valve/Deinitialize()
 	SSradio.remove_object(src,frequency)
 	if(radio_connection)
 		radio_connection = null

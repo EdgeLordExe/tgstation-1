@@ -30,7 +30,7 @@
 	if(cooldown && (issilicon(user) || isobserver(user)))
 		. += "It will be ready in [DisplayTimeText(cooldown_timer - world.time)]."
 
-/obj/machinery/transformer/Destroy()
+/obj/machinery/transformer/Deinitialize()
 	QDEL_NULL(countdown)
 	. = ..()
 

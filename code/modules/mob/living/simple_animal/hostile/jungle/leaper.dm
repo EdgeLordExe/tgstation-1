@@ -84,7 +84,7 @@
 	INVOKE_ASYNC(src, /atom/movable.proc/float, TRUE)
 	QDEL_IN(src, 100)
 
-/obj/structure/leaper_bubble/Destroy()
+/obj/structure/leaper_bubble/Deinitialize()
 	new /obj/effect/temp_visual/leaper_projectile_impact(get_turf(src))
 	playsound(src,'sound/effects/snap.ogg',50, TRUE, -1)
 	return ..()

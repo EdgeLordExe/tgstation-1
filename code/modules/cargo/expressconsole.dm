@@ -31,7 +31,7 @@
 	. = ..()
 	packin_up()
 
-/obj/machinery/computer/cargo/express/Destroy()
+/obj/machinery/computer/cargo/express/Deinitialize()
 	if(beacon)
 		beacon.unlink_console()
 	return ..()

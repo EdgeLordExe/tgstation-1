@@ -21,7 +21,7 @@
 	. = ..()
 	soundloop = new(list(src), active)
 
-/obj/machinery/power/port_gen/Destroy()
+/obj/machinery/power/port_gen/Deinitialize()
 	QDEL_NULL(soundloop)
 	return ..()
 
@@ -99,7 +99,7 @@
 	var/obj/S = sheet_path
 	sheet_name = initial(S.name)
 
-/obj/machinery/power/port_gen/pacman/Destroy()
+/obj/machinery/power/port_gen/pacman/Deinitialize()
 	DropFuel()
 	return ..()
 

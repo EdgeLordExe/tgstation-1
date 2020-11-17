@@ -11,7 +11,7 @@
 	var/last_transmission
 	var/datum/radio_frequency/radio_connection
 
-/obj/item/integrated_signaler/Destroy()
+/obj/item/integrated_signaler/Deinitialize()
 	radio_connection = null
 	return ..()
 

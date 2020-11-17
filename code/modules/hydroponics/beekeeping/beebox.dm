@@ -45,7 +45,7 @@
 	START_PROCESSING(SSobj, src)
 
 
-/obj/structure/beebox/Destroy()
+/obj/structure/beebox/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	bees.Cut()
 	honeycombs.Cut()

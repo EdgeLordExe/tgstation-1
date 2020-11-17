@@ -32,7 +32,7 @@
 	target.orbiters = null
 	QDEL_NULL(tracker)
 
-/datum/component/orbiter/Destroy()
+/datum/component/orbiter/Deinitialize()
 	var/atom/master = parent
 	if(master.orbiters == src)
 		master.orbiters = null

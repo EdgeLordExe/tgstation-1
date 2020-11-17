@@ -66,7 +66,7 @@
 	icon_state = initial(icon_state)
 	next_use = world.time + (world.time - last_use) // Could be 2*world.time-last_use but that would just be confusing
 
-/obj/item/desynchronizer/Destroy()
+/obj/item/desynchronizer/Deinitialize()
 	if(sync_holder)
 		resync()
 	return ..()
@@ -82,7 +82,7 @@
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/effect/abstract/sync_holder/Destroy()
+/obj/effect/abstract/sync_holder/Deinitialize()
 	for(var/I in contents)
 		var/atom/movable/AM = I
 		AM.forceMove(drop_location())

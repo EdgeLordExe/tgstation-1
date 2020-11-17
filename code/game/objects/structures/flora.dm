@@ -409,7 +409,7 @@
 	. = ..()
 	icon_state = "[icon_state][rand(1,3)]"
 
-/obj/structure/flora/rock/Destroy()
+/obj/structure/flora/rock/Deinitialize()
 	if(mineResult && mineAmount)
 		new mineResult(loc, mineAmount)
 	. = ..()

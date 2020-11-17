@@ -25,7 +25,7 @@
 	init_tube_dirs()
 	generate_tube_overlays()
 
-/obj/structure/transit_tube/Destroy()
+/obj/structure/transit_tube/Deinitialize()
 	for(var/obj/structure/transit_tube_pod/P in loc)
 		P.deconstruct(FALSE)
 	return ..()

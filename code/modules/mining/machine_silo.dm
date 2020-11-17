@@ -32,7 +32,7 @@ GLOBAL_LIST_EMPTY(silo_access_logs)
 	if (!GLOB.ore_silo_default && mapload && is_station_level(z))
 		GLOB.ore_silo_default = src
 
-/obj/machinery/ore_silo/Destroy()
+/obj/machinery/ore_silo/Deinitialize()
 	if (GLOB.ore_silo_default == src)
 		GLOB.ore_silo_default = null
 

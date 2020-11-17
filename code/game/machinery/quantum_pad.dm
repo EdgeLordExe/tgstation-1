@@ -25,7 +25,7 @@
 	if(map_pad_id)
 		mapped_quantum_pads[map_pad_id] = src
 
-/obj/machinery/quantumpad/Destroy()
+/obj/machinery/quantumpad/Deinitialize()
 	mapped_quantum_pads -= map_pad_id
 	return ..()
 

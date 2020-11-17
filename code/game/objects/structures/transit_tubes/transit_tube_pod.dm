@@ -17,7 +17,7 @@
 	air_contents.temperature = T20C
 
 
-/obj/structure/transit_tube_pod/Destroy()
+/obj/structure/transit_tube_pod/Deinitialize()
 	empty_pod()
 	return ..()
 

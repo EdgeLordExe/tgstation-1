@@ -15,7 +15,7 @@
 	BM.holder.images -= areaimage
 	return ..()
 
-/datum/buildmode_mode/area_edit/Destroy()
+/datum/buildmode_mode/area_edit/Deinitialize()
 	QDEL_NULL(areaimage)
 	storedarea = null
 	return ..()

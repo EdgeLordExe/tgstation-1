@@ -33,7 +33,7 @@
 	target = Target
 	RegisterSignal(Target, COMSIG_ATOM_UPDATED_ICON, .proc/OnUpdatedIcon)
 
-/datum/action/Destroy()
+/datum/action/Deinitialize()
 	if(owner)
 		Remove(owner)
 	target = null
@@ -157,7 +157,7 @@
 	LAZYINITLIST(I.actions)
 	I.actions += src
 
-/datum/action/item_action/Destroy()
+/datum/action/item_action/Deinitialize()
 	var/obj/item/I = target
 	I.actions -= src
 	UNSETEMPTY(I.actions)
@@ -280,7 +280,7 @@
 	. = ..()
 	RegisterSignal(target, COMSIG_SUIT_SPACE_TOGGLE, .proc/toggle)
 
-/datum/action/item_action/toggle_spacesuit/Destroy()
+/datum/action/item_action/toggle_spacesuit/Deinitialize()
 	UnregisterSignal(target, COMSIG_SUIT_SPACE_TOGGLE)
 	return ..()
 
@@ -540,7 +540,7 @@
 	background_icon_state = S.action_background_icon_state
 	button.name = name
 
-/datum/action/spell_action/Destroy()
+/datum/action/spell_action/Deinitialize()
 	var/obj/effect/proc_holder/S = target
 	S.action = null
 	return ..()

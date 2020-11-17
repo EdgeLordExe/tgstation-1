@@ -187,7 +187,7 @@
 	modularInterface.plane = ABOVE_HUD_PLANE
 
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
-/mob/living/silicon/robot/Destroy()
+/mob/living/silicon/robot/Deinitialize()
 	var/atom/T = drop_location()//To hopefully prevent run time errors.
 	if(mmi && mind)//Safety for when a cyborg gets dust()ed. Or there is no MMI inside.
 		if(T)

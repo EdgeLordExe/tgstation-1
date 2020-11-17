@@ -41,7 +41,7 @@
 	if(A == petrified_mob)
 		petrified_mob = null
 
-/obj/structure/statue/petrified/Destroy()
+/obj/structure/statue/petrified/Deinitialize()
 
 	if(istype(src.loc, /mob/living/simple_animal/hostile/statue))
 		var/mob/living/simple_animal/hostile/statue/S = src.loc

@@ -93,7 +93,7 @@
 		grilled_item = null
 	..()
 
-/obj/machinery/grill/Destroy()
+/obj/machinery/grill/Deinitialize()
 	grilled_item = null
 	. = ..()
 

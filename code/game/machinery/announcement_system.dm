@@ -49,7 +49,7 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	if(machine_stat & BROKEN)
 		. += errorlight
 
-/obj/machinery/announcement_system/Destroy()
+/obj/machinery/announcement_system/Deinitialize()
 	QDEL_NULL(radio)
 	GLOB.announcement_systems -= src //"OH GOD WHY ARE THERE 100,000 LISTED ANNOUNCEMENT SYSTEMS?!!"
 	return ..()

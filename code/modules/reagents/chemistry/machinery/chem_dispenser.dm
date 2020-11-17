@@ -94,7 +94,7 @@
 		begin_processing()
 	update_icon()
 
-/obj/machinery/chem_dispenser/Destroy()
+/obj/machinery/chem_dispenser/Deinitialize()
 	QDEL_NULL(beaker)
 	QDEL_NULL(cell)
 	return ..()

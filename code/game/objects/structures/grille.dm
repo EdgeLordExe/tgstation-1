@@ -16,7 +16,7 @@
 	var/grille_type = null
 	var/broken_type = /obj/structure/grille/broken
 
-/obj/structure/grille/Destroy()
+/obj/structure/grille/Deinitialize()
 	update_cable_icons_on_turf(get_turf(src))
 	return ..()
 

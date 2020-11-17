@@ -24,7 +24,7 @@
 	appliedComponents = list()
 	randomAffixes()
 
-/datum/component/fantasy/Destroy()
+/datum/component/fantasy/Deinitialize()
 	unmodify()
 	affixes = null
 	return ..()

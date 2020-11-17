@@ -24,7 +24,7 @@
 	if(direction & WEST)
 		holder.pixel_x -= world.icon_size * range
 
-/datum/component/mirage_border/Destroy()
+/datum/component/mirage_border/Deinitialize()
 	QDEL_NULL(holder)
 	return ..()
 

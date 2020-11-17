@@ -62,7 +62,7 @@
 	if(building)
 		setDir(ndir)
 
-/obj/structure/light_construct/Destroy()
+/obj/structure/light_construct/Deinitialize()
 	QDEL_NULL(cell)
 	return ..()
 
@@ -329,7 +329,7 @@
 				break_light_tube(1)
 	addtimer(CALLBACK(src, .proc/update, 0), 1)
 
-/obj/machinery/light/Destroy()
+/obj/machinery/light/Deinitialize()
 	var/area/A = get_area(src)
 	if(A)
 		on = FALSE

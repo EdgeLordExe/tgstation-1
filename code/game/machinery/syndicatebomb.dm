@@ -90,7 +90,7 @@
 	countdown = new(src)
 	end_processing()
 
-/obj/machinery/syndicatebomb/Destroy()
+/obj/machinery/syndicatebomb/Deinitialize()
 	QDEL_NULL(wires)
 	QDEL_NULL(countdown)
 	end_processing()

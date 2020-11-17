@@ -160,7 +160,7 @@
 	playsound(get_turf(src),'sound/magic/mandswap.ogg', 50, TRUE, TRUE)
 	playsound(get_turf(src),'sound/hallucinations/wail.ogg', 50, TRUE, TRUE)
 
-/obj/effect/temp_visual/paperwiz_dying/Destroy()
+/obj/effect/temp_visual/paperwiz_dying/Deinitialize()
 	for(var/mob/M in range(7,src))
 		shake_camera(M, 7, 1)
 	var/turf/T = get_turf(src)

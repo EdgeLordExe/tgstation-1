@@ -43,7 +43,7 @@ Borg Hypospray
 	START_PROCESSING(SSobj, src)
 
 
-/obj/item/reagent_containers/borghypo/Destroy()
+/obj/item/reagent_containers/borghypo/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

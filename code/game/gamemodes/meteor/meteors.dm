@@ -117,7 +117,7 @@ GLOBAL_LIST_INIT(meteorsC, list(/obj/effect/meteor/dust)) //for space dust event
 		if(prob(10) && !isspaceturf(T))//randomly takes a 'hit' from ramming
 			get_hit()
 
-/obj/effect/meteor/Destroy()
+/obj/effect/meteor/Deinitialize()
 	if (timerid)
 		deltimer(timerid)
 	GLOB.meteor_list -= src

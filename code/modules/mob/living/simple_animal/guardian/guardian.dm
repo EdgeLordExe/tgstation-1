@@ -84,7 +84,7 @@ GLOBAL_LIST_EMPTY(parasites) //all currently existing/living guardians
 		else
 			holder.icon_state = "hudhealthy"
 
-/mob/living/simple_animal/hostile/guardian/Destroy()
+/mob/living/simple_animal/hostile/guardian/Deinitialize()
 	GLOB.parasites -= src
 	return ..()
 

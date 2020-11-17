@@ -22,7 +22,7 @@
 	var/obj/item/mecha_parts/mecha_equipment/orebox_manager/ME = new(src)
 	ME.attach(src)
 
-/obj/vehicle/sealed/mecha/working/clarke/Destroy()
+/obj/vehicle/sealed/mecha/working/clarke/Deinitialize()
 	box.dump_box_contents()
 	return ..()
 

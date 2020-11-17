@@ -235,7 +235,7 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 	if(!GLOB.the_gateway)
 		GLOB.the_gateway = src
 
-/obj/machinery/gateway/centerstation/Destroy()
+/obj/machinery/gateway/centerstation/Deinitialize()
 	if(GLOB.the_gateway == src)
 		GLOB.the_gateway = null
 	return ..()

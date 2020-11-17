@@ -31,7 +31,7 @@
 	for(var/id in unlock_ids)
 		unlock_ids[id] = TRUE
 
-/datum/techweb_node/Destroy()
+/datum/techweb_node/Deinitialize()
 	SSresearch.techweb_nodes -= id
 	return ..()
 

@@ -74,7 +74,7 @@
 		stack_trace("[type] initialized outside of a borg, deleting.")
 		return INITIALIZE_HINT_QDEL
 
-/obj/item/modular_computer/tablet/integrated/Destroy()
+/obj/item/modular_computer/tablet/integrated/Deinitialize()
 	borgo = null
 	return ..()
 

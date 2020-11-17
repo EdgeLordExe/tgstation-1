@@ -212,7 +212,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		if(damtype == BRUTE)
 			hitsound = "swing_hit"
 
-/obj/item/Destroy()
+/obj/item/Deinitialize()
 	item_flags &= ~DROPDEL	//prevent reqdels
 	if(ismob(loc))
 		var/mob/m = loc

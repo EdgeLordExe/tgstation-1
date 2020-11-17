@@ -1101,7 +1101,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	qdel(src)
 	return
 
-/obj/item/pda/Destroy()
+/obj/item/pda/Deinitialize()
 	GLOB.PDAs -= src
 	if(istype(id))
 		QDEL_NULL(id)

@@ -124,7 +124,7 @@
 	. = ..()
 	. += "<span class='notice'>The condenser switch is set to <b>[refill_enabled ? "ON" : "OFF"]</b>.</span>"
 
-/obj/item/mop/advanced/Destroy()
+/obj/item/mop/advanced/Deinitialize()
 	if(refill_enabled)
 		STOP_PROCESSING(SSobj, src)
 	return ..()

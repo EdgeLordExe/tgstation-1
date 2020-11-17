@@ -35,7 +35,7 @@
 	else
 		pass_flags &= ~PASSBLOB
 
-/mob/living/simple_animal/hostile/blob/Destroy()
+/mob/living/simple_animal/hostile/blob/Deinitialize()
 	if(overmind)
 		overmind.blob_mobs -= src
 	return ..()
@@ -205,7 +205,7 @@
 
 	..()
 
-/mob/living/simple_animal/hostile/blob/blobspore/Destroy()
+/mob/living/simple_animal/hostile/blob/blobspore/Deinitialize()
 	if(factory)
 		factory.spores -= src
 		factory = null

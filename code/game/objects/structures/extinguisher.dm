@@ -25,7 +25,7 @@
 	. = ..()
 	. += "<span class='notice'>Alt-click to [opened ? "close":"open"] it.</span>"
 
-/obj/structure/extinguisher_cabinet/Destroy()
+/obj/structure/extinguisher_cabinet/Deinitialize()
 	if(stored_extinguisher)
 		qdel(stored_extinguisher)
 		stored_extinguisher = null

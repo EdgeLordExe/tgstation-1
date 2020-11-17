@@ -194,7 +194,7 @@
 				return
 	return ..()
 
-/mob/living/silicon/ai/Destroy()
+/mob/living/silicon/ai/Deinitialize()
 	GLOB.ai_list -= src
 	GLOB.shuttle_caller_list -= src
 	SSshuttle.autoEvac()

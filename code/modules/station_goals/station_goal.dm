@@ -32,7 +32,7 @@
 	else
 		return "<li>[name] : <span class='redtext'>Failed!</span></li>"
 
-/datum/station_goal/Destroy()
+/datum/station_goal/Deinitialize()
 	SSticker.mode.station_goals -= src
 	. = ..()
 

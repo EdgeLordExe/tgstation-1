@@ -40,7 +40,7 @@
 			filter_types -= f
 			filter_types += gas_id2path(f)
 
-/obj/machinery/atmospherics/components/unary/vent_scrubber/Destroy()
+/obj/machinery/atmospherics/components/unary/vent_scrubber/Deinitialize()
 	var/area/scrub_area = get_area(src)
 	if(scrub_area)
 		scrub_area.air_scrub_info -= id_tag

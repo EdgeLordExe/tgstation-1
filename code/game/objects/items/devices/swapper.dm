@@ -13,7 +13,7 @@
 	var/next_use = 0
 	var/obj/item/swapper/linked_swapper
 
-/obj/item/swapper/Destroy()
+/obj/item/swapper/Deinitialize()
 	if(linked_swapper)
 		linked_swapper.linked_swapper = null //*inception music*
 		linked_swapper.update_icon()

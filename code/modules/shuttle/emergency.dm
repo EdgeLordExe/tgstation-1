@@ -273,7 +273,7 @@
 
 	process(SSMACHINES_DT)
 
-/obj/machinery/computer/emergency_shuttle/Destroy()
+/obj/machinery/computer/emergency_shuttle/Deinitialize()
 	// Our fake IDs that the emag generated are just there for colour
 	// They're not supposed to be accessible
 

@@ -7,7 +7,7 @@
 
 INITIALIZE_IMMEDIATE(/mob/living/carbon/human/dummy)
 
-/mob/living/carbon/human/dummy/Destroy()
+/mob/living/carbon/human/dummy/Deinitialize()
 	in_use = FALSE
 	return ..()
 

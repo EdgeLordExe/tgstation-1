@@ -711,7 +711,7 @@
 	else
 		return INITIALIZE_HINT_QDEL
 
-/obj/structure/cloth_pile/Destroy()
+/obj/structure/cloth_pile/Deinitialize()
 	if(cloth_golem)
 		QDEL_NULL(cloth_golem)
 	return ..()

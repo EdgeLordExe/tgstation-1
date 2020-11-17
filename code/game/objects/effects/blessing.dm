@@ -18,10 +18,10 @@
 		add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/blessed_aware, "blessing", I)
 	RegisterSignal(loc, COMSIG_ATOM_INTERCEPT_TELEPORT, .proc/block_cult_teleport)
 
-/obj/effect/blessing/Destroy()	
+/obj/effect/blessing/Deinitialize()
 	UnregisterSignal(loc, COMSIG_ATOM_INTERCEPT_TELEPORT)
 	return ..()
-	
+
 /obj/effect/blessing/proc/block_cult_teleport(datum/source, channel, turf/origin, turf/destination)
 	SIGNAL_HANDLER
 

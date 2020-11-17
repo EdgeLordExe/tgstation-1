@@ -24,7 +24,7 @@
 	materials = AddComponent(/datum/component/remote_materials, "lathe", mapload, breakdown_flags=BREAKDOWN_FLAGS_LATHE)
 	RefreshParts()
 
-/obj/machinery/rnd/production/Destroy()
+/obj/machinery/rnd/production/Deinitialize()
 	materials = null
 	cached_designs = null
 	matching_designs = null

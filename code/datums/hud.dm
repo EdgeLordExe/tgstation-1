@@ -43,7 +43,7 @@ GLOBAL_LIST_INIT(huds, list(
 /datum/atom_hud/New()
 	GLOB.all_huds += src
 
-/datum/atom_hud/Destroy()
+/datum/atom_hud/Deinitialize()
 	for(var/v in hudusers)
 		remove_hud_from(v)
 	for(var/v in hudatoms)

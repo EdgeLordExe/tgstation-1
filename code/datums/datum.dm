@@ -75,6 +75,10 @@
 	..()
 	SEND_SIGNAL(src, COMSIG_TOPIC, usr, href_list)
 
+/datum/Deconstruct()
+	SHOULD_CALL_PARENT(TRUE)
+	qdel(src)
+
 /**
   * Default implementation of clean-up code.
   *

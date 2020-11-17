@@ -31,7 +31,7 @@
 	if(trunk)
 		trunk.linked = src	// link the pipe trunk to self
 
-/obj/structure/disposaloutlet/Destroy()
+/obj/structure/disposaloutlet/Deinitialize()
 	if(trunk)
 		trunk.linked = null
 		trunk = null

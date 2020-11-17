@@ -124,7 +124,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/organ/Destroy()
+/obj/item/organ/Deinitialize()
 	if(owner)
 		// The special flag is important, because otherwise mobs can die
 		// while undergoing transformation into different mobs.

@@ -497,7 +497,7 @@
 	frequency.post_signal(src, status_signal)
 
 
-/obj/machinery/computer/communications/Destroy()
+/obj/machinery/computer/communications/Deinitialize()
 	GLOB.shuttle_caller_list -= src
 	SSshuttle.autoEvac()
 	return ..()

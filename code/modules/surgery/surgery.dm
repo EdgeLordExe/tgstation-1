@@ -35,7 +35,7 @@
 				operated_wound = operated_bodypart.get_wound_type(targetable_wound)
 				operated_wound.attached_surgery = src
 
-/datum/surgery/Destroy()
+/datum/surgery/Deinitialize()
 	if(operated_wound)
 		operated_wound.attached_surgery = null
 	if(target)

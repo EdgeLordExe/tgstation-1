@@ -6,7 +6,7 @@
 		qdel(src)
 	owner = new_owner
 
-/datum/spawners_menu/Destroy()
+/datum/spawners_menu/Deinitialize()
 	owner = null
 	return ..()
 

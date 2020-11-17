@@ -165,7 +165,7 @@
 	START_PROCESSING(SSfastprocess, src)
 	zoom_lock_action = new(src)
 
-/obj/item/gun/energy/beam_rifle/Destroy()
+/obj/item/gun/energy/beam_rifle/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	set_user(null)
 	QDEL_LIST(current_tracers)

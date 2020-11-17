@@ -41,7 +41,7 @@
 	if(comp && istype(comp))
 		computer = comp
 
-/datum/computer_file/program/Destroy()
+/datum/computer_file/program/Deinitialize()
 	computer = null
 	. = ..()
 

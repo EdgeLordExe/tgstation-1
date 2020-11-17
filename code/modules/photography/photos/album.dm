@@ -22,7 +22,7 @@
 	STR.max_items = 21
 	LAZYADD(SSpersistence.photo_albums, src)
 
-/obj/item/storage/photo_album/Destroy()
+/obj/item/storage/photo_album/Deinitialize()
 	LAZYREMOVE(SSpersistence.photo_albums, src)
 	return ..()
 

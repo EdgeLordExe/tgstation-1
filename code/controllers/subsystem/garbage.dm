@@ -244,7 +244,7 @@ SUBSYSTEM_DEF(garbage)
 /datum/qdel_item
 	var/name = ""
 	var/qdels = 0			//Total number of times it's passed thru qdel.
-	var/destroy_time = 0	//Total amount of milliseconds spent processing this type's Destroy()
+	var/destroy_time = 0	//Total amount of milliseconds spent processing this type's Deinitialize()
 	var/failures = 0		//Times it was queued for soft deletion but failed to soft delete.
 	var/hard_deletes = 0 	//Different from failures because it also includes QDEL_HINT_HARDDEL deletions
 	var/hard_delete_time = 0//Total amount of milliseconds spent hard deleting this type.
@@ -294,7 +294,7 @@ SUBSYSTEM_DEF(garbage)
 					D.gc_destroyed = null //clear the gc variable (important!)
 					return
 				// Returning LETMELIVE after being told to force destroy
-				// indicates the objects Destroy() does not respect force
+				// indicates the objects Deinitialize() does not respect force
 				#ifdef TESTING
 				if(!I.no_respect_force)
 					testing("WARNING: [D.type] has been force deleted, but is \

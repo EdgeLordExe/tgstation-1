@@ -8,7 +8,7 @@
 	bd = bld
 	return ..()
 
-/atom/movable/screen/buildmode/Destroy()
+/atom/movable/screen/buildmode/Deinitialize()
 	bd = null
 	return ..()
 

@@ -119,7 +119,7 @@
 /obj/effect/cross_action/spacetime_dist/attack_paw(mob/user)
 	walk_link(user)
 
-/obj/effect/cross_action/spacetime_dist/Destroy()
+/obj/effect/cross_action/spacetime_dist/Deinitialize()
 	busy = TRUE
 	linked_dist = null
 	return ..()

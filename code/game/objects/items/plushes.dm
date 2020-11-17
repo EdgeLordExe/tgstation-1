@@ -19,7 +19,7 @@
 	var/obj/item/toy/plush/maternal_parent	//who owns, see love()
 	var/static/list/breeding_blacklist = typecacheof(/obj/item/toy/plush/carpplushie/dehy_carp) // you cannot have sexual relations with this plush
 	var/list/scorned	= list()	//who the plush hates
-	var/list/scorned_by	= list()	//who hates the plush, to remove external references on Destroy()
+	var/list/scorned_by	= list()	//who hates the plush, to remove external references on Deinitialize()
 	var/heartbroken = FALSE
 	var/vowbroken = FALSE
 	var/young = FALSE
@@ -53,7 +53,7 @@
 
 	normal_desc = desc
 
-/obj/item/toy/plush/Destroy()
+/obj/item/toy/plush/Deinitialize()
 	QDEL_NULL(grenade)
 
 	//inform next of kin and... acquaintances

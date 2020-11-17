@@ -33,7 +33,7 @@
 
 	GLOB.new_player_list += src
 
-/mob/dead/new_player/Destroy()
+/mob/dead/new_player/Deinitialize()
 	GLOB.new_player_list -= src
 	return ..()
 

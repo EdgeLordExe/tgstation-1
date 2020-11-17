@@ -22,7 +22,7 @@
 	icon_state = "manifoldlayer_center"
 	return ..()
 
-/obj/machinery/atmospherics/pipe/layer_manifold/Destroy()
+/obj/machinery/atmospherics/pipe/layer_manifold/Deinitialize()
 	nullifyAllNodes()
 	return ..()
 

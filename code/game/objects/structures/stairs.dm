@@ -35,7 +35,7 @@
 	update_surrounding()
 	return ..()
 
-/obj/structure/stairs/Destroy()
+/obj/structure/stairs/Deinitialize()
 	listeningTo = null
 	return ..()
 

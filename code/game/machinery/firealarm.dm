@@ -50,7 +50,7 @@
 	myarea = get_area(src)
 	LAZYADD(myarea.firealarms, src)
 
-/obj/machinery/firealarm/Destroy()
+/obj/machinery/firealarm/Deinitialize()
 	LAZYREMOVE(myarea.firealarms, src)
 	return ..()
 

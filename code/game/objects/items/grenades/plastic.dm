@@ -28,7 +28,7 @@
 	. = ..()
 	AddElement(/datum/element/empprotection, EMP_PROTECT_WIRES)
 
-/obj/item/grenade/c4/Destroy()
+/obj/item/grenade/c4/Deinitialize()
 	qdel(wires)
 	wires = null
 	target = null

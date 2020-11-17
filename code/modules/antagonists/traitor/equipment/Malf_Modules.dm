@@ -90,7 +90,7 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/ai_module))
 		Remove(owner)
 		QDEL_IN(src, 100) //let any active timers on us finish up
 
-/datum/action/innate/ai/ranged/Destroy()
+/datum/action/innate/ai/ranged/Deinitialize()
 	QDEL_NULL(linked_ability)
 	return ..()
 
@@ -106,7 +106,7 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/ai_module))
 	var/disable_text = "<span class='danger'>Goodbye Cruel World!</span>"
 	var/datum/action/innate/ai/ranged/attached_action
 
-/obj/effect/proc_holder/ranged_ai/Destroy()
+/obj/effect/proc_holder/ranged_ai/Deinitialize()
 	attached_action = null
 	return ..()
 
@@ -274,7 +274,7 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/ai_module))
 		qdel(src)
 	countdown = new(src)
 
-/obj/machinery/doomsday_device/Destroy()
+/obj/machinery/doomsday_device/Deinitialize()
 	timing = FALSE
 	QDEL_NULL(countdown)
 	STOP_PROCESSING(SSfastprocess, src)

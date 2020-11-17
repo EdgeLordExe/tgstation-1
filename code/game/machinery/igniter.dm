@@ -78,7 +78,7 @@
 	spark_system.set_up(2, 1, src)
 	spark_system.attach(src)
 
-/obj/machinery/sparker/Destroy()
+/obj/machinery/sparker/Deinitialize()
 	QDEL_NULL(spark_system)
 	return ..()
 

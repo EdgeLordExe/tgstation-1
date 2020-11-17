@@ -18,7 +18,7 @@
 	RegisterSignal(parent, COMSIG_ATOM_CONTENTS_DEL, .proc/on_contents_del)
 	RegisterSignal(parent, COMSIG_OBJ_DECONSTRUCT, .proc/on_deconstruct)
 
-/datum/component/storage/concrete/Destroy()
+/datum/component/storage/concrete/Deinitialize()
 	var/atom/real_location = real_location()
 	for(var/atom/_A in real_location)
 		_A.mouse_opacity = initial(_A.mouse_opacity)

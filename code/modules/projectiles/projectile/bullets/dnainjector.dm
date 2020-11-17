@@ -20,6 +20,6 @@
 									   "<span class='userdanger'>You are protected against \the [src]!</span>")
 	return ..()
 
-/obj/projectile/bullet/dnainjector/Destroy()
+/obj/projectile/bullet/dnainjector/Deinitialize()
 	QDEL_NULL(injector)
 	return ..()

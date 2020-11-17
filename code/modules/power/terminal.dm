@@ -16,7 +16,7 @@
 
 	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE, use_alpha = TRUE)
 
-/obj/machinery/power/terminal/Destroy()
+/obj/machinery/power/terminal/Deinitialize()
 	if(master)
 		master.disconnect_terminal()
 		master = null

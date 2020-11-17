@@ -194,7 +194,7 @@
 		update_icon()
 		addtimer(CALLBACK(src, .proc/update), 5)
 
-/obj/machinery/power/apc/Destroy()
+/obj/machinery/power/apc/Deinitialize()
 	GLOB.apcs_list -= src
 
 	if(malfai && operating)

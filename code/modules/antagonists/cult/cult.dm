@@ -41,7 +41,7 @@
 /datum/antagonist/cult/proc/add_objectives()
 	objectives |= cult_team.objectives
 
-/datum/antagonist/cult/Destroy()
+/datum/antagonist/cult/Deinitialize()
 	QDEL_NULL(communion)
 	QDEL_NULL(vote)
 	return ..()
@@ -187,7 +187,7 @@
 	var/datum/action/innate/cult/master/cultmark/bloodmark = new
 	var/datum/action/innate/cult/master/pulse/throwing = new
 
-/datum/antagonist/cult/master/Destroy()
+/datum/antagonist/cult/master/Deinitialize()
 	QDEL_NULL(reckoning)
 	QDEL_NULL(bloodmark)
 	QDEL_NULL(throwing)

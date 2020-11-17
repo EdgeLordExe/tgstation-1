@@ -15,7 +15,7 @@
 		battery = new battery_type(src)
 	..()
 
-/obj/item/computer_hardware/battery/Destroy()
+/obj/item/computer_hardware/battery/Deinitialize()
 	. = ..()
 	QDEL_NULL(battery)
 

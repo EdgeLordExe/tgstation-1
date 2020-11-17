@@ -59,7 +59,7 @@
 	. = ..()
 	GLOB.all_abstract_markers += src
 
-/obj/effect/abstract/marker/Destroy()
+/obj/effect/abstract/marker/Deinitialize()
 	GLOB.all_abstract_markers -= src
 	. = ..()
 

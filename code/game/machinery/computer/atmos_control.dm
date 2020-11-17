@@ -118,7 +118,7 @@
 	SSair.start_processing_machine(src)
 	set_frequency(frequency)
 
-/obj/machinery/air_sensor/Destroy()
+/obj/machinery/air_sensor/Deinitialize()
 	SSair.stop_processing_machine(src)
 	SSradio.remove_object(src, frequency)
 	return ..()
@@ -173,7 +173,7 @@ GLOBAL_LIST_EMPTY(atmos_air_controllers)
 	GLOB.atmos_air_controllers += src
 	set_frequency(frequency)
 
-/obj/machinery/computer/atmos_control/Destroy()
+/obj/machinery/computer/atmos_control/Deinitialize()
 	GLOB.atmos_air_controllers -= src
 	SSradio.remove_object(src, frequency)
 	return ..()

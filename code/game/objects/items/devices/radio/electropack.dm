@@ -20,7 +20,7 @@
 	. = ..()
 	set_frequency(frequency)
 
-/obj/item/electropack/Destroy()
+/obj/item/electropack/Deinitialize()
 	SSradio.remove_object(src, frequency)
 	return ..()
 

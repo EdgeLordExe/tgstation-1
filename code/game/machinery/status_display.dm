@@ -165,7 +165,7 @@
 	// register for radio system
 	SSradio.add_object(src, frequency)
 
-/obj/machinery/status_display/evac/Destroy()
+/obj/machinery/status_display/evac/Deinitialize()
 	SSradio.remove_object(src,frequency)
 	return ..()
 
@@ -310,7 +310,7 @@
 	. = ..()
 	GLOB.ai_status_displays.Add(src)
 
-/obj/machinery/status_display/ai/Destroy()
+/obj/machinery/status_display/ai/Deinitialize()
 	GLOB.ai_status_displays.Remove(src)
 	. = ..()
 

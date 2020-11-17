@@ -58,7 +58,7 @@ GLOBAL_PROTECT(href_token)
 	else
 		deactivate()
 
-/datum/admins/Destroy()
+/datum/admins/Deinitialize()
 	if(IsAdminAdvancedProcCall())
 		var/msg = " has tried to elevate permissions!"
 		message_admins("[key_name_admin(usr)][msg]")

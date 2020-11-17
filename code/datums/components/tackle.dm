@@ -47,7 +47,7 @@
 
 	addtimer(CALLBACK(src, .proc/resetTackle), base_knockdown, TIMER_STOPPABLE)
 
-/datum/component/tackler/Destroy()
+/datum/component/tackler/Deinitialize()
 	var/mob/P = parent
 	to_chat(P, "<span class='notice'>You can no longer tackle.</span>")
 	..()

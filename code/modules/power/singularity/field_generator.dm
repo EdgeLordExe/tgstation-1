@@ -169,7 +169,7 @@ field_generator power level display
 	. = ..()
 
 
-/obj/machinery/field/generator/Destroy()
+/obj/machinery/field/generator/Deinitialize()
 	cleanup()
 	return ..()
 

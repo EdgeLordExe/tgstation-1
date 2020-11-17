@@ -59,7 +59,7 @@
 	fire_sound = shot.fire_sound
 	fire_delay = shot.delay
 
-/obj/item/gun/energy/Destroy()
+/obj/item/gun/energy/Deinitialize()
 	if (cell)
 		QDEL_NULL(cell)
 	STOP_PROCESSING(SSobj, src)

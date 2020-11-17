@@ -197,7 +197,7 @@
 	realappearance = new /obj/effect/cult_turf/overlay/floor/bloodcult(src)
 	realappearance.linked = src
 
-/turf/open/floor/engine/cult/Destroy()
+/turf/open/floor/engine/cult/Deinitialize()
 	be_removed()
 	return ..()
 

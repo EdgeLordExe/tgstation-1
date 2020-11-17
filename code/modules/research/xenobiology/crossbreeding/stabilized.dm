@@ -18,7 +18,7 @@ Stabilized extracts:
 	. = ..()
 	START_PROCESSING(SSobj,src)
 
-/obj/item/slimecross/stabilized/Destroy()
+/obj/item/slimecross/stabilized/Deinitialize()
 	STOP_PROCESSING(SSobj,src)
 	qdel(linked_effect)
 	return ..()

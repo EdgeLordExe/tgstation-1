@@ -30,7 +30,7 @@
 			/obj/effect,
 			/mob/dead))
 
-/obj/structure/trap/Destroy()
+/obj/structure/trap/Deinitialize()
 	qdel(spark_system)
 	spark_system = null
 	. = ..()
@@ -99,7 +99,7 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "bounty_trap_on"
 	stun_time = 200
-	sparks = FALSE //the item version gives them off to prevent runtimes (see Destroy())
+	sparks = FALSE //the item version gives them off to prevent runtimes (see Deinitialize())
 	checks_antimagic  = FALSE
 	var/obj/item/bountytrap/stored_item
 	var/caught = FALSE
@@ -161,7 +161,7 @@
 	stored_trap.forceMove(T)//moves trap to ground
 	forceMove(stored_trap)//moves item into trap
 
-/obj/item/bountytrap/Destroy()
+/obj/item/bountytrap/Deinitialize()
 	qdel(stored_trap)
 	QDEL_NULL(radio)
 	QDEL_NULL(spark_system)

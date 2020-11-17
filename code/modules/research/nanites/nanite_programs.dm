@@ -58,7 +58,7 @@
 	. = ..()
 	register_extra_settings()
 
-/datum/nanite_program/Destroy()
+/datum/nanite_program/Deinitialize()
 	extra_settings = null
 	if(host_mob)
 		if(activated)
@@ -318,7 +318,7 @@
 	..()
 	nanites.protocols += src
 
-/datum/nanite_program/protocol/Destroy()
+/datum/nanite_program/protocol/Deinitialize()
 	if(nanites)
 		nanites.protocols -= src
 	return ..()

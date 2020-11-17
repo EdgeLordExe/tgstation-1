@@ -20,7 +20,7 @@
 	radio.broadcasting = FALSE //researching radio mmis turned the robofabs into radios because this didnt start as 0.
 	laws.set_laws_config()
 
-/obj/item/mmi/Destroy()
+/obj/item/mmi/Deinitialize()
 	if(iscyborg(loc))
 		var/mob/living/silicon/robot/borg = loc
 		borg.mmi = null

@@ -31,7 +31,7 @@
 	handler = new /datum/gang_handler(antag_candidates,restricted_jobs)
 	return handler.pre_setup_analogue()
 
-/datum/game_mode/gang/Destroy()
+/datum/game_mode/gang/Deinitialize()
 	QDEL_NULL(handler)
 	return ..()
 

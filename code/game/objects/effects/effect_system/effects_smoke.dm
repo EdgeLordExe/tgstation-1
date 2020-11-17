@@ -36,7 +36,7 @@
 	START_PROCESSING(SSobj, src)
 
 
-/obj/effect/particle_effect/smoke/Destroy()
+/obj/effect/particle_effect/smoke/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -267,7 +267,7 @@
 	chemholder.reagents = R
 	R.my_atom = chemholder
 
-/datum/effect_system/smoke_spread/chem/Destroy()
+/datum/effect_system/smoke_spread/chem/Deinitialize()
 	qdel(chemholder)
 	chemholder = null
 	return ..()

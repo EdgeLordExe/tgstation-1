@@ -133,7 +133,7 @@
 		cell = null
 	return ..()
 
-/obj/item/bodypart/chest/robot/Destroy()
+/obj/item/bodypart/chest/robot/Deinitialize()
 	QDEL_NULL(cell)
 	return ..()
 
@@ -236,7 +236,7 @@
 		flash2 = null
 	return ..()
 
-/obj/item/bodypart/head/robot/Destroy()
+/obj/item/bodypart/head/robot/Deinitialize()
 	QDEL_NULL(flash1)
 	QDEL_NULL(flash2)
 	return ..()

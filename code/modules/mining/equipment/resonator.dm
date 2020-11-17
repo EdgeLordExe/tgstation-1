@@ -72,7 +72,7 @@
 	deltimer(timerid)
 	timerid = addtimer(CALLBACK(src, .proc/burst), duration, TIMER_STOPPABLE)
 
-/obj/effect/temp_visual/resonance/Destroy()
+/obj/effect/temp_visual/resonance/Deinitialize()
 	if(res)
 		res.fields -= src
 		res = null

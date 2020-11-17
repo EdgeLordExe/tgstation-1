@@ -126,7 +126,7 @@
 	. = ..()
 	set_light(2)
 
-/mob/living/simple_animal/hostile/syndicate/melee/sword/Destroy()
+/mob/living/simple_animal/hostile/syndicate/melee/sword/Deinitialize()
 	QDEL_NULL(sord)
 	return ..()
 
@@ -153,7 +153,7 @@
 	sord = new(src)
 	set_light(4)
 
-/mob/living/simple_animal/hostile/syndicate/melee/sword/space/Destroy()
+/mob/living/simple_animal/hostile/syndicate/melee/sword/space/Deinitialize()
 	QDEL_NULL(sord)
 	return ..()
 

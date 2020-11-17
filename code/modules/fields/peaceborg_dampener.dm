@@ -26,7 +26,7 @@
 	staging = list()
 	return ..()
 
-/datum/proximity_monitor/advanced/peaceborg_dampener/Destroy()
+/datum/proximity_monitor/advanced/peaceborg_dampener/Deinitialize()
 	return ..()
 
 /datum/proximity_monitor/advanced/peaceborg_dampener/process()

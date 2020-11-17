@@ -26,7 +26,7 @@
 	if(autoconnect_station_network)
 		register_connection(SSnetworks.station_network)
 
-/datum/component/ntnet_interface/Destroy()
+/datum/component/ntnet_interface/Deinitialize()
 	unregister_all_connections()
 	SSnetworks.unregister_interface(src)
 	return ..()

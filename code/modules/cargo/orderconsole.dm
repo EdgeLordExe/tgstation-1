@@ -39,7 +39,7 @@
 	. = ..()
 	radio = new /obj/item/radio/headset/headset_cargo(src)
 
-/obj/machinery/computer/cargo/Destroy()
+/obj/machinery/computer/cargo/Deinitialize()
 	QDEL_NULL(radio)
 	..()
 

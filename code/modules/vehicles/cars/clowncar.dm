@@ -94,7 +94,7 @@
 	initialize_controller_action_type(/datum/action/vehicle/sealed/cannon, VEHICLE_CONTROL_DRIVE)
 	AddElement(/datum/element/waddling)
 
-/obj/vehicle/sealed/car/clowncar/Destroy()
+/obj/vehicle/sealed/car/clowncar/Deinitialize()
   playsound(src, 'sound/vehicles/clowncar_fart.ogg', 100)
   return ..()
 

@@ -168,7 +168,7 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 	name += " ([rand(100,999)]) ([get_area_name(src, TRUE)])"
 	GLOB.total_extraction_beacons += src
 
-/obj/structure/extraction_point/Destroy()
+/obj/structure/extraction_point/Deinitialize()
 	GLOB.total_extraction_beacons -= src
 	..()
 

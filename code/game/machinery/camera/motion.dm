@@ -37,7 +37,7 @@
 	targets |= WEAKREF(target)
 	return TRUE
 
-/obj/machinery/camera/Destroy()
+/obj/machinery/camera/Deinitialize()
 	var/area/ai_monitored/A = get_area(src)
 	localMotionTargets = null
 	if(istype(A))

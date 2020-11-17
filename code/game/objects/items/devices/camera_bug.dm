@@ -35,7 +35,7 @@
 	..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/camera_bug/Destroy()
+/obj/item/camera_bug/Deinitialize()
 	get_cameras()
 	for(var/cam_tag in bugged_cameras)
 		var/obj/machinery/camera/camera = bugged_cameras[cam_tag]

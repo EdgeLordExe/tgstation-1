@@ -7,7 +7,7 @@
 	if(target)
 		track(target, listener)
 
-/datum/movement_detector/Destroy()
+/datum/movement_detector/Deinitialize()
 	untrack()
 	tracked = null
 	listener = null

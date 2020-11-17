@@ -27,7 +27,7 @@
 	soundloop = new(list(src))
 	soundloop2 = new(list(src))
 
-/obj/item/reverse_bear_trap/Destroy()
+/obj/item/reverse_bear_trap/Deinitialize()
 	QDEL_NULL(soundloop)
 	QDEL_NULL(soundloop2)
 	STOP_PROCESSING(SSprocessing, src)

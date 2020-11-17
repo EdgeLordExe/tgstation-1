@@ -33,7 +33,7 @@
 	AddAbility(tentacle_slap)
 	add_cell_sample()
 
-/mob/living/simple_animal/hostile/vatbeast/Destroy()
+/mob/living/simple_animal/hostile/vatbeast/Deinitialize()
 	. = ..()
 	QDEL_NULL(tentacle_slap)
 

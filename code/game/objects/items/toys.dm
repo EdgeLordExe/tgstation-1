@@ -163,7 +163,7 @@
 	. = ..()
 
 
-/obj/item/toy/balloon/syndicate/Destroy()
+/obj/item/toy/balloon/syndicate/Deinitialize()
 	if(ismob(loc))
 		var/mob/M = loc
 		SEND_SIGNAL(M, COMSIG_CLEAR_MOOD_EVENT, "badass_antag", /datum/mood_event/badass_antag)

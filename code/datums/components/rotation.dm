@@ -87,7 +87,7 @@
 	remove_signals()
 	. = ..()
 
-/datum/component/simple_rotation/Destroy()
+/datum/component/simple_rotation/Deinitialize()
 	QDEL_NULL(can_user_rotate)
 	QDEL_NULL(can_be_rotated)
 	QDEL_NULL(after_rotation)

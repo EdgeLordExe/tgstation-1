@@ -27,7 +27,7 @@
 	"<span class='userdanger'>Everything grows bigger!</span>")
 	QDEL_IN(src, shrink_time)
 
-/datum/component/shrink/Destroy()
+/datum/component/shrink/Deinitialize()
 	var/atom/parent_atom = parent
 	parent_atom.transform = parent_atom.transform.Scale(2,2)
 	parent_atom.density = olddens

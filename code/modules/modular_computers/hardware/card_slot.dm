@@ -13,7 +13,7 @@
 		try_eject(null, TRUE)
 	. = ..()
 
-/obj/item/computer_hardware/card_slot/Destroy()
+/obj/item/computer_hardware/card_slot/Deinitialize()
 	try_eject(forced = TRUE)
 	return ..()
 

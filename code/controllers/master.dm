@@ -94,7 +94,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	if(!GLOB)
 		new /datum/controller/global_vars
 
-/datum/controller/master/Destroy()
+/datum/controller/master/Deinitialize()
 	..()
 	// Tell qdel() to Del() this object.
 	return QDEL_HINT_HARDDEL_NOW

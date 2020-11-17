@@ -67,7 +67,7 @@
 
 	/// Wire assignment for airlocks in this area
 	var/airlock_wires = /datum/wires/airlock
-    
+
 	///This datum, if set, allows terrain generation behavior to be ran on Initialize()
 	var/datum/map_generator/map_generator
 
@@ -189,7 +189,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
   * This is despite the fact that no code appears to put it on SSobj, but
   * who am I to argue with old coders
   */
-/area/Destroy()
+/area/Deinitialize()
 	if(GLOB.areas_by_type[type] == src)
 		GLOB.areas_by_type[type] = null
 	STOP_PROCESSING(SSobj, src)

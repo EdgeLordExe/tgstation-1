@@ -23,7 +23,7 @@
 	. = ..()
 	defib = new/obj/item/defibrillator/loaded(src)
 
-/obj/machinery/defibrillator_mount/Destroy()
+/obj/machinery/defibrillator_mount/Deinitialize()
 	if(defib)
 		QDEL_NULL(defib)
 	. = ..()

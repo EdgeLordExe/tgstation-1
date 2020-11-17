@@ -106,7 +106,7 @@
 /obj/structure/pitgrate/proc/reset_plane()
 	plane = FLOOR_PLANE
 
-/obj/structure/pitgrate/Destroy()
+/obj/structure/pitgrate/Deinitialize()
 	if(hidden)
 		open = TRUE
 		update_openspace()

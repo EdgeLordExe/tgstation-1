@@ -223,7 +223,7 @@
 
 	update_icon()
 
-/obj/machinery/airalarm/Destroy()
+/obj/machinery/airalarm/Deinitialize()
 	SSradio.remove_object(src, frequency)
 	qdel(wires)
 	wires = null

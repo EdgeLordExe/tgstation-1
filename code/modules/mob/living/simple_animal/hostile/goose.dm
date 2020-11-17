@@ -105,7 +105,7 @@
 		desc = "[initial(desc)] It's waddling more than usual. It seems to be possessed."
 		deadchat_plays_goose()
 
-/mob/living/simple_animal/hostile/retaliate/goose/vomit/Destroy()
+/mob/living/simple_animal/hostile/retaliate/goose/vomit/Deinitialize()
 	UnregisterSignal(src, COMSIG_MOVABLE_MOVED)
 	QDEL_NULL(goosevomit)
 	return ..()

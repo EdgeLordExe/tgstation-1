@@ -42,7 +42,7 @@
 /obj/machinery/flasher/connect_to_shuttle(obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
 	id = "[port.id]_[id]"
 
-/obj/machinery/flasher/Destroy()
+/obj/machinery/flasher/Deinitialize()
 	QDEL_NULL(bulb)
 	return ..()
 

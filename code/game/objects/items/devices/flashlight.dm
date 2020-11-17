@@ -401,7 +401,7 @@
 	..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/flashlight/emp/Destroy()
+/obj/item/flashlight/emp/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
@@ -468,7 +468,7 @@
 	return ..()
 
 
-/obj/item/flashlight/glowstick/Destroy()
+/obj/item/flashlight/glowstick/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

@@ -79,7 +79,7 @@
 /datum/disease/advance/New()
 	Refresh()
 
-/datum/disease/advance/Destroy()
+/datum/disease/advance/Deinitialize()
 	if(processing)
 		for(var/datum/symptom/S in symptoms)
 			S.End(src)

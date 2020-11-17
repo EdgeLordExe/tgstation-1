@@ -92,7 +92,7 @@
 		. += "<span class='notice'>The status display reads: Tray efficiency at <b>[rating*100]%</b>.</span>"
 
 
-/obj/machinery/hydroponics/Destroy()
+/obj/machinery/hydroponics/Deinitialize()
 	if(myseed)
 		qdel(myseed)
 		myseed = null

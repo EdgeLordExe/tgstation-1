@@ -45,7 +45,7 @@
 /obj/singularity/energy_ball/consume(severity, target)
 	return
 
-/obj/singularity/energy_ball/Destroy()
+/obj/singularity/energy_ball/Deinitialize()
 	if(orbiting && istype(orbiting.parent, /obj/singularity/energy_ball))
 		var/obj/singularity/energy_ball/EB = orbiting.parent
 		EB.orbiting_balls -= src

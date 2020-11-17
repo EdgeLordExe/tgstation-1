@@ -15,7 +15,7 @@
 	if(overmind)
 		overmind.resource_blobs += src
 
-/obj/structure/blob/resource/Destroy()
+/obj/structure/blob/resource/Deinitialize()
 	if(overmind)
 		overmind.resource_blobs -= src
 	return ..()

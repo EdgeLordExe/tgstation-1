@@ -77,7 +77,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	else
 		return ..()
 
-/obj/machinery/computer/card/Destroy()
+/obj/machinery/computer/card/Deinitialize()
 	if(inserted_scan_id)
 		qdel(inserted_scan_id)
 		inserted_scan_id = null

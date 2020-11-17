@@ -87,7 +87,7 @@
 	tick()
 	return ..()
 
-/datum/status_effect/seedling_beam_indicator/Destroy()
+/datum/status_effect/seedling_beam_indicator/Deinitialize()
 	if(owner)
 		if(owner.client)
 			owner.client.screen -= seedling_screen_object

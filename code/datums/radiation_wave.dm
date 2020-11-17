@@ -36,7 +36,7 @@
 
 	START_PROCESSING(SSradiation, src)
 
-/datum/radiation_wave/Destroy()
+/datum/radiation_wave/Deinitialize()
 	. = QDEL_HINT_IWILLGC
 	STOP_PROCESSING(SSradiation, src)
 	..()

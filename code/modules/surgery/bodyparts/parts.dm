@@ -18,7 +18,7 @@
 		return FALSE
 	return ..()
 
-/obj/item/bodypart/chest/Destroy()
+/obj/item/bodypart/chest/Deinitialize()
 	QDEL_NULL(cavity_item)
 	return ..()
 

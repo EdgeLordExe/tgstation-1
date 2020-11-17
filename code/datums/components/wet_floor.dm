@@ -39,7 +39,7 @@
 /datum/component/wet_floor/UnregisterFromParent()
 	UnregisterSignal(parent, list(COMSIG_TURF_IS_WET, COMSIG_TURF_MAKE_DRY))
 
-/datum/component/wet_floor/Destroy()
+/datum/component/wet_floor/Deinitialize()
 	STOP_PROCESSING(SSwet_floors, src)
 	var/turf/T = parent
 	qdel(T.GetComponent(/datum/component/slippery))

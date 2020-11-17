@@ -12,7 +12,7 @@
 	. = ..()
 	GLOB.alert_consoles += src
 
-/obj/machinery/computer/station_alert/Destroy()
+/obj/machinery/computer/station_alert/Deinitialize()
 	GLOB.alert_consoles -= src
 	return ..()
 

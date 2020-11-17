@@ -28,7 +28,7 @@
 	return ..()
 
 
-/obj/structure/ai_core/Destroy()
+/obj/structure/ai_core/Deinitialize()
 	QDEL_NULL(circuit)
 	QDEL_NULL(brain)
 	QDEL_NULL(laws)
@@ -60,7 +60,7 @@
 	circuit = new(src)
 	GLOB.latejoin_ai_cores += src
 
-/obj/structure/ai_core/latejoin_inactive/Destroy()
+/obj/structure/ai_core/latejoin_inactive/Deinitialize()
 	GLOB.latejoin_ai_cores -= src
 	return ..()
 

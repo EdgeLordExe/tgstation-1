@@ -57,7 +57,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	update_move_direction()
 	LAZYADD(GLOB.conveyors_by_id[id], src)
 
-/obj/machinery/conveyor/Destroy()
+/obj/machinery/conveyor/Deinitialize()
 	LAZYREMOVE(GLOB.conveyors_by_id[id], src)
 	return ..()
 
@@ -263,7 +263,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	LAZYADD(GLOB.conveyors_by_id[id], src)
 	wires = new /datum/wires/conveyor(src)
 
-/obj/machinery/conveyor_switch/Destroy()
+/obj/machinery/conveyor_switch/Deinitialize()
 	LAZYREMOVE(GLOB.conveyors_by_id[id], src)
 	QDEL_NULL(wires)
 	. = ..()

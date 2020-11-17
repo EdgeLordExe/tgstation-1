@@ -219,7 +219,7 @@
 	var/obj/effect/decal/cleanable/blood/gibs/decal = new chosen_decal(drop_location())
 	decal.setDir(dir)
 
-/mob/living/simple_animal/hostile/eldritch/armsy/Destroy()
+/mob/living/simple_animal/hostile/eldritch/armsy/Deinitialize()
 	if(front)
 		front.icon_state = "armsy_end"
 		front.icon_living = "armsy_end"

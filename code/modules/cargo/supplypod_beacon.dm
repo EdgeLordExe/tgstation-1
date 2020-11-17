@@ -51,7 +51,7 @@
 	else
 		. += "<span class='notice'>Alt-click to unlink it from the Express Supply console.</span>"
 
-/obj/item/supplypod_beacon/Destroy()
+/obj/item/supplypod_beacon/Deinitialize()
 	if(express_console)
 		express_console.beacon = null
 	return ..()

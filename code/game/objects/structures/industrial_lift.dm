@@ -7,7 +7,7 @@
 /datum/lift_master
 	var/list/lift_platforms
 
-/datum/lift_master/Destroy()
+/datum/lift_master/Deinitialize()
 	for(var/l in lift_platforms)
 		var/obj/structure/industrial_lift/lift_platform = l
 		lift_platform.lift_master_datum = null
@@ -276,7 +276,7 @@ GLOBAL_LIST_EMPTY(lifts)
 	else
 		user.visible_message("<span class='notice'>[user] moves the lift downwards.</span>", "<span class='notice'>You move the lift downwards.</span>")
 
-/obj/structure/industrial_lift/Destroy()
+/obj/structure/industrial_lift/Deinitialize()
 	GLOB.lifts.Remove(src)
 	QDEL_NULL(lift_master_datum)
 	var/list/border_lift_platforms = lift_platform_expansion()

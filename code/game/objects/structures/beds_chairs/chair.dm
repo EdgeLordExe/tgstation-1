@@ -45,7 +45,7 @@
 		return TRUE
 	return FALSE
 
-/obj/structure/chair/Destroy()
+/obj/structure/chair/Deinitialize()
 	RemoveFromLatejoin()
 	return ..()
 
@@ -167,7 +167,7 @@
 /obj/structure/chair/comfy/proc/GetArmrest()
 	return mutable_appearance('icons/obj/chairs.dmi', "comfychair_armrest")
 
-/obj/structure/chair/comfy/Destroy()
+/obj/structure/chair/comfy/Deinitialize()
 	QDEL_NULL(armrest)
 	return ..()
 
@@ -399,7 +399,7 @@
 	item_chair = null
 	var/turns = 0
 
-/obj/structure/chair/bronze/Destroy()
+/obj/structure/chair/bronze/Deinitialize()
 	STOP_PROCESSING(SSfastprocess, src)
 	. = ..()
 

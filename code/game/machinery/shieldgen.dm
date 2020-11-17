@@ -81,7 +81,7 @@
 	else
 		..()
 
-/obj/structure/emergency_shield/cult/barrier/Destroy()
+/obj/structure/emergency_shield/cult/barrier/Deinitialize()
 	if(parent_rune)
 		parent_rune.visible_message("<span class='danger'>The [parent_rune] fades away as [src] is destroyed!</span>")
 		QDEL_NULL(parent_rune)
@@ -123,7 +123,7 @@
 	if(mapload && active && anchored)
 		shields_up()
 
-/obj/machinery/shieldgen/Destroy()
+/obj/machinery/shieldgen/Deinitialize()
 	QDEL_LIST(deployed_shields)
 	return ..()
 
@@ -279,7 +279,7 @@
 	if(anchored)
 		connect_to_network()
 
-/obj/machinery/power/shieldwallgen/Destroy()
+/obj/machinery/power/shieldwallgen/Deinitialize()
 	for(var/d in GLOB.cardinals)
 		cleanup_field(d)
 	return ..()
@@ -456,7 +456,7 @@
 		visible_message("<span class='danger'>\The [src] is suddenly occupying the same space as \the [L]!</span>")
 		L.gib()
 
-/obj/machinery/shieldwall/Destroy()
+/obj/machinery/shieldwall/Deinitialize()
 	gen_primary = null
 	gen_secondary = null
 	return ..()

@@ -61,7 +61,7 @@
 	RegisterSignal(src, COMSIG_PARENT_ATTACKBY, .proc/convert)
 
 
-/obj/item/melee/baton/Destroy()
+/obj/item/melee/baton/Deinitialize()
 	if(cell)
 		QDEL_NULL(cell)
 	UnregisterSignal(src, COMSIG_PARENT_ATTACKBY)
@@ -301,7 +301,7 @@
 	if(sparkler.activate())
 		..()
 
-/obj/item/melee/baton/cattleprod/Destroy()
+/obj/item/melee/baton/cattleprod/Deinitialize()
 	if(sparkler)
 		QDEL_NULL(sparkler)
 	return ..()

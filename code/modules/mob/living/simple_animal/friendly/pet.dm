@@ -41,7 +41,7 @@
 		pcollar = new(src)
 		regenerate_icons()
 
-/mob/living/simple_animal/pet/Destroy()
+/mob/living/simple_animal/pet/Deinitialize()
 	QDEL_NULL(pcollar)
 	return ..()
 

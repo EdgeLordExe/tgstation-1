@@ -27,7 +27,7 @@
 		bin_pen = P
 		update_icon()
 
-/obj/item/paper_bin/Destroy()
+/obj/item/paper_bin/Deinitialize()
 	if(papers)
 		for(var/i in papers)
 			qdel(i)

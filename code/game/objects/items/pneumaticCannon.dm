@@ -50,7 +50,7 @@
 	if(++charge_tick >= charge_ticks && charge_type)
 		fill_with_type(charge_type, charge_amount)
 
-/obj/item/pneumatic_cannon/Destroy()
+/obj/item/pneumatic_cannon/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

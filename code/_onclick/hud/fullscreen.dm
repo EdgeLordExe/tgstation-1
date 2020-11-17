@@ -78,7 +78,7 @@
 		return FALSE
 	return TRUE
 
-/atom/movable/screen/fullscreen/Destroy()
+/atom/movable/screen/fullscreen/Deinitialize()
 	severity = 0
 	. = ..()
 

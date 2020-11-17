@@ -18,7 +18,7 @@
 	payday_modifier = modifier
 	setup_unique_account_id()
 
-/datum/bank_account/Destroy()
+/datum/bank_account/Deinitialize()
 	if(add_to_accounts)
 		SSeconomy.bank_accounts_by_id -= "[account_id]"
 	return ..()

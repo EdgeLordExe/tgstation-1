@@ -299,7 +299,7 @@
 	. = ..()
 	GLOB.syndicate_shuttle_boards += src
 
-/obj/item/circuitboard/computer/syndicate_shuttle/Destroy()
+/obj/item/circuitboard/computer/syndicate_shuttle/Deinitialize()
 	GLOB.syndicate_shuttle_boards -= src
 	return ..()
 

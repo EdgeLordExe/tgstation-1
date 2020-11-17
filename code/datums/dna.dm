@@ -20,7 +20,7 @@
 	if(istype(new_holder))
 		holder = new_holder
 
-/datum/dna/Destroy()
+/datum/dna/Deinitialize()
 	if(iscarbon(holder))
 		var/mob/living/carbon/cholder = holder
 		if(cholder.dna == src)

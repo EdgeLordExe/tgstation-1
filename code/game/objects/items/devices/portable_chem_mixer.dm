@@ -25,7 +25,7 @@
 		/obj/item/reagent_containers/glass/beaker,
 	))
 
-/obj/item/storage/portable_chem_mixer/Destroy()
+/obj/item/storage/portable_chem_mixer/Deinitialize()
 	QDEL_NULL(beaker)
 	return ..()
 

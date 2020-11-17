@@ -19,7 +19,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/nuke_core/Destroy()
+/obj/item/nuke_core/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -50,7 +50,7 @@
 	righthand_file = 'icons/mob/inhands/misc/tiles_righthand.dmi'
 	var/obj/item/nuke_core/core
 
-/obj/item/nuke_core_container/Destroy()
+/obj/item/nuke_core_container/Deinitialize()
 	QDEL_NULL(core)
 	return ..()
 
@@ -189,7 +189,7 @@
 	desc = "A tiny receptacle that releases an inert hyper-noblium mix upon sealing, allowing a sliver of a supermatter crystal to be safely stored."
 	var/obj/item/nuke_core/supermatter_sliver/sliver
 
-/obj/item/nuke_core_container/supermatter/Destroy()
+/obj/item/nuke_core_container/supermatter/Deinitialize()
 	QDEL_NULL(sliver)
 	return ..()
 
@@ -246,7 +246,7 @@
 	damtype = BURN
 	var/obj/item/nuke_core/supermatter_sliver/sliver
 
-/obj/item/hemostat/supermatter/Destroy()
+/obj/item/hemostat/supermatter/Deinitialize()
 	QDEL_NULL(sliver)
 	return ..()
 

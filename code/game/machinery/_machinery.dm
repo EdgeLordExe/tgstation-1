@@ -39,7 +39,7 @@ Class Variables:
 Class Procs:
    Initialize()                     'game/machinery/machine.dm'
 
-   Destroy()                   'game/machinery/machine.dm'
+   Deinitialize()                   'game/machinery/machine.dm'
 
    auto_use_power()            'game/machinery/machine.dm'
       This proc determines how power mode power is deducted by the machine.
@@ -167,7 +167,7 @@ Class Procs:
 	power_change()
 	RegisterSignal(src, COMSIG_ENTER_AREA, .proc/power_change)
 
-/obj/machinery/Destroy()
+/obj/machinery/Deinitialize()
 	GLOB.machines.Remove(src)
 	end_processing()
 	dump_contents()
@@ -735,7 +735,7 @@ Class Procs:
  *
  * Sends all AIs a message that a hack is occurring.  Specifically used for space ninja tampering as this proc was originally in the ninja files.
  * However, the proc may also be used elsewhere.
- */	
+ */
 /obj/machinery/proc/AI_notify_hack()
 	var/alertstr = "<span class='userdanger'>Network Alert: Hacking attempt detected[get_area(src)?" in [get_area_name(src, TRUE)]":". Unable to pinpoint location"].</span>"
 	for(var/mob/living/silicon/ai/AI in GLOB.player_list)

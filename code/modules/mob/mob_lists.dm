@@ -3,7 +3,7 @@
 	GLOB.mob_list |= src
 	GLOB.mob_directory[tag] = src
 
-///Removes the mob reference from the list and directory of all mobs. Called on Destroy().
+///Removes the mob reference from the list and directory of all mobs. Called on Deinitialize().
 /mob/proc/remove_from_mob_list()
 	GLOB.mob_list -= src
 	GLOB.mob_directory -= tag

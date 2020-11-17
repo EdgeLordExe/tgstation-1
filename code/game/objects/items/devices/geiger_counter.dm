@@ -34,7 +34,7 @@
 
 	soundloop = new(list(src), FALSE)
 
-/obj/item/geiger_counter/Destroy()
+/obj/item/geiger_counter/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 

@@ -219,7 +219,7 @@
 	. = ..()
 	mob_overlay = image('icons/mob/human_face.dmi', "eyes_glow_gs")
 
-/obj/item/organ/eyes/robotic/glow/Destroy()
+/obj/item/organ/eyes/robotic/glow/Deinitialize()
 	terminate_effects()
 	. = ..()
 
@@ -291,7 +291,7 @@
 	. = ..()
 	UnregisterSignal(M, COMSIG_ATOM_DIR_CHANGE)
 
-/obj/item/organ/eyes/robotic/glow/Destroy()
+/obj/item/organ/eyes/robotic/glow/Deinitialize()
 	QDEL_NULL(mobhook) // mobhook is not our component
 	return ..()
 

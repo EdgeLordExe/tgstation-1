@@ -502,7 +502,7 @@
 	else
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/reagent_containers/food/snacks/chewable/Destroy()
+/obj/item/reagent_containers/food/snacks/chewable/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 

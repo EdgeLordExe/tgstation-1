@@ -85,7 +85,7 @@ Credit dupes that require a lot of manual work shouldn't be removed, unless they
 	export_types = typecacheof(export_types, FALSE, !include_subtypes)
 	exclude_types = typecacheof(exclude_types)
 
-/datum/export/Destroy()
+/datum/export/Deinitialize()
 	SSprocessing.processing -= src
 	return ..()
 

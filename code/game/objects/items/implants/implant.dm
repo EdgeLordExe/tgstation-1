@@ -101,7 +101,7 @@
 
 	return 1
 
-/obj/item/implant/Destroy()
+/obj/item/implant/Deinitialize()
 	if(imp_in)
 		removed(imp_in)
 	return ..()

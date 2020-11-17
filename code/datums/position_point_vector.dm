@@ -206,7 +206,7 @@
 	var/last_move = 0
 	var/paused = FALSE
 
-/datum/point/vector/processed/Destroy()
+/datum/point/vector/processed/Deinitialize()
 	STOP_PROCESSING(SSprojectiles, src)
 	return ..()
 

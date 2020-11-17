@@ -49,7 +49,7 @@
 	AddComponent(/datum/component/footstep, FOOTSTEP_MOB_BAREFOOT, 1, -6)
 	AddComponent(/datum/component/bloodysoles/feet)
 
-/mob/living/carbon/monkey/Destroy()
+/mob/living/carbon/monkey/Deinitialize()
 	SSmobs.cubemonkeys -= src
 	return ..()
 

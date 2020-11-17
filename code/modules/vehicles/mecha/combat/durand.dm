@@ -20,7 +20,7 @@
 	RegisterSignal(src, COMSIG_PROJECTILE_PREHIT, .proc/prehit)
 
 
-/obj/vehicle/sealed/mecha/combat/durand/Destroy()
+/obj/vehicle/sealed/mecha/combat/durand/Deinitialize()
 	if(shield)
 		QDEL_NULL(shield)
 	return ..()
@@ -161,7 +161,7 @@ own integrity back to max. Shield is automatically dropped if we run out of powe
 	RegisterSignal(src, COMSIG_MECHA_ACTION_TRIGGER, .proc/activate)
 
 
-/obj/durand_shield/Destroy()
+/obj/durand_shield/Deinitialize()
 	if(chassis)
 		chassis.shield = null
 		chassis = null

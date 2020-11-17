@@ -28,7 +28,7 @@
 
 	notify_ghosts("Someone won a pulse rifle as a prize!", source = src, action = NOTIFY_ORBIT, header = "Pulse rifle prize")
 
-/obj/item/gun/energy/pulse/prize/Destroy()
+/obj/item/gun/energy/pulse/prize/Deinitialize()
 	GLOB.poi_list -= src
 	. = ..()
 

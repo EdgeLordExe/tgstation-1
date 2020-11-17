@@ -46,7 +46,7 @@
 		GLOB.station_turfs += src
 
 
-/turf/open/floor/Destroy()
+/turf/open/floor/Deinitialize()
 	if(is_station_level(z))
 		GLOB.station_turfs -= src
 	return ..()

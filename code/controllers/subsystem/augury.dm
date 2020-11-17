@@ -60,7 +60,7 @@ SUBSYSTEM_DEF(augury)
 	button_icon_state = "flaming"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
-/datum/action/innate/augury/Destroy()
+/datum/action/innate/augury/Deinitialize()
 	if(owner)
 		SSaugury.watchers -= owner
 	return ..()

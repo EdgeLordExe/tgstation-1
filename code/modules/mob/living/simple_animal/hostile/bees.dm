@@ -75,7 +75,7 @@
 	L.visible_message("<span class='warning'>[L] scoops up [src]!</span>")
 	L.put_in_hands(holder)
 
-/mob/living/simple_animal/hostile/poison/bees/Destroy()
+/mob/living/simple_animal/hostile/poison/bees/Deinitialize()
 	if(beehome)
 		beehome.bees -= src
 		beehome = null
@@ -324,7 +324,7 @@
 	queen = new(src)
 
 
-/obj/item/queen_bee/Destroy()
+/obj/item/queen_bee/Deinitialize()
 	QDEL_NULL(queen)
 	return ..()
 

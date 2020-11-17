@@ -41,7 +41,7 @@
 	. = ..()
 	AddComponent(/datum/component/ntnet_interface)
 
-/obj/machinery/door/window/Destroy()
+/obj/machinery/door/window/Deinitialize()
 	density = FALSE
 	QDEL_LIST(debris)
 	if(obj_integrity == 0)

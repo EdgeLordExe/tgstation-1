@@ -199,7 +199,7 @@
 	diag_hud_set_mechstat()
 	update_icon()
 
-/obj/vehicle/sealed/mecha/Destroy()
+/obj/vehicle/sealed/mecha/Deinitialize()
 	for(var/M in occupants)
 		var/mob/living/occupant = M
 		if(isAI(occupant))

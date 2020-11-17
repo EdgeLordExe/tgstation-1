@@ -84,7 +84,7 @@
 		A.color = "#9C00FF"
 		flash_color(A, flash_color = "#9C00FF", flash_time = 3 SECONDS)
 		animate(A, color = oldcolor, time = 3 SECONDS)
-	
+
 
 /datum/martial_art/plasma_fist/proc/Apotheosis(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	A.say("APOTHEOSIS!!", forced="plasma fist")
@@ -168,7 +168,7 @@
 		animate(beam.visuals, alpha = 0, time = 3 SECONDS)
 	animate(src, alpha = 0, transform = matrix()*0.5, time = 3 SECONDS)
 
-/obj/effect/temp_visual/plasma_soul/Destroy()
+/obj/effect/temp_visual/plasma_soul/Deinitialize()
 	if(!beam_target)
 		visible_message("<span class='notice'>[src] fades away...</span>")
 	. = ..()

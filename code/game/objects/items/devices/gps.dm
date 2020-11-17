@@ -73,7 +73,7 @@
 		T.color = initial(T.color)
 		T.maptext = initial(T.maptext)
 
-/obj/item/gps/visible_debug/Destroy()
+/obj/item/gps/visible_debug/Deinitialize()
 	if(tagged)
 		clear()
 	tagged = null

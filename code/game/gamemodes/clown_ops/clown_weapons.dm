@@ -192,7 +192,7 @@
 	. = ..()
 	AddComponent(/datum/component/slippery, det_time)
 
-/obj/item/grown/bananapeel/bombanana/Destroy()
+/obj/item/grown/bananapeel/bombanana/Deinitialize()
 	. = ..()
 	QDEL_NULL(bomb)
 

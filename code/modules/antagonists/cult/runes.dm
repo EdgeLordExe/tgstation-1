@@ -347,7 +347,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 	listkey = set_keyword ? "[set_keyword] [locname]":"[locname]"
 	GLOB.teleport_runes += src
 
-/obj/effect/rune/teleport/Destroy()
+/obj/effect/rune/teleport/Deinitialize()
 	GLOB.teleport_runes -= src
 	return ..()
 
@@ -468,7 +468,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 	. = ..()
 	GLOB.poi_list |= src
 
-/obj/effect/rune/narsie/Destroy()
+/obj/effect/rune/narsie/Deinitialize()
 	GLOB.poi_list -= src
 	. = ..()
 
@@ -618,7 +618,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 	. = ..()
 	GLOB.wall_runes += src
 
-/obj/effect/rune/wall/Destroy()
+/obj/effect/rune/wall/Deinitialize()
 	GLOB.wall_runes -= src
 	if(barrier)
 		QDEL_NULL(barrier)

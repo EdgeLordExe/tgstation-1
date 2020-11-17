@@ -55,7 +55,7 @@
 	var/list/form_fields = list()
 	var/field_counter = 1
 
-/obj/item/paper/Destroy()
+/obj/item/paper/Deinitialize()
 	stamps = null
 	stamped = null
 	form_fields = null

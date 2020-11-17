@@ -13,7 +13,7 @@
 	other_atmosmch = list()
 	SSair.networks += src
 
-/datum/pipeline/Destroy()
+/datum/pipeline/Deinitialize()
 	SSair.networks -= src
 	if(air?.volume)
 		temporarily_store_air()

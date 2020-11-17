@@ -222,7 +222,7 @@
 	. = ..()
 	SSmobs.cheeserats += src
 
-/mob/living/simple_animal/hostile/rat/Destroy()
+/mob/living/simple_animal/hostile/rat/Deinitialize()
 	SSmobs.cheeserats -= src
 	return ..()
 

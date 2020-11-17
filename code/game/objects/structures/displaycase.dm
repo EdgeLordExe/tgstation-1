@@ -46,7 +46,7 @@
 		update_icon()
 	return ..()
 
-/obj/structure/displaycase/Destroy()
+/obj/structure/displaycase/Deinitialize()
 	QDEL_NULL(electronics)
 	QDEL_NULL(showpiece)
 	return ..()
@@ -286,7 +286,7 @@
 	. = ..()
 	GLOB.trophy_cases += src
 
-/obj/structure/displaycase/trophy/Destroy()
+/obj/structure/displaycase/trophy/Deinitialize()
 	GLOB.trophy_cases -= src
 	return ..()
 

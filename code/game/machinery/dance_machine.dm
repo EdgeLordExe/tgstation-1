@@ -62,7 +62,7 @@
 	if(songs.len)
 		selection = pick(songs)
 
-/obj/machinery/jukebox/Destroy()
+/obj/machinery/jukebox/Deinitialize()
 	dance_over()
 	return ..()
 

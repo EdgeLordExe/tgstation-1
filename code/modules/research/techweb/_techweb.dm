@@ -62,7 +62,7 @@
 	if(remove_tech)
 		SSresearch.techweb_nodes_experimental -= bepis_id
 
-/datum/techweb/Destroy()
+/datum/techweb/Deinitialize()
 	researched_nodes = null
 	researched_designs = null
 	available_nodes = null

@@ -87,7 +87,7 @@
 	proximity_monitor = new(src, 1)
 	materials = AddComponent(/datum/component/remote_materials, "stacking", mapload, FALSE, mapload && force_connect)
 
-/obj/machinery/mineral/stacking_machine/Destroy()
+/obj/machinery/mineral/stacking_machine/Deinitialize()
 	CONSOLE = null
 	materials = null
 	return ..()

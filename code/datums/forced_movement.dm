@@ -24,7 +24,7 @@
 	else
 		qdel(src)	//if you want to overwrite the current forced movement, call qdel(victim.force_moving) before creating this
 
-/datum/forced_movement/Destroy()
+/datum/forced_movement/Deinitialize()
 	if(victim.force_moving == src)
 		victim.force_moving = null
 		if(moved_at_all)

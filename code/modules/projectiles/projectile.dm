@@ -711,7 +711,7 @@
 		if(fired && can_hit_target(original, permutated, TRUE))
 			Bump(original)
 
-/obj/projectile/Destroy()
+/obj/projectile/Deinitialize()
 	if(hitscan)
 		finalize_hitscan_and_generate_tracers()
 	STOP_PROCESSING(SSprojectiles, src)

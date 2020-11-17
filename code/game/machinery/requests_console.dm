@@ -113,7 +113,7 @@ GLOBAL_LIST_EMPTY(req_console_ckey_departments)
 	Radio = new /obj/item/radio(src)
 	Radio.listening = 0
 
-/obj/machinery/requests_console/Destroy()
+/obj/machinery/requests_console/Deinitialize()
 	QDEL_NULL(Radio)
 	GLOB.allConsoles -= src
 	return ..()

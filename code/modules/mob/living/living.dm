@@ -18,7 +18,7 @@
 	med_hud_set_health()
 	med_hud_set_status()
 
-/mob/living/Destroy()
+/mob/living/Deinitialize()
 	if(LAZYLEN(status_effects))
 		for(var/s in status_effects)
 			var/datum/status_effect/S = s

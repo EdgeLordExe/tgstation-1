@@ -28,7 +28,7 @@
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/assembly/timer/Destroy()
+/obj/item/assembly/timer/Deinitialize()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
