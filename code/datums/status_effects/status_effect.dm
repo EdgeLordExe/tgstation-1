@@ -150,7 +150,8 @@
 	tick_interval = 10 //deciseconds between decays once decay starts
 	var/stack_decay = 1 //how many stacks are lost per tick (decay trigger)
 	var/stack_threshold //special effects trigger when stacks reach this amount
-	var/max_stacks //stacks cannot exceed this amount
+	var/max_stacks //stacks cannot exceed this amountw
+	var/min_stacks = 0
 	var/consumed_on_threshold = TRUE //if status should be removed once threshold is crossed
 	var/threshold_crossed = FALSE //set to true once the threshold is crossed, false once it falls back below
 	var/overlay_file
@@ -206,7 +207,7 @@
 			on_threshold_drop()
 		if(stacks_added > 0)
 			tick_interval += delay_before_decay //refreshes time until decay
-		stacks = min(stacks, max_stacks)
+		stacks = max(min(stacks, max_stacks),min_stacks)
 		status_overlay.icon_state = "[overlay_state][stacks]"
 		status_underlay.icon_state = "[underlay_state][stacks]"
 		owner.add_overlay(status_overlay)

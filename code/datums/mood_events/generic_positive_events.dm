@@ -106,6 +106,11 @@
 	mood_change = 10 //maybe being a cultist isnt that bad after all
 	hidden = TRUE
 
+/datum/mood_event/exile_thief
+	description = "<span class='nicegreen'>Incomprehensible knowledge gave me clarity to live, now i can witness the truth through seven openings - seven wounds of marshal.</span>\n"
+	mood_change = 5
+	hidden = TRUE
+
 /datum/mood_event/family_heirloom
 	description = "<span class='nicegreen'>My family heirloom is safe with me.</span>\n"
 	mood_change = 1

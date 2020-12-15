@@ -1540,6 +1540,8 @@
 #include "code\modules\antagonists\eldritch_cult\knowledge\rust_lore.dm"
 #include "code\modules\antagonists\eldritch_cult\knowledge\void_lore.dm"
 #include "code\modules\antagonists\ert\ert.dm"
+#include "code\modules\antagonists\exile\exile_antag_theif.dm"
+#include "code\modules\antagonists\exile\exile_status_effects.dm"
 #include "code\modules\antagonists\fugitive\fugitive.dm"
 #include "code\modules\antagonists\fugitive\fugitive_outfits.dm"
 #include "code\modules\antagonists\fugitive\fugitive_ship.dm"

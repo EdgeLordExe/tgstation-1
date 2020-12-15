@@ -84,3 +84,12 @@ GLOBAL_LIST_INIT(heretic_start_knowledge,list(/datum/eldritch_knowledge/spell/ba
 #define PATH_RUST "Rust"
 #define PATH_FLESH "Flesh"
 #define PATH_VOID "Void"
+
+
+#define EXILE_SECRET_CAT "secret_cat"
+#define EXILE_SECRET_WOUNDS "secret_wounds"
+#define EXILE_SECRET_BROKEN_WEAPON "secret_broken_weapon"
+#define EXILE_SECRET_MEDITATION "secret_mediation"
+#define EXILE_SECRET_KILLED_HUNTER "secret_killed_hunter"
+#define EXILE_SECRET_KILLED_BOSS "secret_killed_hunter"
+#define EXILE_SECRET_MAIMING "secret_self_maim"
