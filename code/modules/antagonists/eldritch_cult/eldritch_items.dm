@@ -6,12 +6,14 @@
 	w_class = WEIGHT_CLASS_SMALL
 	///Target
 	var/mob/living/carbon/human/target
+	var/sacrifice_value = 2
 
 /obj/item/living_heart/attack_self(mob/user)
 	. = ..()
 	if(!IS_HERETIC(user))
 		return
-	if(!target)
+	if( QDELETED(target))
+		target = null
 		to_chat(user,"<span class='warning'>No target could be found. Put the living heart on a transmutation rune and activate the rune to recieve a target.</span>")
 		return
 	var/dist = get_dist(get_turf(user),get_turf(target))
@@ -270,7 +272,7 @@
 	if((IS_HERETIC(local_user) || IS_HERETIC_MONSTER(local_user)) && HAS_TRAIT(src,TRAIT_NODROP))
 		REMOVE_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 
-	for(var/mob/living/carbon/human/human_in_range in spiral_range(9,local_user))
+	for(var/mob/living/carbon/human/human_in_range in view(9,local_user))
 		if(IS_HERETIC(human_in_range) || IS_HERETIC_MONSTER(human_in_range))
 			continue
 
@@ -284,10 +286,13 @@
 
 		if(DT_PROB(30,delta_time))
 			human_in_range.emote(pick("giggle","laugh"))
-			human_in_range.adjustStaminaLoss(10)
+
 
 		if(DT_PROB(25,delta_time))
 			human_in_range.Dizzy(5)
+
+		if(DT_PROB(10,delta_time))
+			human_in_range.adjustStaminaLoss(10)
 
 /obj/item/melee/rune_carver
 	name = "Carving Knife"

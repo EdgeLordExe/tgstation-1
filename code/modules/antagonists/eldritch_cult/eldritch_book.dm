@@ -7,8 +7,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	///Last person that touched this
 	var/mob/living/last_user
-	///how many charges do we have?
-	var/charge = 1
 	///Where we cannot create the rune?
 	var/static/list/blacklisted_turfs = typecacheof(list(/turf/closed,/turf/open/space,/turf/open/lava))
 
@@ -21,7 +19,8 @@
 	. = ..()
 	if(!IS_HERETIC(user))
 		return
-	. += "The Tome holds [charge] charges."
+	var/datum/antagonist/heretic/heresy = IS_HERETIC(user)
+	. += "You can access [heresy.charge] charges."
 	. += "Use it on the floor to create a transmutation rune, used to perform rituals."
 	. += "Hit an influence in the black part with it to gain a charge."
 	. += "Hit a transmutation rune to destroy it."
@@ -43,7 +42,8 @@
 	to_chat(user, "<span class='danger'>You start drawing power from influence...</span>")
 	if(do_after(user, 10 SECONDS, RS))
 		qdel(RS)
-		charge += 1
+		var/datum/antagonist/heretic/heresy = IS_HERETIC(user)
+		heresy.charge += 1
 
 ///Draws a rune on a selected turf
 /obj/item/forbidden_book/proc/draw_rune(atom/target,mob/user)
@@ -81,12 +81,15 @@
 	var/datum/antagonist/heretic/cultie = user.mind.has_antag_datum(/datum/antagonist/heretic)
 	var/list/to_know = list()
 	for(var/Y in cultie.get_researchable_knowledge())
+		if(!istype(Y,/datum/eldritch_knowledge))
+			stack_trace("[Y] is not the right type!")
+			continue
 		to_know += new Y
 	var/list/known = cultie.get_all_knowledge()
 	var/list/data = list()
 	var/list/lore = list()
 
-	data["charges"] = charge
+	data["charges"] = cultie.charge
 
 	for(var/X in to_know)
 		lore = list()
@@ -94,7 +97,7 @@
 		lore["type"] = EK.type
 		lore["name"] = EK.name
 		lore["cost"] = EK.cost
-		lore["disabled"] = EK.cost <= charge ? FALSE : TRUE
+		lore["disabled"] = EK.cost <= cultie.charge ? FALSE : TRUE
 		lore["path"] = EK.route
 		lore["state"] = "Research"
 		lore["flavour"] = EK.gain_text
@@ -124,7 +127,7 @@
 		return
 	switch(action)
 		if("research")
-			var/datum/antagonist/heretic/cultie = last_user.mind.has_antag_datum(/datum/antagonist/heretic)
+			var/datum/antagonist/heretic/cultie = IS_HERETIC(last_user)
 			var/ekname = params["name"]
 			for(var/X in cultie.get_researchable_knowledge())
 				var/datum/eldritch_knowledge/EK = X
@@ -132,7 +135,7 @@
 					continue
 				if(cultie.gain_knowledge(EK))
 					log_codex_ciatrix("[key_name(last_user)] gained knowledge of [EK]")
-					charge -= initial(EK.cost)
+					cultie.charge -= initial(EK.cost)
 					return TRUE
 
 	update_appearance() // Not applicable to all objects.
@@ -142,5 +145,3 @@
 	icon_state = initial(icon_state)
 	return ..()
 
-/obj/item/forbidden_book/debug
-	charge = 100

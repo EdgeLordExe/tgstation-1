@@ -11,6 +11,8 @@
 	var/list/researched_knowledge = list()
 	var/total_sacrifices = 0
 	var/ascended = FALSE
+	var/allow_ascension = TRUE
+	var/charge = 1
 
 /datum/antagonist/heretic/admin_add(datum/mind/new_owner,mob/admin)
 	give_equipment = FALSE
@@ -165,6 +167,18 @@
 /datum/antagonist/heretic/get_admin_commands()
 	. = ..()
 	.["Equip"] = CALLBACK(src,.proc/equip_cultist)
+	.["Allow Ascension Rights"] = CALLBACK(src,.proc/make_ascendable)
+	.["Deny Ascension Rights"] = CALLBACK(src,.proc/make_unascendable)
+
+/datum/antagonist/heretic/proc/make_unascendable()
+	if(allow_ascension)
+		to_chat(owner.current,"<span class='danger'>You feel a fleeting feeling, something has left your grasp.</span>")
+	allow_ascension = FALSE
+
+/datum/antagonist/heretic/proc/make_ascendable()
+	if(!allow_ascension)
+		to_chat(owner.current,"<span class='danger'>Ancient words of power flood your mind, the path to ascension has revelead itself once more!</span>")
+	allow_ascension = TRUE
 
 /datum/antagonist/heretic/roundend_report()
 	var/list/parts = list()
@@ -222,7 +236,9 @@
 		researchable_knowledge |= EK.next_knowledge
 		banned_knowledge |= EK.banned_knowledge
 		banned_knowledge |= EK.type
+		stack_trace("[EK.next_knowledge]")
 	researchable_knowledge -= banned_knowledge
+
 	return researchable_knowledge
 
 /datum/antagonist/heretic/proc/get_knowledge(wanted)
