@@ -236,7 +236,6 @@
 		researchable_knowledge |= EK.next_knowledge
 		banned_knowledge |= EK.banned_knowledge
 		banned_knowledge |= EK.type
-		stack_trace("[EK.next_knowledge]")
 	researchable_knowledge -= banned_knowledge
 
 	return researchable_knowledge

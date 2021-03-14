@@ -469,6 +469,11 @@
 	owner.adjust_bodytemperature(-20)
 	return ..()
 
+/datum/status_effect/paranoia
+	id = "paranoia"
+
+
+
 /// A status effect used for specifying confusion on a living mob.
 /// Created automatically with /mob/living/set_confusion.
 /datum/status_effect/confusion

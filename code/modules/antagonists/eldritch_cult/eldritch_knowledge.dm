@@ -246,11 +246,10 @@
 	gain_text = "Another day at a meaningless job. You feel a shimmer around you, as a realization of something strange in your backpack unfolds. You look at it, unknowingly opening a new chapter in your life."
 	next_knowledge = list(/datum/eldritch_knowledge/base_rust,/datum/eldritch_knowledge/base_ash,/datum/eldritch_knowledge/base_flesh,/datum/eldritch_knowledge/base_void)
 	cost = 0
-	spell_to_add = /obj/effect/proc_holder/spell/targeted/touch/mansus_grasp
+	spell_to_add = /obj/effect/proc_holder/spell/aoe_turf/blaze_tornado
+	//spell_to_add = /obj/effect/proc_holder/spell/targeted/touch/mansus_grasp
 	required_atoms = list(/obj/item/living_heart)
 	route = "Start"
-	//yES YEs i know there is probably some more intuitive way to do this, but honestly if the job is getting paid less chances are it is less difficult to kill
-	var/list/dep_cost = list(PAYCHECK_PRISONER = 1,PAYCHECK_ASSISTANT = 1,PAYCHECK_MINIMAL = 1,PAYCHECK_EASY = 2,PAYCHECK_MEDIUM =2 ,PAYCHECK_HARD = 3,PAYCHECK_COMMAND =3)
 
 /datum/eldritch_knowledge/spell/basic/recipe_snowflake_check(list/atoms, loc)
 	. = ..()
@@ -281,15 +280,25 @@
 			A.owner = user.mind
 			var/list/targets = list()
 			var/list/sac_values = list()
+
 			for(var/i in 0 to 3)
 				var/datum/mind/targeted =  A.find_target()//easy way, i dont feel like copy pasting that entire block of code
 				if(!targeted || !targeted.current)
 					break
 				var/datum/job/some_job = SSjob.GetJobType(targeted.assigned_role)
-				var/sac_value = dep_cost[some_job.paycheck_department]
+				var/sac_value = 2
+
+				if((some_job.departments & DEPARTMENT_COMMAND) || (some_job.departments & DEPARTMENT_SECURITY))
+					sac_value++
+				else if(some_job.departments & DEPARTMENT_SERVICE)
+					//Saccing assistants and bartenders is less valueable than for example a CMO
+					sac_value--
+
 				if(IS_HERETIC(targeted.current))
-					sac_value += 2
-				targets["[targeted.current.real_name] the [targeted.assigned_role] [IS_HERETIC(targeted.current) ? "as Scholar of hidden knowledge" : ""] ([sac_value] Charges)"] = targeted.current
+					sac_value += 1
+
+				//Max possible value for a sacrifice is 4 in the case a head is a heretic
+				targets["[targeted.current.real_name] the [targeted.assigned_role][IS_HERETIC(targeted.current) ? " a fellow Scholar of hidden knowledge" : ""] ([sac_value] Charges)"] = targeted.current
 				sac_values[targeted.current] = sac_value
 			LH.target = targets[input(user,"Choose your next target","Target") in targets]
 			qdel(A)
@@ -325,7 +334,7 @@
 	desc = "Sacrifices your ability to ascend for 4 points, cannot be undone. To use this ritual place your Codex Cicatrix, your Living Heart and your Path's Blade on the rune and activate."
 	gain_text = "All bearers of this knowledge must make a sacrifice at some point, some sacrifice their humanity, some their sanity... I chose to survive - Said the Priest."
 	cost = 0
-	required_atoms = list(/obj/item/forbidden_book,/obj/item/living_heart,/obj/item/melee/sickly_blade)
+	required_atoms = list(/obj/item/forbidden_book,/obj/item/melee/sickly_blade)
 	route = "Start"
 
 /datum/eldritch_knowledge/ascension_sacrifice/on_finished_recipe(mob/living/user, list/atoms, loc)

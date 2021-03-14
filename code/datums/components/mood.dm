@@ -26,7 +26,7 @@
 	RegisterSignal(parent, COMSIG_MOB_HUD_CREATED, .proc/modify_hud)
 	RegisterSignal(parent, COMSIG_JOB_RECEIVED, .proc/register_job_signals)
 
-	RegisterSignal(parent, COMSIG_VOID_MASK_ACT, .proc/direct_sanity_drain)
+	RegisterSignal(parent, list(COMSIG_VOID_MASK_ACT,COMSIG_SANITY_DREADED_EFFIGY), .proc/direct_sanity_drain)
 
 	var/mob/living/owner = parent
 	owner.become_area_sensitive(MOOD_COMPONENT_TRAIT)

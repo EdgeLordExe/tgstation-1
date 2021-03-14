@@ -81,9 +81,6 @@
 	var/datum/antagonist/heretic/cultie = user.mind.has_antag_datum(/datum/antagonist/heretic)
 	var/list/to_know = list()
 	for(var/Y in cultie.get_researchable_knowledge())
-		if(!istype(Y,/datum/eldritch_knowledge))
-			stack_trace("[Y] is not the right type!")
-			continue
 		to_know += new Y
 	var/list/known = cultie.get_all_knowledge()
 	var/list/data = list()

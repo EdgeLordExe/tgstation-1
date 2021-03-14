@@ -179,3 +179,86 @@
 	carbon_victim.blind_eyes(2)
 	SEND_SIGNAL(carbon_victim, COMSIG_ADD_MOOD_EVENT, "gates_of_mansus", /datum/mood_event/gates_of_mansus)
 	return ..()
+
+/obj/structure/dread_effigy
+	name = "Dreaded Effigy"
+	desc = "A horrifying result of unknown transmutation that dates back to the time before the Epochs, made from equal parts life and non-living matter. It stands as a perversion of the natural order, a dreaded testament to humanities sin of curiosity."
+	icon = 'icons/obj/eldritch_structures_32x48.dmi'
+	icon_state = "effigy1"
+	anchored = TRUE
+	density = TRUE
+	layer = MOB_LAYER
+	var/mob/owner
+	var/active = FALSE
+
+/obj/structure/dread_effigy/proc/setup(mob/_owner)
+	owner = _owner
+	active = TRUE
+
+/obj/structure/dread_effigy/harming/setup(mob/_owner)
+	. = ..()
+	RegisterSignal(owner,COMSIG_MOB_ITEM_AFTERATTACK,.proc/on_owner_attack)
+
+/obj/structure/dread_effigy/harming/proc/on_owner_attack(datum/source,atom/target,mob/user,proximity_flag,click_parameters)
+	if(get_dist(src,user) > 16 || !isliving(target) || !proximity_flag  || !user.combat_mode || target == user)
+		return
+
+	Beam(target,icon_state = "eldritch", maxdistance = 32, time = 1 SECONDS)
+	var/mob/living/living_target = target
+	living_target.adjustToxLoss(rand(10,20))
+
+/obj/structure/dread_effigy/wounding/setup(mob/_owner)
+	. = ..()
+	RegisterSignal(owner,COMSIG_MOB_ITEM_AFTERATTACK,.proc/on_owner_attack)
+
+/obj/structure/dread_effigy/wounding/proc/on_owner_attack(datum/source,atom/target,mob/user,proximity_flag,click_parameters)
+	if(get_dist(src,user) > 16 || !ishuman(target) || !proximity_flag  || !user.combat_mode || target == user)
+		return
+
+	var/mob/living/carbon/human/human_target = target
+	var/obj/item/bodypart/some_bodypart =  pick(human_target.bodyparts)
+
+	if(!some_bodypart)
+		return
+
+	Beam(human_target,icon_state = "eldritch", maxdistance = 32, time = 1 SECONDS)
+
+	some_bodypart.check_wounding(WOUND_BURN,rand(10,20),10,5)
+
+/obj/structure/dread_effigy/animated/setup(mob/_owner)
+	. = ..()
+	animation()
+
+/obj/structure/dread_effigy/animated/proc/animation()
+	add_filter("effigy_ripple", 2, list("type" = "ripple", "radius" = 0, "size" = 32))
+	animate(get_filter("effigy_ripple"),4.5 SECONDS,radius = 80,size=0)
+	addtimer(CALLBACK(src,.proc/animation),5 SECONDS)
+
+
+/obj/structure/dread_effigy/animated/vibrating/setup(mob/_owner)
+	. = ..()
+	START_PROCESSING(SSprocessing,src)
+
+/obj/structure/dread_effigy/animated/vibrating/Destroy()
+	STOP_PROCESSING(SSprocessing,src)
+	return ..()
+
+/obj/structure/dread_effigy/animated/vibrating/process(delta_time)
+	for(var/mob/living/carbon/human/humie in spiral_range(16,src))
+		if(IS_HERETIC(humie) || IS_HERETIC_MONSTER(humie) || humie == owner)
+			continue
+
+		humie.adjustOrganLoss(ORGAN_SLOT_EARS,rand(0,1))
+
+/obj/structure/dread_effigy/animated/sanity/setup(mob/_owner)
+	. = ..()
+	START_PROCESSING(SSprocessing,src)
+
+/obj/structure/dread_effigy/animated/sanity/Destroy()
+	STOP_PROCESSING(SSprocessing,src)
+	return ..()
+
+/obj/structure/dread_effigy/animated/sanity/process(delta_time)
+	for(var/mob/living/carbon/human/humie in spiral_range(16,src))
+		if(IS_HERETIC(humie) || IS_HERETIC_MONSTER(humie) || humie == owner)
+			continue

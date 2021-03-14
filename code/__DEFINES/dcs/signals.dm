@@ -908,6 +908,9 @@
 ///sent to everyone in range of being affected by mask of madness
 #define COMSIG_VOID_MASK_ACT "void_mask_act"
 
+///sent to everyone in range of being affected by mask of madness
+#define COMSIG_SANITY_DREADED_EFFIGY "sanity_dreaded_effigy"
+
 //NTnet
 
 ///called on an object by its NTNET connection component on receive. (data(datum/netdata))

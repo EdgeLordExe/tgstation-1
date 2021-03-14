@@ -803,3 +803,34 @@
 		for(var/i in 1 to 3)
 			livies.forceMove(get_step_towards(livies,user))
 
+/obj/effect/proc_holder/spell/aoe_turf/blaze_tornado
+	name = "Blazing Manifestation"
+	desc = "Creates 3 blazes that orbit you 5 times, they set people on fire and deal some damage."
+	school = "transmutation"
+	charge_max = 700
+	clothes_req = FALSE
+	invocation = "N'GH'T F'LM'S"
+	invocation_type = INVOCATION_WHISPER
+	action_icon = 'icons/mob/actions/actions_ecult.dmi'
+	action_icon_state = "3flames"
+	action_background_icon_state = "bg_ecult"
+
+/obj/effect/proc_holder/spell/aoe_turf/blaze_tornado/cast(list/targets, mob/user = usr)
+	INVOKE_ASYNC(src, .proc/fire_cascade, user,5,3,10,5)
+
+/obj/effect/proc_holder/spell/aoe_turf/blaze_tornado/proc/fire_cascade(atom/centre,range,flames,interval,repeats)
+	var/max_theta = 360
+	var/list/current_flames_theta = list()
+	var/turf/centre_turf = get_turf(centre)
+
+	for(var/i in 0 to flames)
+		current_flames_theta += (360 / flames) * i
+
+	for(var/rep in 0 to repeats)
+		for(var/theta = 0 ; theta < max_theta; theta += interval)
+			centre_turf = get_turf(centre)
+			for(var/num in current_flames_theta)
+				num += theta
+				var/turf/turfie = locate(centre_turf.x + round(cos(num)*range + 0.5),centre_turf.y + round(sin(num)*range + 0.5),centre_turf.z)
+				new /obj/effect/hotspot(turfie,500,1000)
+			sleep(2)
