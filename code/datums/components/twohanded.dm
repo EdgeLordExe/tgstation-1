@@ -316,6 +316,22 @@
 	sharpened_increase = min(amount, (max_amount - wielded_val))
 	return COMPONENT_BLOCK_SHARPEN_APPLIED
 
+/datum/component/two_handed/proc/update_stats(require_twohands=FALSE, wieldsound=FALSE, unwieldsound=FALSE, attacksound=FALSE,force_multiplier=0, force_wielded=0, force_unwielded=0, icon_wielded=FALSE)
+
+	src.require_twohands = require_twohands
+	src.wieldsound = wieldsound
+	src.unwieldsound = unwieldsound
+	src.attacksound = attacksound
+	src.force_multiplier = force_multiplier
+	src.force_wielded = force_wielded
+	src.force_unwielded = force_unwielded
+	src.icon_wielded = icon_wielded
+
+	if(require_twohands)
+		ADD_TRAIT(parent, TRAIT_NEEDS_TWO_HANDS, ABSTRACT_ITEM_TRAIT)
+	else
+		REMOVE_TRAIT(parent, TRAIT_NEEDS_TWO_HANDS, ABSTRACT_ITEM_TRAIT)
+
 /**
  * The offhand dummy item for two handed items
  *
