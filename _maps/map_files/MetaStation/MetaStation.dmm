@@ -11792,6 +11792,8 @@
 	pixel_x = 32
 	},
 /obj/structure/table,
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/stack/sheet/iron/fifty,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/clothing/head/welding,
 /turf/open/floor/iron/white,
@@ -25477,6 +25479,8 @@
 /obj/item/stack/ducts/fifty,
 /obj/item/plunger,
 /obj/item/plunger,
+/obj/item/construction/plumbing,
+/obj/item/construction/plumbing,
 /turf/open/floor/iron/white,
 /area/medical/chemistry)
 "fVA" = (
@@ -48746,11 +48750,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
-/obj/structure/table,
-/obj/item/stack/sheet/iron/fifty,
-/obj/item/stack/sheet/iron/fifty,
-/obj/item/construction/plumbing,
-/obj/item/construction/plumbing,
+/obj/machinery/chem_assembler,
 /turf/open/floor/iron/white,
 /area/medical/chemistry)
 "nTI" = (
@@ -62121,6 +62121,9 @@
 /area/science/mixing)
 "spA" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/modular_computer/console/preset/civilian{
+	dir = 1
+	},
 /turf/open/floor/iron,
 /area/science/lab)
 "spD" = (
@@ -70446,10 +70449,10 @@
 /turf/open/floor/wood,
 /area/maintenance/port/aft)
 "uZe" = (
-/obj/machinery/modular_computer/console/preset/civilian,
 /obj/effect/turf_decal/siding{
 	dir = 1
 	},
+/obj/machinery/computer/rdconsole,
 /turf/open/floor/iron/dark,
 /area/science/lab)
 "uZj" = (
